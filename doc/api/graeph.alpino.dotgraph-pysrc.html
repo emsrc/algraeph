@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.alpino.dotgraph</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        <a href="graeph.alpino-module.html">Package&nbsp;alpino</a> ::
+        Module&nbsp;dotgraph
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.alpino.dotgraph-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="graeph.alpino.dotgraph-module.html">Module graeph.alpino.dotgraph</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2007-2013 by </tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment"># Erwin Marsi and TST-Centrale</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># This file is part of the Algraeph program.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is free software; you can redistribute it and/or modify</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># the Free Software Foundation; either version 3 of the License, or</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># (at your option) any later version.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># GNU General Public License for more details.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">dotgraph subclasses specific to Alpino format</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">"Erwin Marsi &lt;e.marsi@gmail.com&gt;"</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package graeph=graeph-module.html"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-0', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module graeph.alpino.dotgraph=graeph.alpino.dotgraph-module.html,Module graeph.dotgraph=graeph.dotgraph-module.html,Module graeph.graphml.dotgraph=graeph.graphml.dotgraph-module.html"><a title="graeph.alpino.dotgraph
+graeph.dotgraph
+graeph.graphml.dotgraph" class="py-name" href="#" onclick="return doclink('link-1', 'dotgraph', 'link-1');">dotgraph</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class graeph.dotgraph.BasicDotSubGraph=graeph.dotgraph.BasicDotSubGraph-class.html"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-2', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Class graeph.dotgraph.BasicDotGraphPair=graeph.dotgraph.BasicDotGraphPair-class.html"><a title="graeph.dotgraph.BasicDotGraphPair" class="py-name" href="#" onclick="return doclink('link-3', 'BasicDotGraphPair', 'link-3');">BasicDotGraphPair</a></tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoDotSubGraph"></a><div id="AlpinoDotSubGraph-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph-toggle" onclick="return toggle('AlpinoDotSubGraph');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html">AlpinoDotSubGraph</a><tt class="py-op">(</tt><tt class="py-base-class">BasicDotSubGraph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AlpinoDotSubGraph-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">     </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-comment"># Public API</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoDotSubGraph.order_nodes_option"></a><div id="AlpinoDotSubGraph.order_nodes_option-def"><a name="L41"></a><tt class="py-lineno"> 41</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph.order_nodes_option-toggle" onclick="return toggle('AlpinoDotSubGraph.order_nodes_option');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#order_nodes_option">order_nodes_option</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">state</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph.order_nodes_option-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph.order_nodes_option-expanded"><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method graeph.dotgraph.BasicDotGraphPair.update_nodes()=graeph.dotgraph.BasicDotGraphPair-class.html#update_nodes,Method graeph.dotgraph.DotGraph.update_nodes()=graeph.dotgraph.DotGraph-class.html#update_nodes,Method graeph.dotgraph.DotGraphPair.update_nodes()=graeph.dotgraph.DotGraphPair-class.html#update_nodes"><a title="graeph.dotgraph.BasicDotGraphPair.update_nodes
+graeph.dotgraph.DotGraph.update_nodes
+graeph.dotgraph.DotGraphPair.update_nodes" class="py-name" href="#" onclick="return doclink('link-4', 'update_nodes', 'link-4');">update_nodes</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._update_nodes_ordered()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_nodes_ordered"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._update_nodes_ordered" class="py-name" href="#" onclick="return doclink('link-5', '_update_nodes_ordered', 'link-5');">_update_nodes_ordered</a></tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="graeph.dotgraph.BasicDotGraphPair.update_nodes
+graeph.dotgraph.DotGraph.update_nodes
+graeph.dotgraph.DotGraphPair.update_nodes" class="py-name" href="#" onclick="return doclink('link-6', 'update_nodes', 'link-4');">update_nodes</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._update_nodes()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_nodes"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._update_nodes" class="py-name" href="#" onclick="return doclink('link-7', '_update_nodes', 'link-7');">_update_nodes</a></tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">             </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-comment"># Private methods</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoDotSubGraph._init_view_options"></a><div id="AlpinoDotSubGraph._init_view_options-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._init_view_options-toggle" onclick="return toggle('AlpinoDotSubGraph._init_view_options');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_init_view_options">_init_view_options</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._init_view_options-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._init_view_options-expanded"><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt id="link-8" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-8', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._init_view_options()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_init_view_options,Method graeph.dotgraph.BasicDotGraphPair._init_view_options()=graeph.dotgraph.BasicDotGraphPair-class.html#_init_view_options,Method graeph.dotgraph.DotGraph._init_view_options()=graeph.dotgraph.DotGraph-class.html#_init_view_options,Method graeph.dotgraph.DotGraphPair._init_view_options()=graeph.dotgraph.DotGraphPair-class.html#_init_view_options,Method graeph.dotgraph.DotSubGraph._init_view_options()=graeph.dotgraph.DotSubGraph-class.html#_init_view_options"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._init_view_options
+graeph.dotgraph.BasicDotGraphPair._init_view_options
+graeph.dotgraph.DotGraph._init_view_options
+graeph.dotgraph.DotGraphPair._init_view_options
+graeph.dotgraph.DotSubGraph._init_view_options" class="py-name" href="#" onclick="return doclink('link-9', '_init_view_options', 'link-9');">_init_view_options</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph.order_nodes_option()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#order_nodes_option"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph.order_nodes_option" class="py-name" href="#" onclick="return doclink('link-10', 'order_nodes_option', 'link-10');">order_nodes_option</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoDotSubGraph._update_nodes"></a><div id="AlpinoDotSubGraph._update_nodes-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._update_nodes-toggle" onclick="return toggle('AlpinoDotSubGraph._update_nodes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_nodes">_update_nodes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stgraph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._update_nodes-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._update_nodes-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._update_ignored_nodes()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_ignored_nodes"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._update_ignored_nodes" class="py-name" href="#" onclick="return doclink('link-11', '_update_ignored_nodes', 'link-11');">_update_ignored_nodes</a></tt><tt class="py-op">(</tt><tt class="py-name">stgraph</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-12" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-12', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="graeph.dotgraph.BasicDotGraphPair.update_nodes
+graeph.dotgraph.DotGraph.update_nodes
+graeph.dotgraph.DotGraphPair.update_nodes" class="py-name" href="#" onclick="return doclink('link-13', 'update_nodes', 'link-4');">update_nodes</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">stgraph</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">     </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">             </tt>
+<a name="AlpinoDotSubGraph._update_nodes_ordered"></a><div id="AlpinoDotSubGraph._update_nodes_ordered-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._update_nodes_ordered-toggle" onclick="return toggle('AlpinoDotSubGraph._update_nodes_ordered');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_nodes_ordered">_update_nodes_ordered</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stgraph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._update_nodes_ordered-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._update_nodes_ordered-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._update_ignored_nodes" class="py-name" href="#" onclick="return doclink('link-14', '_update_ignored_nodes', 'link-11');">_update_ignored_nodes</a></tt><tt class="py-op">(</tt><tt class="py-name">stgraph</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nodes</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">         </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-comment"># the trick to enforce a partcicular node order in dot is to put all</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-comment"># nodes at the same rank and to connect them by an invisible egde</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">stgraph</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._is_visible()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_is_visible,Method graeph.dotgraph.BasicDotSubGraph._is_visible()=graeph.dotgraph.BasicDotSubGraph-class.html#_is_visible,Method graeph.dotgraph.DotGraph._is_visible()=graeph.dotgraph.DotGraph-class.html#_is_visible"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._is_visible
+graeph.dotgraph.BasicDotSubGraph._is_visible
+graeph.dotgraph.DotGraph._is_visible" class="py-name" href="#" onclick="return doclink('link-15', '_is_visible', 'link-15');">_is_visible</a></tt><tt class="py-op">(</tt><tt class="py-name">node</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nodes</tt> <tt class="py-op">+=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph._node_statement()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_node_statement,Method graeph.dotgraph.DotGraph._node_statement()=graeph.dotgraph.DotGraph-class.html#_node_statement"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._node_statement
+graeph.dotgraph.DotGraph._node_statement" class="py-name" href="#" onclick="return doclink('link-16', '_node_statement', 'link-16');">_node_statement</a></tt><tt class="py-op">(</tt><tt class="py-name">stgraph</tt><tt class="py-op">,</tt> <tt class="py-name">node</tt><tt class="py-op">)</tt>  <tt class="py-op">+</tt> <tt class="py-string">"\n"</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-name">same_rank</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                 </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">suc</tt> <tt class="py-keyword">in</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">successors_iter</tt><tt class="py-op">(</tt><tt class="py-name">node</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._is_visible
+graeph.dotgraph.BasicDotSubGraph._is_visible
+graeph.dotgraph.DotGraph._is_visible" class="py-name" href="#" onclick="return doclink('link-17', '_is_visible', 'link-15');">_is_visible</a></tt><tt class="py-op">(</tt><tt class="py-name">suc</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                        <tt class="py-name">same_rank</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method graeph.dotgraph.DotGraph._dot_node()=graeph.dotgraph.DotGraph-class.html#_dot_node"><a title="graeph.dotgraph.DotGraph._dot_node" class="py-name" href="#" onclick="return doclink('link-18', '_dot_node', 'link-18');">_dot_node</a></tt><tt class="py-op">(</tt><tt class="py-name">suc</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                 </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">same_rank</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nodes</tt> <tt class="py-op">+=</tt> <tt class="py-op">(</tt> <tt class="py-string">"\n{ rank=same; "</tt> <tt class="py-op">+</tt>  </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                                    <tt class="py-string">"; "</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">same_rank</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt>  </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                                    <tt class="py-string">"};\n"</tt> <tt class="py-op">+</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                                    <tt class="py-string">"-&gt;"</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">same_rank</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                                    <tt class="py-string">" [style=invis];\n"</tt> <tt class="py-op">)</tt>   </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoDotSubGraph._update_ignored_nodes"></a><div id="AlpinoDotSubGraph._update_ignored_nodes-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._update_ignored_nodes-toggle" onclick="return toggle('AlpinoDotSubGraph._update_ignored_nodes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_update_ignored_nodes">_update_ignored_nodes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stgraph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._update_ignored_nodes-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._update_ignored_nodes-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_ignored_nodes</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">[</tt>  </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">            <tt class="py-name">stnode</tt>  </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">stnode</tt> <tt class="py-keyword">in</tt> <tt class="py-name">stgraph</tt>  </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-op">(</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node_is_punct</tt><tt class="py-op">(</tt><tt class="py-name">stnode</tt><tt class="py-op">)</tt> <tt class="py-keyword">or</tt>  </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                 <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node_is_index</tt><tt class="py-op">(</tt><tt class="py-name">stnode</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> <tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoDotSubGraph._node_label"></a><div id="AlpinoDotSubGraph._node_label-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._node_label-toggle" onclick="return toggle('AlpinoDotSubGraph._node_label');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_node_label">_node_label</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stgraph</tt><tt class="py-op">,</tt> <tt class="py-param">stnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._node_label-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._node_label-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-comment"># tweak node label to become the word rather than the pos for</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-comment"># terminals</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node_is_terminal</tt><tt class="py-op">(</tt><tt class="py-name">stnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-name">label</tt> <tt class="py-op">=</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node</tt><tt class="py-op">[</tt><tt class="py-name">stnode</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">"word"</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">            <tt class="py-name">label</tt> <tt class="py-op">=</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node</tt><tt class="py-op">[</tt><tt class="py-name">stnode</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt class="py-string">"label"</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">             </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">label</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">'"'</tt><tt class="py-op">,</tt> <tt class="py-string">'\\"'</tt><tt class="py-op">)</tt>  </tt>
+</div><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">     </tt>
+<a name="AlpinoDotSubGraph._node_statement"></a><div id="AlpinoDotSubGraph._node_statement-def"><a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._node_statement-toggle" onclick="return toggle('AlpinoDotSubGraph._node_statement');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_node_statement">_node_statement</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stgraph</tt><tt class="py-op">,</tt> <tt class="py-param">stnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._node_statement-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._node_statement-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">stgraph</tt><tt class="py-op">.</tt><tt class="py-name">node_is_terminal</tt><tt class="py-op">(</tt><tt class="py-name">stnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-19" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-19', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._node_statement
+graeph.dotgraph.DotGraph._node_statement" class="py-name" href="#" onclick="return doclink('link-20', '_node_statement', 'link-16');">_node_statement</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">stgraph</tt><tt class="py-op">,</tt> <tt class="py-name">stnode</tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-21" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-21', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._node_statement
+graeph.dotgraph.DotGraph._node_statement" class="py-name" href="#" onclick="return doclink('link-22', '_node_statement', 'link-16');">_node_statement</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">stgraph</tt><tt class="py-op">,</tt> <tt class="py-name">stnode</tt><tt class="py-op">,</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                                                    <tt class="py-name">fontcolor</tt><tt class="py-op">=</tt><tt class="py-string">"black"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoDotSubGraph._is_visible"></a><div id="AlpinoDotSubGraph._is_visible-def"><a name="L111"></a><tt class="py-lineno">111</tt> <a class="py-toggle" href="#" id="AlpinoDotSubGraph._is_visible-toggle" onclick="return toggle('AlpinoDotSubGraph._is_visible');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#_is_visible">_is_visible</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">stnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotSubGraph._is_visible-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotSubGraph._is_visible-expanded"><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt> <tt id="link-23" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph" class="py-name" href="#" onclick="return doclink('link-23', 'BasicDotSubGraph', 'link-2');">BasicDotSubGraph</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph._is_visible
+graeph.dotgraph.BasicDotSubGraph._is_visible
+graeph.dotgraph.DotGraph._is_visible" class="py-name" href="#" onclick="return doclink('link-24', '_is_visible', 'link-15');">_is_visible</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">stnode</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                <tt class="py-name">stnode</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_ignored_nodes</tt> <tt class="py-op">)</tt> </tt>
+</div></div><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">     </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">     </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoDotGraphPair"></a><div id="AlpinoDotGraphPair-def"><a name="L118"></a><tt class="py-lineno">118</tt> <a class="py-toggle" href="#" id="AlpinoDotGraphPair-toggle" onclick="return toggle('AlpinoDotGraphPair');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html">AlpinoDotGraphPair</a><tt class="py-op">(</tt><tt class="py-base-class">BasicDotGraphPair</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotGraphPair-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AlpinoDotGraphPair-expanded"><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">     </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">    <tt class="py-comment"># Public API</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoDotGraphPair.__init__"></a><div id="AlpinoDotGraphPair.__init__-def"><a name="L124"></a><tt class="py-lineno">124</tt> <a class="py-toggle" href="#" id="AlpinoDotGraphPair.__init__-toggle" onclick="return toggle('AlpinoDotGraphPair.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">                 <tt class="py-param">name</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">,</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                 <tt class="py-param">node_prefix</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">,</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                 <tt class="py-param">graph_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">splines</tt><tt class="py-op">=</tt><tt class="py-string">"true"</tt><tt class="py-op">,</tt>  </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                                 <tt class="py-comment">#ordering="out",</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">                                 <tt class="py-param">ranksep</tt><tt class="py-op">=</tt><tt class="py-number">0.25</tt><tt class="py-op">,</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                                 <tt class="py-param">nodesep</tt><tt class="py-op">=</tt><tt class="py-number">0.1</tt><tt class="py-op">,</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                                 <tt class="py-comment"># size of margin depends on particular version of dot...</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">                                 <tt class="py-comment">#margin=-0.25</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                                 <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">                 <tt class="py-param">node_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">fontname</tt><tt class="py-op">=</tt><tt class="py-string">"sans"</tt><tt class="py-op">,</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                                <tt class="py-param">fontsize</tt><tt class="py-op">=</tt><tt class="py-string">"9"</tt><tt class="py-op">,</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                                <tt class="py-comment">#style="bold",</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                                <tt class="py-param">height</tt><tt class="py-op">=</tt><tt class="py-string">".1"</tt><tt class="py-op">,</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                                <tt class="py-param">shape</tt><tt class="py-op">=</tt><tt class="py-string">"plaintext"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                 <tt class="py-param">edge_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">fontname</tt><tt class="py-op">=</tt><tt class="py-string">"sans"</tt><tt class="py-op">,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                                <tt class="py-param">color</tt><tt class="py-op">=</tt><tt class="py-string">"limegreen"</tt><tt class="py-op">,</tt>  </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                                <tt class="py-param">fontsize</tt><tt class="py-op">=</tt><tt class="py-string">"8"</tt><tt class="py-op">,</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                                <tt class="py-param">weight</tt><tt class="py-op">=</tt><tt class="py-string">"0"</tt><tt class="py-op">,</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                                <tt class="py-param">constraint</tt><tt class="py-op">=</tt><tt class="py-string">"false"</tt><tt class="py-op">,</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                                <tt class="py-comment">#arrowhead="none",</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                                <tt class="py-comment">#style="dashed,bold"</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                                <tt class="py-comment">#headclip="false",</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                                <tt class="py-comment">#tailclip="false"</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                                <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                 <tt class="py-param">from_graph_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">=</tt><tt class="py-string">"white"</tt><tt class="py-op">,</tt>  </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                                      <tt class="py-comment">#ordering="out"</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                                      <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">                 <tt class="py-param">from_node_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">fontcolor</tt><tt class="py-op">=</tt><tt class="py-string">"blue"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                 <tt class="py-param">from_edge_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">weight</tt><tt class="py-op">=</tt><tt class="py-string">"100"</tt><tt class="py-op">,</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                                     <tt class="py-param">style</tt><tt class="py-op">=</tt><tt class="py-string">"solid"</tt><tt class="py-op">,</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                                     <tt class="py-param">color</tt><tt class="py-op">=</tt><tt class="py-string">"gray"</tt><tt class="py-op">,</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                                     <tt class="py-param">arrowhead</tt><tt class="py-op">=</tt><tt class="py-string">"none"</tt><tt class="py-op">,</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">                                     <tt class="py-param">constraint</tt><tt class="py-op">=</tt><tt class="py-string">"true"</tt><tt class="py-op">,</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                                     <tt class="py-comment">#headclip="true",</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                                     <tt class="py-comment">#tailclip="true",                               </tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                                     <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">                 <tt class="py-param">to_graph_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">=</tt><tt class="py-string">"white"</tt><tt class="py-op">,</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                                    <tt class="py-comment">#ordering="out"</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                                    <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">                 <tt class="py-param">to_node_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">fontcolor</tt><tt class="py-op">=</tt><tt class="py-string">"red"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                 <tt class="py-param">to_edge_attr</tt><tt class="py-op">=</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">weight</tt><tt class="py-op">=</tt><tt class="py-string">"100"</tt><tt class="py-op">,</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">                                   <tt class="py-param">style</tt><tt class="py-op">=</tt><tt class="py-string">"solid"</tt><tt class="py-op">,</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">                                   <tt class="py-param">color</tt><tt class="py-op">=</tt><tt class="py-string">"gray"</tt><tt class="py-op">,</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">                                   <tt class="py-param">arrowhead</tt><tt class="py-op">=</tt><tt class="py-string">"none"</tt><tt class="py-op">,</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">                                   <tt class="py-param">constraint</tt><tt class="py-op">=</tt><tt class="py-string">"true"</tt><tt class="py-op">,</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">                                   <tt class="py-comment">#headclip="true",</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">                                   <tt class="py-comment">#tailclip="true",                                </tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">                                   <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">                                   <tt class="py-param">subgraph_class</tt><tt class="py-op">=</tt><tt id="link-25" class="py-name" targets="Class graeph.alpino.dotgraph.AlpinoDotSubGraph=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph" class="py-name" href="#" onclick="return doclink('link-25', 'AlpinoDotSubGraph', 'link-25');">AlpinoDotSubGraph</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoDotGraphPair.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoDotGraphPair.__init__-expanded"><a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">         </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">        <tt id="link-26" class="py-name"><a title="graeph.dotgraph.BasicDotGraphPair" class="py-name" href="#" onclick="return doclink('link-26', 'BasicDotGraphPair', 'link-3');">BasicDotGraphPair</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method graeph.aligner.Aligner.__init__()=graeph.aligner.Aligner-class.html#__init__,Method graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__()=graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html#__init__,Method graeph.alpino.graphview.AlpinoGraphView.__init__()=graeph.alpino.graphview.AlpinoGraphView-class.html#__init__,Method graeph.commentview.CommentView.__init__()=graeph.commentview.CommentView-class.html#__init__,Method graeph.dotgraph.BasicDotGraphPair.__init__()=graeph.dotgraph.BasicDotGraphPair-class.html#__init__,Method graeph.dotgraph.DotGraph.__init__()=graeph.dotgraph.DotGraph-class.html#__init__,Method graeph.dotgraph.DotGraphPair.__init__()=graeph.dotgraph.DotGraphPair-class.html#__init__,Method graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__()=graeph.graphml.dotgraph.GraphmlDotGraphPair-class.html#__init__,Method graeph.graphview.GraphView.__init__()=graeph.graphview.GraphView-class.html#__init__,Method graeph.graphview.ViewMenu.__init__()=graeph.graphview.ViewMenu-class.html#__init__,Method graeph.gui.Algraeph.__init__()=graeph.gui.Algraeph-class.html#__init__,Method graeph.gui.AlgraephFrame.__init__()=graeph.gui.AlgraephFrame-class.html#__init__,Method graeph.gui.AlignPage.__init__()=graeph.gui.AlignPage-class.html#__init__,Method graeph.gui.BottomPanel.__init__()=graeph.gui.BottomPanel-class.html#__init__,Method graeph.gui.CommentPage.__init__()=graeph.gui.CommentPage-class.html#__init__,Method graeph.gui.GraphTokenPanel.__init__()=graeph.gui.GraphTokenPanel-class.html#__init__,Method graeph.gui.GraphViewPanel.__init__()=graeph.gui.GraphViewPanel-class.html#__init__,Method graeph.helpview.HelpViewFrame.__init__()=graeph.helpview.HelpViewFrame-class.html#__init__,Method graeph.relationview.RelationView.__init__()=graeph.relationview.RelationView-class.html#__init__,Method graeph.tokenview.TokenView.__init__()=graeph.tokenview.TokenView-class.html#__init__"><a title="graeph.aligner.Aligner.__init__
+graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__
+graeph.alpino.graphview.AlpinoGraphView.__init__
+graeph.commentview.CommentView.__init__
+graeph.dotgraph.BasicDotGraphPair.__init__
+graeph.dotgraph.DotGraph.__init__
+graeph.dotgraph.DotGraphPair.__init__
+graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__
+graeph.graphview.GraphView.__init__
+graeph.graphview.ViewMenu.__init__
+graeph.gui.Algraeph.__init__
+graeph.gui.AlgraephFrame.__init__
+graeph.gui.AlignPage.__init__
+graeph.gui.BottomPanel.__init__
+graeph.gui.CommentPage.__init__
+graeph.gui.GraphTokenPanel.__init__
+graeph.gui.GraphViewPanel.__init__
+graeph.helpview.HelpViewFrame.__init__
+graeph.relationview.RelationView.__init__
+graeph.tokenview.TokenView.__init__" class="py-name" href="#" onclick="return doclink('link-27', '__init__', 'link-27');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-28" class="py-name" targets="Function graeph.pubsub.name()=graeph.pubsub-module.html#name,Variable graeph.release.name=graeph.release-module.html#name"><a title="graeph.pubsub.name
+graeph.release.name" class="py-name" href="#" onclick="return doclink('link-28', 'name', 'link-28');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">node_prefix</tt><tt class="py-op">,</tt>  </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">                                   <tt class="py-name">graph_attr</tt><tt class="py-op">,</tt> <tt class="py-name">node_attr</tt><tt class="py-op">,</tt> <tt class="py-name">edge_attr</tt><tt class="py-op">,</tt>  </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">                                   <tt class="py-name">from_graph_attr</tt><tt class="py-op">,</tt> <tt class="py-name">from_node_attr</tt><tt class="py-op">,</tt> <tt class="py-name">from_edge_attr</tt><tt class="py-op">,</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">                                   <tt class="py-name">to_graph_attr</tt><tt class="py-op">,</tt> <tt class="py-name">to_node_attr</tt><tt class="py-op">,</tt> <tt class="py-name">to_edge_attr</tt><tt class="py-op">,</tt>  </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">                                   <tt class="py-name">subgraph_class</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:31 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

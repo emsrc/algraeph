@@ -1,0 +1,750 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="daeso.css" type="text/css" />
+  <title>Hitaext User Manual</title
+</head>
+<body>
+<h1>Algraeph User Manual</h1>
+
+<b>Erwin Marsi</b>
+<br>
+Department of Communication and Information Sciences<br>
+Tilburg University<br>
+The Netherlands<br>
+<a href="mailto:e.marsi@gmail.com">e.marsi@gmail.com</a><br>
+
+
+<p><font  color="red"><b>This is work in progress!</b></font></p>
+
+<!-- --------------------------------------------------- -->
+<h2><a name="contents">Contents</a></h2>
+<!-- --------------------------------------------------- -->
+
+<ol>
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#sum">Summary</a></li>
+  <li><a href="#quick">Quick start</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#use">Using Hitaext</a></li>
+  <li><a href="#create">Creating your own alignment files</a></li>
+  <li><a href="#ref">Reference</a></li>
+  <ul>
+    <li><a href="#menus">Menus</a></li>
+    <li><a href="#keys">Keys</a></li>
+  </ul>
+</ol>
+
+<br>
+<br>
+
+
+<hr>
+
+
+
+<!-- --------------------------------------------------- -->
+<h2><a name="sum">Summary</a></h2>
+<!-- --------------------------------------------------- -->
+
+Hitaext is a graphical tool for manually aligning pairs of text
+documents with XML markup. It reads two XML documents and allows you
+to align XML elements on the basis of the text they contain. The
+format of the source and target documents is free as long as it is
+well-formed XML, and both documents are read-only. Alignment is
+virtually unrestricted: you can create one-to-one, one-to-many or even
+many-to-many alignments between arbitrary elements at any level of the
+XML tree structure. The alignments are stored in a simple XML format,
+which can be used for further processing. Hitaext is implemented in
+the Python programming language using the wxPython GUI toolkit. It has
+been tested on Mac OS X, GNU Linux and MS Windows, but should run on
+any platform which is supported by Python and wxPython.
+
+<!-- --------------------------------------------------- -->
+<h2><a name="quick">Quick start</a></h2>
+<!-- --------------------------------------------------- -->
+
+<p>So you managed to install Hitaext and now you are in hurry to see
+if this is of any use to you? Sounds familiar :-) Try this:<p>
+
+<ul>
+  <li>Start Hitaext by double clicking the program icon or typing "hitaext.py" at the command line.</li>
+  <li>From the "File" menu, choose "Open", go to the "data" directory included in the Hitaext distribution, and open the file "alignment-sample-of-the-cathedral-and-the-bazaar.xml". Hitaext loads three files:
+  <ol>
+    <li>the <i>source</i>, which is the first chapter of the book "The cathedral and the Bazaar" from the file "sample-of-the-cathedral-and-the-bazaar.xml" in the "data" directory;</li>
+    <li>the <i>target</i>, which is the first chapter of the books translation in Dutch called "De kathedraal en de Bazaar" from the file "sample-of-de-kathedraal-en-de-bazaar.xml" in the "data" directory;</li>
+    <li>the <i>alignment</i> between XML elements from source and target, as contained in the file "alignment-sample-of-de-kathedraal-en-de-bazaar.xml"</li>
+  </ol>
+  Two windows pop up:
+    <ol>
+      <li>the <i>tree window</i> shows the tree structure of the XML elements from the source and the target</li>
+      <li>the <i>text window</i> shows the text from the source and the target</li>
+    </ol>
+    </li>
+  <li>In the tree window, click the symbol in front of the tree roots ("book") to unfold the trees. Green font color means an element/text is <i>aligned</i>; red means <i>unaligned</i>.</li>
+  <li>Walk the tree. See how the text corresponding to the selected elements gets updated in the text window, and how the aligned element(s) in the other tree are marked by a red icon (specific shape is platform dependent).</li>
+  <li>Select the two "title" elements in the tree window. Press the space bar to align them; press again to unalign them.</li>
+  <li>Look at the first sentences in the last pair of paragraps for an example of a one-to-many alignment.</li>
+  <li>How I get to the alignment? Open the file "alignment-sample-of-de-kathedraal-en-de-bazaar.xml" in a text editor. The section called "&lt;alignment&gt;" contains a list of all the aligned elements. An element like "&lt;link from_n="10" from_tag="s" to_n="10" to_tag="s"/&gt;" means "the 10th element with tag <i>s</i> in the source file is aligned with the 10th element with tag <i>s</i> in the target file".</li>
+  <li>Read on to learn more about menu options, key board shortcuts, creating your own alignment files, configuring text layout, and more.</li>
+</ul>
+
+
+<!-- --------------------------------------------------- -->
+<h2><a name="intro">Introduction</a></h2>
+<!-- --------------------------------------------------- -->
+
+<p><i>Hitaext</i> is a tool for manually <i>aligning</i> text
+fragments from two arbitrary XML documents.</p> 
+
+
+<p>The Hitaext user interface consists of three different windows: the log
+window, the tree window and the text window.</p>
+
+
+<!-- --------------------------------------------------- -->
+<h2><a name="use">Using Hitaext</a></h2>
+<!-- --------------------------------------------------- -->
+
+<h5>Starting Hitaext</h5>
+
+<p>Start Hitaext by clicking (or perhaps double clicking) on its program icon.
+The <i>log window</i> is the first visible window upon startup. It serves to
+displays messages about what is going on inside the program, including error
+messages if something goes wrong. On MS Windows and Linux, the top of the log
+window contains the <i>menubar</i>; on Mac OS X, it is located at the top of
+the screen.</p>
+
+<blockquote>
+<b>The log window</b>
+<img src="log-window.png" vspace="8pt"><br>
+<i>Note: the screenshots show Hitaext under Mac OS X and may look
+slightly different if you are running Hitaext under MS Windows or Linux.</i>
+</blockquote>
+<br>
+<br>
+
+<h5>Opening an alignment file</h5>
+
+<p>From the <i>File</i> menu, choose <i>Open</i>. Hitaext presents a
+file selection dialogue for selecting the alignment file. Go to the
+subdirectory called <kbd>data</kbd> and open the file
+<kbd>alignment-sample-of-the-cathedral-and-the-bazaar.xml</kbd>. If
+any errors are encountered during reading and processing, they will
+appear in the log window.</p>
+
+<p>After opening an alignment file, two more windows appear. The
+<i>tree window</i> shows the hierarchical structure of the XML
+documents in the form of two <i>tree controls</i>. The tree on the left
+represent the source document; the tree on the right represents the
+target document. As both trees are still completely <i>folded</i>, the
+only nodes visible are the document <i>roots</i>
+(i.e. <i>&lt;book&gt;</i>).</p>
+
+...
+
+<h5>Exploring documents</h5>
+
+<p>...</p>
+
+<h5>Altering alignments</h5>
+
+<p>...</p>
+
+<h5>Saving an alignment file</h5>
+
+<p>...</p>
+
+
+<!--
+COPIED FROM ATAEXT - MAY BE USEFULL HERE 
+
+Sentences from one text fragment are presented in the left column
+of the window; sentences from the other text are in the right column. Lines
+between sentences represent alignments. Any sentence on the left is aligned to
+zero or more sentences on the right.<p>
+
+<p>In order to modify alignments, you first have to <i>select</i> a sentence
+from the left fragment and a sentence from the right fragment. A left mouse
+click on a sentence adds it to the current <i>selection</i>, and turns its
+background gray. Clicking on an already selected sentence removes it from the
+current selection, and turns its background white again. Hitting the space bar
+<i>toggles</i> the alignment between the selected sentences: that is, if an
+alignnment exists, it will be deleted, and if no alignment exists, it will be
+added.<p> 
+
+<p>You can follow the same procedure to create alignments from a single
+sentence on the left to multiple sentences on the right (1-to-n alignment), or
+vice versa (n-to-1 alignment), or even from multiple sentences on the left to
+mutiple sentences on the right (n-to-m alignment).</p>
+
+<p>If the selection contains only sentences from one text fragment, either the
+left or the right one, hitting the space bar will delete all their alignments.
+This is a way to quicly remove unwanted alignments. Furthermore, Hitting the
+escape key clears the selection.</p>
+
+<p>At the level of text fragments, you can go to the go to the next fragment,
+return to the previous one, or edit text comments regarding the current
+fragment.<p>
+-->
+
+
+
+<!-- --------------------------------------------------- -->
+<h2><a name="create">Creating your own alignment files</a></h2>
+<!-- --------------------------------------------------- -->
+
+<h5>Preliminaries</h5>
+
+<p>This section explains how to create your won alignment files. It is
+assumed that you have have a minimal knowledge of XML, basically that
+you know understand how markup <i>tags</i> are used to create a
+hierarchical document structure of <i>elemments</i>. If you are not
+familiar with this, take a look at one of the many introduction to XML
+on the web, for instance, this <a
+href="http://www.w3schools.com/xml/">XML Tutorial</a>.</p>
+
+<p>The two XML documents we will use are shown below. The <i>source
+document</i>, which has the filename
+<kbd>sample-on-the-origin-of-species.xml</kbd>, is a small sample from the 6th
+edition of <i>On the Origin of Species</i> by Charles Darwin (available for
+free from <a href="http://www.gutenberg.org/">Project Gutenberg</a>. The
+<i>target document</i>, with filename
+<kbd>sample-over-het-ontstaan-van-de-soorten.xml</kbd>, is a corresponding sample
+from the Dutch translation.</p>
+
+<p>Both document have a simple, ad-hoc markup with <i>&lt;book</i> as the
+document root, which contains - besides <i>&lt;title&gt;</i> and
+<i>&lt;author&gt;</i> elements - a number of <i>&lt;chapter&gt;</i> elements.
+Chapters contain <i>&lt;p&gt;</i>'s (paragraphs), or <i>&lt;section&gt;</i>'s
+containing paragraphs, where paragraphs can in turn contain <i>&lt;s&gt;</i>'s
+(sentences). Actually, Hitaext does not care at all which elements are used
+and how the markup structures the text, or whether both documents use the same
+markup scheme. The only thing Hitaext insists on is that both source and
+target are <i>well-formed</i> XML documents.</p>
+
+<!-- --------------------------------------------------- -->
+<!-- START OF SAMPLE FILES                               -->
+<!-- --------------------------------------------------- -->
+
+<blockquote>
+<br>
+<b>The source file: sample-on-the-origin-of-species.xml</b>
+<br>
+<br>
+<table bgcolor="lightgrey" cellpadding="8">
+<tr>
+<td>
+<pre>
+<font  color="red">&lt;?xml version="1.0" encoding="utf-8"?&gt;</font>
+<font  color="red">&lt;book&gt;</font>
+  <font  color="red">&lt;title&gt;</font>The Origin of Species by means of Natural Selection; or, the
+Preservation of Favoured Races in the Struggle for Life.<font  color="red">&lt;/title&gt;</font>
+  <font  color="red">&lt;author&gt;</font>Charles Darwin, M.A., F.R.S.<font  color="red">&lt;/author&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+    <font  color="red">&lt;head&gt;</font>Introduction<font  color="red">&lt;/head&gt;</font>
+    <font  color="red">&lt;p&gt;</font>
+      <font  color="red">&lt;s&gt;</font>When on board H.M.S. Beagle, as naturalist, I was much struck with certain
+facts in the distribution of the organic beings inhabiting South America,
+and in the geological relations of the present to the past inhabitants of
+that continent.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>These facts, as will be seen in the latter chapters of
+this volume, seemed to throw some light on the origin of species--that
+mystery of mysteries, as it has been called by one of our greatest
+philosophers.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>On my return home, it occurred to me, in 1837, that
+something might perhaps be made out on this question by patiently
+accumulating and reflecting on all sorts of facts which could possibly have
+any bearing on it.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>After five years' work I allowed myself to speculate on
+the subject, and drew up some short notes; these I enlarged in 1844 into a
+sketch of the conclusions, which then seemed to me probable:  from that
+period to the present day I have steadily pursued the same object.<font  color="red">&lt;s/&gt;</font>I hope
+that I may be excused for entering on these personal details, as I give
+them to show that I have not been hasty in coming to a decision.<font  color="red">&lt;/s&gt;</font>
+    <font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;p&gt;</font>
+      <font  color="red">&lt;s&gt;</font>My work is now (1859) nearly finished; but as it will take me many more
+years to complete it, and as my health is far from strong, I have been
+urged to publish this abstract.<font  color="red">&lt;s/&gt;</font>I have more especially been induced to do
+this, as Mr. Wallace, who is now studying the natural history of the Malay
+Archipelago, has arrived at almost exactly the same general conclusions
+that I have on the origin of species.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>In 1858 he sent me a memoir on this
+subject, with a request that I would forward it to Sir Charles Lyell, who
+sent it to the Linnean Society, and it is published in the third volume of
+the Journal of that Society.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Sir C. Lyell and Dr. Hooker, who both knew of
+my work--the latter having read my sketch of 1844--honoured me by thinking
+it advisable to publish, with Mr. Wallace's excellent memoir, some brief
+extracts from my manuscripts.<font  color="red">&lt;/s&gt;</font>
+    <font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;p&gt;</font>[...another paragraph...]<font  color="red">&lt;/p&gt;</font>
+  <font  color="red">&lt;/chapter&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+    <font  color="red">&lt;head&gt;</font>VARIATION UNDER DOMESTICATION<font  color="red">&lt;/head&gt;</font>
+    <font  color="red">&lt;section&gt;</font>
+      <font  color="red">&lt;head&gt;</font>CAUSES OF VARIABILITY<font  color="red">&lt;/head&gt;</font>
+      <font  color="red">&lt;p&gt;</font>
+        <font  color="red">&lt;s&gt;</font>When we compare the individuals of the same variety or sub-variety of our
+older cultivated plants and animals, one of the first points which strikes
+us is, that they generally differ more from each other than do the
+individuals of any one species or variety in a state of nature.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>And if we
+reflect on the vast diversity of the plants and animals which have been
+cultivated, and which have varied during all ages under the most different
+climates and treatment, we are driven to conclude that this great
+variability is due to our domestic productions having been raised under
+conditions of life not so uniform as, and somewhat different from, those to
+which the parent species had been exposed under nature.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>There is, also,
+some probability in the view propounded by Andrew Knight, that this
+variability may be partly connected with excess of food.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>It seems clear
+that organic beings must be exposed during several generations to new
+conditions to cause any great amount of variation; and that, when the
+organisation has once begun to vary, it generally continues varying for
+many generations.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>No case is on record of a variable organism ceasing to
+vary under cultivation.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Our oldest cultivated plants, such as wheat, still
+yield new varieties:  our oldest domesticated animals are still capable of
+rapid improvement or modification.<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;/p&gt;</font>
+      <font  color="red">&lt;p&gt;</font>[...another paragraph...]<font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;/section&gt;</font>
+    <font  color="red">&lt;section&gt;</font>
+[...another section...]
+<font  color="red">&lt;/section&gt;</font>
+  <font  color="red">&lt;/chapter&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+[...another chapter...]
+<font  color="red">&lt;/chapter&gt;</font>
+<font  color="red">&lt;/book&gt;</font>
+</pre>
+</td>
+</tr>
+</table>
+
+<br>
+<b>The target file: sample-over-het-ontstaan-van-de-soorten.xml</b>
+<br>
+<br>
+<table bgcolor="lightgrey" cellpadding="8">
+<tr>
+<td>
+<pre>
+<font  color="red">&lt;?xml version="1.0" encoding="utf-8"?&gt;</font>
+<font  color="red">&lt;book&gt;</font>
+  <font  color="red">&lt;title&gt;</font>Het ontstaan van soorten door natuurlijke selectie ofwel het bewaard 
+blijven van rassen die in het voordeel zijn in de strijd om het bestaan<font  color="red">&lt;/title&gt;</font>
+  <font  color="red">&lt;author&gt;</font>Charles Darwin<font  color="red">&lt;/author&gt;</font>
+  <font  color="red">&lt;translator&gt;</font>Ruud Rook<font  color="red">&lt;/translator&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+    <font  color="red">&lt;head&gt;</font>Inleiding<font  color="red">&lt;/head&gt;</font>
+    <font  color="red">&lt;p&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Toen ik als natuuronderzoeker aan boord van Zijne Majesteits Beagle 
+vertoefde , vielen mij bepaalde feiten op omtrent de verspreiding van de 
+levende wezens van Zuid-Amerika en de geologische relaties tussen de huidige en 
+de vroegere bewoners van genoemd werelddeel .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Deze feiten schenen , zoals zal blijken uit de laatste hoofdstukken 
+van dit boek , enig licht te werpen op het ontstaan van soorten -- het raadsel 
+der raadselen , zoals een van onze grootste wijsgeren het noemde .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Na mijn terugkeer in Engeland kwam ik in 1837 op de gedachte dat het 
+raadsel misschien kon worden opgelost door geduldig allerlei gegevens die er 
+mogelijk verband mee hielden te vergaren en de revue te laten passeren .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Na vijf jaar studie stond ik mezelf bespiegelingen over dit onderwerp 
+toe en maakte ik enkele korte notities .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>In 1844 werkte ik die uit tot een schets van wat me op dat moment 
+waarschijnlijke bevindingen leken .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Sindsdien heb ik me ononderbroken met dit onderwerp beziggehouden .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Ik hoop dat deze persoonlijke details mij niet euvel worden geduid , 
+want ik vermeld ze slechts om aan te tonen dat ik mijn conclusies niet 
+overhaast heb getrokken .<font  color="red">&lt;/s&gt;</font>
+    <font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;p&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Mijn werk is nu ( 1859 ) bijna gereed .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Maar omdat de voltooiing ervan nog vele jaren zal vergen , en omdat 
+mijn gezondheid verre van volmaakt is , werd op publicatie van deze 
+samenvatting aangedrongen .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Ik ben hiertoe in het bijzonder aangezet omdat Mr. Wallace , die thans 
+de natuurlijke historie van de Maleise archipel bestudeert , tot vrijwel 
+dezelfde slotsom omtrent het ontstaan van soorten is gekomen als ik .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>In 1858 stuurde hij mij over dit onderwerp een opstel , met het 
+verzoek het Sir Charles Lyell ter hand te stellen , die het doorstuurde naar de 
+Linnean Society .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Het is gepubliceerd in het derde deel van het Journal van genoemde 
+instelling .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;s&gt;</font>Sir C.Lyell en dr. Hooker , die beiden bekend waren met mijn werk -- 
+laatstgenoemde had mijn schets uit 1844 gelezen -- , gaven te kennen dat het 
+raadzaam zou zijn om , nu het uitstekende opstel van Mr. Wallace er was , tot 
+publicatie over te gaan van korte uittreksels van mijn manuscripten .<font  color="red">&lt;/s&gt;</font>
+    <font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;p&gt;</font> [...nog een paragraaf...]<font  color="red">&lt;/p&gt;</font>
+  <font  color="red">&lt;/chapter&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+    <font  color="red">&lt;head&gt;</font>VARIATIE BIJ GEDOMESTICEERDE PLANTEN EN DIEREN<font  color="red">&lt;/head&gt;</font>
+    <font  color="red">&lt;section&gt;</font>
+      <font  color="red">&lt;head&gt;</font>Oorzaken van variabiliteit<font  color="red">&lt;/head&gt;</font>
+      <font  color="red">&lt;p&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Wanneer we de individuen van dezelfde variëteit of subvariëteit 
+van onze oude cultuurplanten en huisdieren vergelijken , is een van de eerste 
+punten die ons opvallen dat ze doorgaans onderling meer verschillen dan 
+individuen van soorten of variëteiten in de vrije natuur .<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>En als wij onze gedachten laten gaan over de enorme verscheidenheid 
+aan planten en dieren die gecultiveerd zijn , en die reeds van oudsher in alle 
+mogelijke klimaten en dankzij de meest uiteenlopende behandelingen variëren , 
+dan dringt zich de conclusie op dat deze grote variabiliteit het gevolg is van 
+de omstandigheid dat gedomesticeerde dieren en planten ontstaan zijn onder 
+leefomstandigheden die minder eenvormig zijn dan en enigszins verschillen van 
+die waaraan de oorspronkelijke soorten in de vrije natuur waren blootgesteld 
+.<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Ook is er iets te zeggen voor het standpunt van Andrew Knight dat 
+deze variabiliteit deels toe te schrijven is aan een overdaad aan voedsel .<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Het lijkt duidelijk dat er pas variatie in enige omvang kan 
+op­treden , als levende wezens in de loop van verscheidene generaties aan 
+nieuwe omstandigheden zijn blootgesteld , en dat als de structuur eenmaal 
+begonnen is te variëren , deze meestal in de loop van vele generaties blijft 
+variëren .<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Er is geen voorbeeld bekend van een variabel organisme dat in 
+gedomesticeerde toestand op is gehouden met variëren .<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Onze oudste cultuurgewassen , zoals tarwe , brengen nog steeds 
+nieuwe variëteiten voort .<font  color="red">&lt;/s&gt;</font>
+        <font  color="red">&lt;s&gt;</font>Nog steeds kunnen onze oudste gedomesticeerde dieren snel worden 
+veredeld of veranderd .<font  color="red">&lt;/s&gt;</font>
+      <font  color="red">&lt;/p&gt;</font>
+      <font  color="red">&lt;p&gt;</font> [...nog een paragraaf...]<font  color="red">&lt;/p&gt;</font>
+    <font  color="red">&lt;/section&gt;</font>
+    <font  color="red">&lt;section&gt;</font>
+[...nog een sectie...]
+<font  color="red">&lt;/section&gt;</font>
+  <font  color="red">&lt;/chapter&gt;</font>
+  <font  color="red">&lt;chapter&gt;</font>
+[...nog een hoofdstuk...]
+<font  color="red">&lt;/chapter&gt;</font>
+<font  color="red">&lt;/book&gt;</font>
+</pre>
+</td>
+</tr>
+</table>
+</blockquote>
+<br>
+<br>
+
+<!-- --------------------------------------------------- -->
+<!-- END OF SAMPLE FILES                                 -->
+<!-- --------------------------------------------------- -->
+
+<h5>Step 1: create</h5>
+
+<p>Choose New from the File menu. Choose source and target files. Save
+alignment file.</p>
+
+<p>Notice that the text is rendered in the text window as a single
+long string. We want tweak the rendering so we can distinguish
+sentences and paragraphs more easily.</p>
+
+<p>Remark: the following steps will be supported by the GUI in future
+version of Hitaext.</p>
+
+<h5>Step 2: tweak</h5>
+
+<p>Open alignment file in a text editor. It should look like the
+example below.</p>
+
+<blockquote>
+<br>
+<b>The alignment file: alignment-sample-on-the-origin-of-species.xml</b>
+<br>
+<br>
+<table bgcolor="lightgrey" cellpadding="8">
+<tr>
+<td>
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;hitaext&gt;
+  &lt;from&gt;
+    &lt;filename&gt;data/sample-on-the-origin-of-species.xml&lt;/filename&gt;
+    &lt;render&gt;
+      &lt;font/&gt;
+      &lt;elements pseudo_root="book"&gt;
+        &lt;book blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;title blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;author blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;chapter blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;head blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;p blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;s blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;section blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+      &lt;/elements&gt;
+    &lt;/render&gt;
+  &lt;/from&gt;
+  &lt;to&gt;
+    &lt;filename&gt;data/sample-over-het-ontstaan-van-de-soorten.xml&lt;/filename&gt;
+    &lt;render&gt;
+      &lt;font/&gt;
+      &lt;elements pseudo_root="book"&gt;
+        &lt;book blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;title blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;author blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;translator blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;chapter blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;head blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;p blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;s blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;section blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+      &lt;/elements&gt;
+    &lt;/render&gt;
+  &lt;/to&gt;
+  &lt;alignment/&gt;
+&lt;/hitaext&gt;
+
+</pre>
+</td>
+</tr>
+</table>
+</table>
+</blockquote>
+
+<p>The first &lt;elements&gt; contains all the elements occurring in
+the source document; the second one all those in the target
+document. You can tweak the way these elements are rendered in Hitaext
+by changing their attributes. Attributes are booleans and can have the
+value True of False. Explanation:</p>
+
+
+<table border="1" cellpadding="4" style="font-size: 100%;font-family: Verdana, Arial, Helvetica, Sans-serif;">
+<tr>
+<td><b>Attribute:</b></td>
+<td><b>Effect:</b></td>
+</tr>
+
+<tr>
+<td><kbd>blankline</kbd></td>
+<td>insert a blank line after the elements's text in the text window</td>
+</tr>
+
+<tr>
+<td><kbd>ignore</kbd></td>
+<td>the element and all its child elements are ignored in the tree and text window - like they do not exist</td>
+</tr>
+
+<tr>
+<td><kbd>newline</kbd></td>
+<td>insert a new line character after the elements's text in the text window</td>
+</tr>
+
+<tr>
+<td><kbd>skip</kbd></td>
+<td>the elements is skipped in the tree window - does not affect its text or child elements</td>
+</tr>
+
+<tr>
+<td><kbd>uniq</kbd></td>
+<td>an administrative features that records whether an element is unique in the document - do not change</td>
+</tr>
+
+</table>
+
+<p>A tweaked version of the same alignment file might look like below.</p>
+
+<blockquote>
+<br>
+<b>The alignment file: alignment-sample-on-the-origin-of-species.xml</b>
+<br>
+<br>
+<table bgcolor="lightgrey" cellpadding="8">
+<tr>
+<td>
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;hitaext&gt;
+  &lt;from&gt;
+    &lt;filename&gt;data/sample-on-the-origin-of-species.xml&lt;/filename&gt;
+    &lt;render&gt;
+      &lt;font/&gt;
+      &lt;elements pseudo_root="book"&gt;
+        &lt;book blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;title blankline="True" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;author blankline="True" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;chapter blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;head blankline="True" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;p blankline="True" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;s blankline="False" ignore="False" newline="True" skip="False" uniq="False"/&gt;
+        &lt;section blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+      &lt;/elements&gt;
+    &lt;/render&gt;
+  &lt;/from&gt;
+  &lt;to&gt;
+    &lt;filename&gt;data/sample-over-het-ontstaan-van-de-soorten.xml&lt;/filename&gt;
+    &lt;render&gt;
+      &lt;font/&gt;
+      &lt;elements pseudo_root="book"&gt;
+        &lt;book blankline="False" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;title blankline="True" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;author blankline="True" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;translator blankline="True" ignore="False" newline="False" skip="False" uniq="True"/&gt;
+        &lt;chapter blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;head blankline="True" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;p blankline="True" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+        &lt;s blankline="False" ignore="False" newline="True" skip="False" uniq="False"/&gt;
+        &lt;section blankline="False" ignore="False" newline="False" skip="False" uniq="False"/&gt;
+      &lt;/elements&gt;
+    &lt;/render&gt;
+  &lt;/to&gt;
+  &lt;alignment/&gt;
+&lt;/hitaext&gt;
+
+</pre>
+</td>
+</tr>
+</table>
+</table>
+</blockquote>
+
+
+
+<p>Now save the alignment file.</p>
+
+<h5>Step 3: reload</h5>
+
+<p>Choose Open from the File menu and reload the alignment. Check lay
+out. If you are not satisfied, edit the alignment file and reopen.</p>
+
+
+
+
+
+
+<!-- --------------------------------------------------- -->
+<h2><a name="ref">Reference</a></h2>
+<!-- --------------------------------------------------- -->
+
+<h3>Menus</h3>
+
+<h4>File menu</h4>
+
+...
+
+<!--
+<table border="1" cellpadding="8">
+<tr>
+<td><b>Item:</b></td>
+<td><b>Effect:</b></td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Shows a file dialog box which allows you to select a file containing a corpus in Daeso XML format.</td>
+</tr>
+<tr>
+<td>Reopen</td>
+<td>Reads the orginal corpus from file, discarding all changes (if any).</td>
+</tr>
+<tr>
+<td>Save</td>
+<td>Write the corpus to file.</td>
+</tr>
+<tr>
+<td>Save As</td>
+<td>Shows a file dialog box which allows you to select a (new) file to write the corpus to.</td>
+</tr>
+<tr>
+<td>Quit</td>
+<td>Quit Ataext</td>
+</tr>
+</table>
+
+<h3>Fragment menu</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+<td><b>Item:</b></td>
+<td><b>Effect:</b></td>
+</tr>
+<tr>
+<td>Previous</td>
+<td>Go to the previous text fragment</td>
+</tr>
+<tr>
+<td>Next</td>
+<td>Go to the next text fragment</td>
+</tr>
+<tr>
+<td>Edit Comments</td>
+<td>Edit the comments for the current text fragment</td>
+</tr>
+</table>
+
+<h3>Sentence menu</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+<td><b>Item:</b></td>
+<td><b>Effect:</b></td>
+</tr>
+<tr>
+<td>Toggle Aligment</td>
+<td>Toggles the alignment between the selected sentences; 
+existing alignments between selected sentences are deleted, 
+whereas non-existing alignments are inserted</td>
+</tr>
+</table>
+
+
+
+<hr>
+-->
+
+
+<h3>Keys</h3>
+
+<p>The tree window supports the following key strokes:</p>
+
+<table border="1" cellpadding="4" style="font-size: 100%;font-family: Verdana, Arial, Helvetica, Sans-serif;">
+<tr>
+<td><b>Key:</b></td>
+<td><b>Effect:</b></td>
+</tr>
+
+<tr>
+<td><kbd>Up arrow</kbd></td>
+<td>select previous element (skipping collapsed parts of the tree)</td>
+</tr>
+
+<tr>
+<td><kbd>Down arrow</kbd></td>
+<td>select next element (skipping collapsed parts of the tree)</td>
+</tr>
+
+<tr>
+<td><kbd>Right arrow</kbd></td>
+<td>Expand subtree and select first child element (for non-terminal elements, otherwise same as down arrow)</td>
+</tr>
+
+<tr>
+<td><kbd>Left arrow</kbd></td>
+<td>Select parent element and collapse subtree</td>
+</tr>
+
+<tr>
+<td><kbd>Tab</kbd></td>
+<td>Change focus between source and target trees</td>
+</tr>
+
+<tr>
+<td><kbd>Ctrl + Tab</kbd></td>
+<td>Select aligned element in other tree; repeat to visit the other aligned elements (for one-to-many alignments)</td>
+</tr>
+
+<tr>
+<td><kbd>Spacebar</kbd></td>
+<td>Toggles alignment between selected elements</td>
+</tr>
+
+</table>
+
+
+
+
+</body>
+</html>

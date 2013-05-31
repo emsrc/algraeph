@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parallel_graph_corpus>
+  <corpus_meta_data>
+    <version>$Id:$</version>
+  </corpus_meta_data>
+  <graphbanks>
+    <file format="graphml" id="1">graphbank_RTE2_dev-dep-SUM.xml</file>
+  </graphbanks>
+  <node_relations>
+    <relation>equals</relation>
+    <relation>restates</relation>
+    <relation>specifies</relation>
+    <relation>generalizes</relation>
+    <relation>intersects</relation>
+  </node_relations>
+  <aligned_graphs>
+    <graph_pair from_bank_id="1" from_graph_id="p2t1" n="1" to_bank_id="1" to_graph_id="p2h1">
+      <aligned_nodes>
+        <node_pair from_node_id="3" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="4" relation="specifies" to_node_id="2"/>
+        <node_pair from_node_id="21" relation="equals" to_node_id="8"/>
+        <node_pair from_node_id="22" relation="specifies" to_node_id="9"/>
+        <node_pair from_node_id="18" relation="specifies" to_node_id="6"/>
+        <node_pair from_node_id="17" relation="specifies" to_node_id="5"/>
+        <node_pair from_node_id="6" relation="specifies" to_node_id="4"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:2
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p5t1" n="2" to_bank_id="1" to_graph_id="p5h1">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="14" relation="specifies" to_node_id="12"/>
+        <node_pair from_node_id="11" relation="equals" to_node_id="9"/>
+        <node_pair from_node_id="12" relation="equals" to_node_id="10"/>
+        <node_pair from_node_id="13" relation="equals" to_node_id="11"/>
+        <node_pair from_node_id="7" relation="specifies" to_node_id="2"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:5
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p9t1" n="3" to_bank_id="1" to_graph_id="p9h1">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="equals" to_node_id="2"/>
+        <node_pair from_node_id="1" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="4" relation="restates" to_node_id="3"/>
+        <node_pair from_node_id="5" relation="specifies" to_node_id="4"/>
+        <node_pair from_node_id="14" relation="specifies" to_node_id="8"/>
+        <node_pair from_node_id="12" relation="equals" to_node_id="7"/>
+        <node_pair from_node_id="6" relation="equals" to_node_id="5"/>
+        <node_pair from_node_id="15" relation="specifies" to_node_id="9"/>
+        <node_pair from_node_id="21" relation="specifies" to_node_id="10"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:9
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p21t1" n="4" to_bank_id="1" to_graph_id="p21h1">
+      <aligned_nodes>
+        <node_pair from_node_id="1" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="2" relation="restates" to_node_id="2"/>
+        <node_pair from_node_id="3" relation="equals" to_node_id="3"/>
+        <node_pair from_node_id="10" relation="intersects" to_node_id="4"/>
+        <node_pair from_node_id="16" relation="equals" to_node_id="14"/>
+        <node_pair from_node_id="8" relation="equals" to_node_id="11"/>
+        <node_pair from_node_id="7" relation="restates" to_node_id="10"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:21
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p22t1" n="5" to_bank_id="1" to_graph_id="p22h1">
+      <aligned_nodes>
+        <node_pair from_node_id="1" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="13" relation="specifies" to_node_id="6"/>
+        <node_pair from_node_id="14" relation="specifies" to_node_id="7"/>
+        <node_pair from_node_id="12" relation="specifies" to_node_id="5"/>
+        <node_pair from_node_id="11" relation="specifies" to_node_id="4"/>
+        <node_pair from_node_id="2" relation="intersects" to_node_id="3"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:22
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p26t1" n="6" to_bank_id="1" to_graph_id="p26h1">
+      <aligned_nodes>
+        <node_pair from_node_id="3" relation="equals" to_node_id="8"/>
+        <node_pair from_node_id="2" relation="equals" to_node_id="7"/>
+        <node_pair from_node_id="1" relation="equals" to_node_id="6"/>
+        <node_pair from_node_id="4" relation="equals" to_node_id="9"/>
+        <node_pair from_node_id="12" relation="intersects" to_node_id="1"/>
+        <node_pair from_node_id="9" relation="equals" to_node_id="18"/>
+        <node_pair from_node_id="10" relation="equals" to_node_id="19"/>
+        <node_pair from_node_id="7" relation="specifies" to_node_id="16"/>
+        <node_pair from_node_id="6" relation="equals" to_node_id="15"/>
+        <node_pair from_node_id="8" relation="equals" to_node_id="17"/>
+        <node_pair from_node_id="5" relation="specifies" to_node_id="E1"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:26
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p28t1" n="7" to_bank_id="1" to_graph_id="p28h1">
+      <aligned_nodes>
+        <node_pair from_node_id="1" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="4" relation="specifies" to_node_id="4"/>
+        <node_pair from_node_id="3" relation="equals" to_node_id="3"/>
+        <node_pair from_node_id="26" relation="specifies" to_node_id="11"/>
+        <node_pair from_node_id="22" relation="equals" to_node_id="7"/>
+        <node_pair from_node_id="25" relation="equals" to_node_id="10"/>
+        <node_pair from_node_id="23" relation="equals" to_node_id="8"/>
+        <node_pair from_node_id="24" relation="equals" to_node_id="9"/>
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:28
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p29t1" n="8" to_bank_id="1" to_graph_id="p29h1">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="specifies" to_node_id="3"/>
+        <node_pair from_node_id="5" relation="equals" to_node_id="2"/>
+        <node_pair from_node_id="4" relation="specifies" to_node_id="1"/>
+        <node_pair from_node_id="18" relation="equals" to_node_id="9"/>
+        <node_pair from_node_id="17" relation="equals" to_node_id="8"/>
+        <node_pair from_node_id="E6" relation="intersects" to_node_id="E1"/>
+        <node_pair from_node_id="8" relation="intersects" to_node_id="5"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:29
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p37t1" n="9" to_bank_id="1" to_graph_id="p37h1">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="equals" to_node_id="2"/>
+        <node_pair from_node_id="1" relation="equals" to_node_id="1"/>
+        <node_pair from_node_id="10" relation="specifies" to_node_id="4"/>
+        <node_pair from_node_id="11" relation="specifies" to_node_id="5"/>
+        <node_pair from_node_id="13" relation="specifies" to_node_id="7"/>
+        <node_pair from_node_id="15" relation="intersects" to_node_id="13"/>
+        <node_pair from_node_id="17" relation="intersects" to_node_id="9"/>
+        <node_pair from_node_id="3" relation="specifies" to_node_id="3"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:37
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p39t1" n="10" to_bank_id="1" to_graph_id="p39h1">
+      <aligned_nodes>
+        <node_pair from_node_id="22" relation="restates" to_node_id="3"/>
+        <node_pair from_node_id="7" relation="intersects" to_node_id="12"/>
+        <node_pair from_node_id="1" relation="equals" to_node_id="9"/>
+        <node_pair from_node_id="5" relation="equals" to_node_id="10"/>
+        <node_pair from_node_id="6" relation="equals" to_node_id="11"/>
+        <node_pair from_node_id="14" relation="generalizes" to_node_id="7"/>
+        <node_pair from_node_id="13" relation="equals" to_node_id="6"/>
+        <node_pair from_node_id="16" relation="specifies" to_node_id="14"/>
+        <node_pair from_node_id="17" relation="specifies" to_node_id="15"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>pair id:39
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p55t1" n="11" to_bank_id="1" to_graph_id="p55h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:55
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p57t1" n="12" to_bank_id="1" to_graph_id="p57h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:57
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p64t1" n="13" to_bank_id="1" to_graph_id="p64h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:64
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p69t1" n="14" to_bank_id="1" to_graph_id="p69h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:69
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p73t1" n="15" to_bank_id="1" to_graph_id="p73h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:73
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p74t1" n="16" to_bank_id="1" to_graph_id="p74h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:74
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p77t1" n="17" to_bank_id="1" to_graph_id="p77h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:77
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p81t1" n="18" to_bank_id="1" to_graph_id="p81h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:81
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p82t1" n="19" to_bank_id="1" to_graph_id="p82h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:82
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p83t1" n="20" to_bank_id="1" to_graph_id="p83h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:83
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p86t1" n="21" to_bank_id="1" to_graph_id="p86h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:86
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p88t1" n="22" to_bank_id="1" to_graph_id="p88h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:88
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p89t1" n="23" to_bank_id="1" to_graph_id="p89h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:89
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p92t1" n="24" to_bank_id="1" to_graph_id="p92h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:92
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p109t1" n="25" to_bank_id="1" to_graph_id="p109h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:109
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p112t1" n="26" to_bank_id="1" to_graph_id="p112h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:112
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p113t1" n="27" to_bank_id="1" to_graph_id="p113h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:113
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p118t1" n="28" to_bank_id="1" to_graph_id="p118h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:118
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p124t1" n="29" to_bank_id="1" to_graph_id="p124h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:124
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p126t1" n="30" to_bank_id="1" to_graph_id="p126h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:126
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p128t1" n="31" to_bank_id="1" to_graph_id="p128h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:128
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p131t1" n="32" to_bank_id="1" to_graph_id="p131h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:131
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p133t1" n="33" to_bank_id="1" to_graph_id="p133h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:133
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p139t1" n="34" to_bank_id="1" to_graph_id="p139h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:139
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p143t1" n="35" to_bank_id="1" to_graph_id="p143h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:143
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p154t1" n="36" to_bank_id="1" to_graph_id="p154h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:154
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p156t1" n="37" to_bank_id="1" to_graph_id="p156h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:156
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p159t1" n="38" to_bank_id="1" to_graph_id="p159h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:159
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p160t1" n="39" to_bank_id="1" to_graph_id="p160h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:160
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p165t1" n="40" to_bank_id="1" to_graph_id="p165h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:165
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p168t1" n="41" to_bank_id="1" to_graph_id="p168h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:168
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p170t1" n="42" to_bank_id="1" to_graph_id="p170h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:170
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p177t1" n="43" to_bank_id="1" to_graph_id="p177h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:177
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p180t1" n="44" to_bank_id="1" to_graph_id="p180h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:180
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p188t1" n="45" to_bank_id="1" to_graph_id="p188h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:188
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p189t1" n="46" to_bank_id="1" to_graph_id="p189h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:189
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p195t1" n="47" to_bank_id="1" to_graph_id="p195h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:195
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p199t1" n="48" to_bank_id="1" to_graph_id="p199h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:199
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p201t1" n="49" to_bank_id="1" to_graph_id="p201h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:201
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p204t1" n="50" to_bank_id="1" to_graph_id="p204h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:204
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p211t1" n="51" to_bank_id="1" to_graph_id="p211h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:211
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p217t1" n="52" to_bank_id="1" to_graph_id="p217h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:217
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p224t1" n="53" to_bank_id="1" to_graph_id="p224h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:224
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p233t1" n="54" to_bank_id="1" to_graph_id="p233h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:233
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p241t1" n="55" to_bank_id="1" to_graph_id="p241h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:241
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p242t1" n="56" to_bank_id="1" to_graph_id="p242h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:242
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p252t1" n="57" to_bank_id="1" to_graph_id="p252h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:252
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p253t1" n="58" to_bank_id="1" to_graph_id="p253h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:253
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p256t1" n="59" to_bank_id="1" to_graph_id="p256h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:256
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p257t1" n="60" to_bank_id="1" to_graph_id="p257h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:257
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p261t1" n="61" to_bank_id="1" to_graph_id="p261h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:261
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p265t1" n="62" to_bank_id="1" to_graph_id="p265h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:265
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p267t1" n="63" to_bank_id="1" to_graph_id="p267h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:267
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p269t1" n="64" to_bank_id="1" to_graph_id="p269h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:269
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p278t1" n="65" to_bank_id="1" to_graph_id="p278h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:278
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p279t1" n="66" to_bank_id="1" to_graph_id="p279h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:279
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p280t1" n="67" to_bank_id="1" to_graph_id="p280h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:280
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p281t1" n="68" to_bank_id="1" to_graph_id="p281h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:281
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p286t1" n="69" to_bank_id="1" to_graph_id="p286h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:286
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p292t1" n="70" to_bank_id="1" to_graph_id="p292h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:292
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p295t1" n="71" to_bank_id="1" to_graph_id="p295h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:295
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p296t1" n="72" to_bank_id="1" to_graph_id="p296h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:296
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p306t1" n="73" to_bank_id="1" to_graph_id="p306h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:306
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p309t1" n="74" to_bank_id="1" to_graph_id="p309h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:309
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p316t1" n="75" to_bank_id="1" to_graph_id="p316h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:316
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p317t1" n="76" to_bank_id="1" to_graph_id="p317h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:317
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p319t1" n="77" to_bank_id="1" to_graph_id="p319h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:319
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p320t1" n="78" to_bank_id="1" to_graph_id="p320h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:320
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p323t1" n="79" to_bank_id="1" to_graph_id="p323h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:323
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p326t1" n="80" to_bank_id="1" to_graph_id="p326h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:326
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p330t1" n="81" to_bank_id="1" to_graph_id="p330h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:330
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p337t1" n="82" to_bank_id="1" to_graph_id="p337h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:337
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p339t1" n="83" to_bank_id="1" to_graph_id="p339h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:339
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p340t1" n="84" to_bank_id="1" to_graph_id="p340h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:340
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p341t1" n="85" to_bank_id="1" to_graph_id="p341h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:341
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p347t1" n="86" to_bank_id="1" to_graph_id="p347h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:347
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p348t1" n="87" to_bank_id="1" to_graph_id="p348h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:348
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p356t1" n="88" to_bank_id="1" to_graph_id="p356h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:356
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p357t1" n="89" to_bank_id="1" to_graph_id="p357h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:357
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p359t1" n="90" to_bank_id="1" to_graph_id="p359h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:359
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p366t1" n="91" to_bank_id="1" to_graph_id="p366h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:366
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p368t1" n="92" to_bank_id="1" to_graph_id="p368h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:368
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p373t1" n="93" to_bank_id="1" to_graph_id="p373h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:373
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p374t1" n="94" to_bank_id="1" to_graph_id="p374h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:374
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p376t1" n="95" to_bank_id="1" to_graph_id="p376h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:376
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p377t1" n="96" to_bank_id="1" to_graph_id="p377h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:377
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p379t1" n="97" to_bank_id="1" to_graph_id="p379h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:379
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p382t1" n="98" to_bank_id="1" to_graph_id="p382h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:382
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p394t1" n="99" to_bank_id="1" to_graph_id="p394h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:394
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p398t1" n="100" to_bank_id="1" to_graph_id="p398h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:398
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p400t1" n="101" to_bank_id="1" to_graph_id="p400h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:400
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p420t1" n="102" to_bank_id="1" to_graph_id="p420h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:420
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p424t1" n="103" to_bank_id="1" to_graph_id="p424h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:424
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p426t1" n="104" to_bank_id="1" to_graph_id="p426h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:426
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p432t1" n="105" to_bank_id="1" to_graph_id="p432h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:432
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p437t1" n="106" to_bank_id="1" to_graph_id="p437h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:437
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p442t1" n="107" to_bank_id="1" to_graph_id="p442h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:442
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p444t1" n="108" to_bank_id="1" to_graph_id="p444h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:444
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p445t1" n="109" to_bank_id="1" to_graph_id="p445h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:445
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p446t1" n="110" to_bank_id="1" to_graph_id="p446h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:446
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p447t1" n="111" to_bank_id="1" to_graph_id="p447h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:447
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p448t1" n="112" to_bank_id="1" to_graph_id="p448h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:448
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p449t1" n="113" to_bank_id="1" to_graph_id="p449h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:449
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p452t1" n="114" to_bank_id="1" to_graph_id="p452h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:452
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p456t1" n="115" to_bank_id="1" to_graph_id="p456h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:456
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p458t1" n="116" to_bank_id="1" to_graph_id="p458h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:458
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p470t1" n="117" to_bank_id="1" to_graph_id="p470h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:470
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p474t1" n="118" to_bank_id="1" to_graph_id="p474h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:474
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p476t1" n="119" to_bank_id="1" to_graph_id="p476h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:476
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p479t1" n="120" to_bank_id="1" to_graph_id="p479h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:479
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p486t1" n="121" to_bank_id="1" to_graph_id="p486h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:486
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p494t1" n="122" to_bank_id="1" to_graph_id="p494h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:494
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p495t1" n="123" to_bank_id="1" to_graph_id="p495h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:495
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p501t1" n="124" to_bank_id="1" to_graph_id="p501h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:501
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p502t1" n="125" to_bank_id="1" to_graph_id="p502h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:502
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p507t1" n="126" to_bank_id="1" to_graph_id="p507h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:507
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p509t1" n="127" to_bank_id="1" to_graph_id="p509h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:509
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p510t1" n="128" to_bank_id="1" to_graph_id="p510h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:510
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p519t1" n="129" to_bank_id="1" to_graph_id="p519h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:519
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p522t1" n="130" to_bank_id="1" to_graph_id="p522h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:522
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p527t1" n="131" to_bank_id="1" to_graph_id="p527h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:527
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p529t1" n="132" to_bank_id="1" to_graph_id="p529h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:529
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p531t1" n="133" to_bank_id="1" to_graph_id="p531h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:531
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p533t1" n="134" to_bank_id="1" to_graph_id="p533h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:533
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p540t1" n="135" to_bank_id="1" to_graph_id="p540h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:540
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p543t1" n="136" to_bank_id="1" to_graph_id="p543h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:543
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p544t1" n="137" to_bank_id="1" to_graph_id="p544h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:544
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p552t1" n="138" to_bank_id="1" to_graph_id="p552h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:552
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p560t1" n="139" to_bank_id="1" to_graph_id="p560h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:560
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p565t1" n="140" to_bank_id="1" to_graph_id="p565h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:565
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p574t1" n="141" to_bank_id="1" to_graph_id="p574h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:574
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p577t1" n="142" to_bank_id="1" to_graph_id="p577h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:577
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p579t1" n="143" to_bank_id="1" to_graph_id="p579h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:579
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p586t1" n="144" to_bank_id="1" to_graph_id="p586h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:586
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p595t1" n="145" to_bank_id="1" to_graph_id="p595h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:595
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p602t1" n="146" to_bank_id="1" to_graph_id="p602h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:602
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p606t1" n="147" to_bank_id="1" to_graph_id="p606h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:606
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p608t1" n="148" to_bank_id="1" to_graph_id="p608h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:608
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p609t1" n="149" to_bank_id="1" to_graph_id="p609h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:609
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p610t1" n="150" to_bank_id="1" to_graph_id="p610h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:610
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p612t1" n="151" to_bank_id="1" to_graph_id="p612h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:612
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p615t1" n="152" to_bank_id="1" to_graph_id="p615h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:615
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p616t1" n="153" to_bank_id="1" to_graph_id="p616h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:616
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p629t1" n="154" to_bank_id="1" to_graph_id="p629h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:629
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p631t1" n="155" to_bank_id="1" to_graph_id="p631h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:631
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p634t1" n="156" to_bank_id="1" to_graph_id="p634h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:634
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p643t1" n="157" to_bank_id="1" to_graph_id="p643h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:643
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p644t1" n="158" to_bank_id="1" to_graph_id="p644h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:644
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p645t1" n="159" to_bank_id="1" to_graph_id="p645h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:645
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p650t1" n="160" to_bank_id="1" to_graph_id="p650h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:650
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p664t1" n="161" to_bank_id="1" to_graph_id="p664h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:664
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p666t1" n="162" to_bank_id="1" to_graph_id="p666h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:666
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p667t1" n="163" to_bank_id="1" to_graph_id="p667h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:667
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p672t1" n="164" to_bank_id="1" to_graph_id="p672h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:672
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p674t1" n="165" to_bank_id="1" to_graph_id="p674h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:674
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p681t1" n="166" to_bank_id="1" to_graph_id="p681h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:681
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p682t1" n="167" to_bank_id="1" to_graph_id="p682h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:682
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p688t1" n="168" to_bank_id="1" to_graph_id="p688h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:688
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p689t1" n="169" to_bank_id="1" to_graph_id="p689h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:689
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p694t1" n="170" to_bank_id="1" to_graph_id="p694h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:694
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p696t1" n="171" to_bank_id="1" to_graph_id="p696h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:696
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p698t1" n="172" to_bank_id="1" to_graph_id="p698h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:698
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p699t1" n="173" to_bank_id="1" to_graph_id="p699h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:699
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p704t1" n="174" to_bank_id="1" to_graph_id="p704h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:704
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p714t1" n="175" to_bank_id="1" to_graph_id="p714h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:714
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p720t1" n="176" to_bank_id="1" to_graph_id="p720h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:720
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p730t1" n="177" to_bank_id="1" to_graph_id="p730h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:730
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p733t1" n="178" to_bank_id="1" to_graph_id="p733h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:733
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p733t2" n="179" to_bank_id="1" to_graph_id="p733h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:733
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p738t1" n="180" to_bank_id="1" to_graph_id="p738h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:738
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p741t1" n="181" to_bank_id="1" to_graph_id="p741h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:741
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p747t1" n="182" to_bank_id="1" to_graph_id="p747h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:747
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p749t1" n="183" to_bank_id="1" to_graph_id="p749h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:749
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p758t1" n="184" to_bank_id="1" to_graph_id="p758h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:758
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p758t2" n="185" to_bank_id="1" to_graph_id="p758h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:758
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p760t1" n="186" to_bank_id="1" to_graph_id="p760h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:760
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p766t1" n="187" to_bank_id="1" to_graph_id="p766h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:766
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p768t1" n="188" to_bank_id="1" to_graph_id="p768h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:768
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p769t1" n="189" to_bank_id="1" to_graph_id="p769h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:769
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p770t1" n="190" to_bank_id="1" to_graph_id="p770h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:770
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p771t1" n="191" to_bank_id="1" to_graph_id="p771h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:771
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p772t1" n="192" to_bank_id="1" to_graph_id="p772h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:772
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p774t1" n="193" to_bank_id="1" to_graph_id="p774h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:774
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p782t1" n="194" to_bank_id="1" to_graph_id="p782h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:782
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p783t1" n="195" to_bank_id="1" to_graph_id="p783h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:783
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p784t1" n="196" to_bank_id="1" to_graph_id="p784h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:784
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p787t1" n="197" to_bank_id="1" to_graph_id="p787h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:787
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p789t1" n="198" to_bank_id="1" to_graph_id="p789h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:789
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p794t1" n="199" to_bank_id="1" to_graph_id="p794h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:794
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p798t1" n="200" to_bank_id="1" to_graph_id="p798h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:798
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p799t1" n="201" to_bank_id="1" to_graph_id="p799h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:799
+task: SUM
+entailment: YES
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="p800t1" n="202" to_bank_id="1" to_graph_id="p800h1">
+      <aligned_nodes/>
+      <graph_meta_data>
+        <comment>pair id:800
+task: SUM
+entailment: NO
+</comment>
+      </graph_meta_data>
+    </graph_pair>
+  </aligned_graphs>
+</parallel_graph_corpus>

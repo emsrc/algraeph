@@ -1,0 +1,246 @@
+================================================================================
+
+	ALGRAEPH INSTALL
+
+================================================================================
+
+Algraeph
+Version 1.0
+
+Copyright (C) 2007-2013 by Erwin Marsi and TST-Central
+
+http://daeso.uvt.nl/algraeph
+e.marsi@gmail.com
+
+
+This file contains instructions for installing Algraeph from a binary
+distribution under Mac OS X or MS Windows, or from source (assuming
+GNU Linux by default).
+
+
+--------------------------------------------------------------------------------
+Mac OS X binary distribution
+--------------------------------------------------------------------------------
+
+Tested on Mac OS X version 10.6 (Snow Leopard).
+
+
+Install Graphviz
+----------------
+
+Algraeph requires a command line program called "dot" from the Graphviz graph
+visualization software (http://www.graphviz.org/). You have two options:
+
+Option 1 (recommended): Install a Graphviz binary package 
+
+  Download and install the current stable release of Graphviz for Mac OS X 
+  from http://www.graphviz.org/Download_macos.php
+  
+Option 2: Install Graphviz from source
+
+  Install Graphviz from a package management system such as MacPorts or Fink,
+  or build directly from source.
+  
+  For example, if you have MacPorts (http://www.macports.org/), you can
+  install graphviz with the command:
+
+    sudo port install graphviz +no_x11
+		
+  IMPORTANT: Make sure that the "dot" executable is in your /usr/bin
+  directory. Either create a symbolic link or copy it to /usr/bin/dot.
+  (Algraeph.app runs in a system-wide environment without reading your
+  .profile or .bashrc, so adding to PATH does not help).
+	
+  For example, if you installed with MacPorts, create a symbolic link (
+  /usr/bin/dot) to the real dot program (/opt/local/bin/dot) by opening a
+  terminal window and typing:
+  
+    sudo ln -s /opt/local/bin/dot /usr/bin/dot
+	
+  (you must supply your superuser password for this)
+  
+
+
+Install Algraeph
+----------------
+
+1. Download the file algraeph_1.0_mac-os-x.zip from http://daeso.uvt.nl/algraeph.
+
+2. Double click on the file algraeph_1.0_mac-os-x.zip to unzip the archive. 
+
+3. Move the newly created folder algraeph_1.0_mac-os-x to a convenient location
+   (e.g., your home folder).
+
+4. Optionally move the application Algraeph from the algraeph_1.0_mac-os-x folder 
+   to your Applications folder.
+
+
+
+Testing Algraeph
+----------------
+
+1. Double click on the application Algraeph
+
+2. Choose Open from the File menu, go to the 
+   algraeph_1.0_mac-os-x/data/graphml/simple directory, 
+   and open the file algraeph-simple-alignment.xml After loading is finished, 
+   you should see two aligned trees for the sentences "spam and eggs" and 
+   "smac en eieren".
+
+   
+Uninstall Algraeph
+------------------ 
+
+1. Delete the folder algraeph_1.0_mac-os-x and all of its contents.
+
+2. If present, delete the application Algraeph from your Applications folder.
+
+
+--------------------------------------------------------------------------------
+MS Windows binary distribution
+--------------------------------------------------------------------------------
+
+Tested on MS Windows XP.
+
+
+Install Graphviz
+----------------
+
+Algraeph requires the command line program called "dot" from the
+Graphviz graph visualization software (http://www.graphviz.org/). Please
+download and install the latest version for MS Wndows from
+http://www.graphviz.org/Download_windows.php
+
+
+Install Algraeph
+----------------
+
+1. Download the file setup-algraeph-1.0.exe from http://daeso.uvt.nl/algraeph
+
+2. Double click on the file setup-algraeph-1.0.exe to run the
+   installer, and you will be guided through the installation proces.
+
+
+Testing Algraeph
+----------------
+
+1. From Start menu, continue to the Program submenu, on to the
+   Algraeph submenu, and choose Algraeph.
+
+2. Choose Open from the File menu, go to the directory
+   data\graphml\simple, and open the file
+   algraeph-simple-alignment.xml. After loading is finished, you should
+   see two aligned trees for the sentences "spam and eggs" and "smac
+   en eieren".
+
+
+Uninstall Algraeph
+------------------
+
+1. Open the "Control Panel" from the "Start" menu
+   
+2. Double click "Add or Remove Software"
+   
+3. Select Algraeph-1.0 and click the button "Remove"
+
+
+--------------------------------------------------------------------------------
+Source distribution (GNU Linux)
+--------------------------------------------------------------------------------
+
+Tested on Ubuntu Linux 9.10
+
+
+Installation requirements
+-------------------------
+
+Algraeph has the following dependencies:
+
+1. Python (tested with version 2.6)
+   available from http://www.python.org/
+
+2. wxPython (tested with version 2.8.10)
+   available from http://www.wxpython.org/
+
+4. "dot" command line program from Graphviz (tested with version 2.26)
+    available from http://www.graphviz.org/
+
+5. NetworkX (tested with version 1.0)
+   available from https://networkx.lanl.gov/
+   
+6. The DAESO Framework and DAESO Dutch Python libraries
+   available from http://daeso.uvt.nl/daeso-framework
+
+Notice that the first five of these may already be present on your system, or
+may be easily installed through a package manager. Although untested, Algraeph
+is likely to work correctly with (slightly) older versions of Python, wxPython
+and Graphviz (NetworkX must be 1.0 or higher though).
+
+
+Install Algraeph
+----------------
+
+1. Download the source archive in your preferred format
+   (e.g. algraeph-1.0.tar.gz) from http://daeso.uvt.nl/algraeph
+
+2. Unpack (e.g. tar xvzf algraeph-1.0.tar.gz) in a suitable location
+   (e.g. /usr/local/src)
+   
+3. Change directory to the root of the unpacked archive 
+   (e.g. cd algraeph-1.0)
+   
+4. Install using the command
+
+      python setup.py -v install
+      
+   You probably need to be root or administrator to be allowed to do a
+   system-wide install. For more information (alternative install locations,
+   trouble shooting, etc) see "Installing Pyton Modules" at
+   http://docs.python.org/inst/inst.html
+   
+   You can check the ouput of the preceding setup.py command to see to
+   which directory the main script algraeph.py was copied. Normally,
+   this will be a directory like /usr/bin, which is already in your
+   search path. If not, make sure you add this directory to your search
+   path or to copy algraeph.py to another directory in your search path.
+	
+   The documentation (in directory "doc") goes to a directory
+   sys.prefix/share/algraeph-1.0/doc and the examples (in directory
+   "data") to sys.prefix/share/algraeph-0-.6.x/doc, where the value of
+   sys.prefix depends on your Python installation. On Linux, this will
+   often be /usr/share, but it may be different on your platform. To
+   find out, type the following at the shell command line:
+
+      python -c "import sys; print sys.prefix"
+   
+5. Optional: remove the unpacked archive
+
+
+Testing Algraeph
+----------------
+
+1. Start Algraeph from the command line by typing "algraeph.py"
+
+2. Open the file algraeph-simple-alignment.xml in the directory
+   sys.prefix/share/algraeph-1.0/data/graphml/simple/ After loading
+   is finished, you should see two aligned trees for the sentences
+   "spam and eggs" and "smac en eieren".
+   
+
+Uninstall Algraeph
+------------------
+
+1. Remove the directories for the "graeph" and "daeso" packages from
+   Python's site-packages directory
+
+2. Remove algraeph.py from Python's bin or scripts directory; 
+   see step 4 of the installation.
+
+3. Remove the"doc" and "data" from the shared files directory; 
+   see step 4 of the installation.
+
+
+$Id: INSTALL 1314 2010-04-27 04:21:36Z emarsi $
+
+
+   

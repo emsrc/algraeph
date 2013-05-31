@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.helpview</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        Module&nbsp;helpview
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.helpview-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="graeph.helpview-module.html">Module graeph.helpview</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2007-2013 by </tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># Erwin Marsi and TST-Centrale</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"># This file is part of the Algraeph program.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is free software; you can redistribute it and/or modify</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># the Free Software Foundation; either version 3 of the License, or</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># (at your option) any later version.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment"># but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-comment"># GNU General Public License for more details.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-comment"># along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-docstring">"Erwin Marsi &lt;e.marsi@gmail.com&gt;"</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">wx</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">html</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">sys</tt> <tt class="py-keyword">import</tt> <tt class="py-name">prefix</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">os</tt> <tt class="py-keyword">import</tt> <tt class="py-name">getcwd</tt><tt class="py-op">,</tt> <tt class="py-name">getenv</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> <tt class="py-keyword">import</tt> <tt class="py-name">dirname</tt><tt class="py-op">,</tt> <tt class="py-name">exists</tt><tt class="py-op">,</tt> <tt class="py-name">join</tt> <tt class="py-keyword">as</tt> <tt class="py-name">pathjoin</tt><tt class="py-op">,</tt> <tt class="py-name">normpath</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="HelpViewFrame"></a><div id="HelpViewFrame-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="HelpViewFrame-toggle" onclick="return toggle('HelpViewFrame');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.helpview.HelpViewFrame-class.html">HelpViewFrame</a><tt class="py-op">(</tt><tt class="py-base-class">wx</tt><tt class="py-op">.</tt><tt class="py-base-class">Frame</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HelpViewFrame-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="HelpViewFrame-expanded"><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">     </tt>
+<a name="HelpViewFrame.__init__"></a><div id="HelpViewFrame.__init__-def"><a name="L38"></a><tt class="py-lineno">38</tt> <a class="py-toggle" href="#" id="HelpViewFrame.__init__-toggle" onclick="return toggle('HelpViewFrame.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.helpview.HelpViewFrame-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">title</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">Frame</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method graeph.aligner.Aligner.__init__()=graeph.aligner.Aligner-class.html#__init__,Method graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__()=graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html#__init__,Method graeph.alpino.graphview.AlpinoGraphView.__init__()=graeph.alpino.graphview.AlpinoGraphView-class.html#__init__,Method graeph.commentview.CommentView.__init__()=graeph.commentview.CommentView-class.html#__init__,Method graeph.dotgraph.BasicDotGraphPair.__init__()=graeph.dotgraph.BasicDotGraphPair-class.html#__init__,Method graeph.dotgraph.DotGraph.__init__()=graeph.dotgraph.DotGraph-class.html#__init__,Method graeph.dotgraph.DotGraphPair.__init__()=graeph.dotgraph.DotGraphPair-class.html#__init__,Method graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__()=graeph.graphml.dotgraph.GraphmlDotGraphPair-class.html#__init__,Method graeph.graphview.GraphView.__init__()=graeph.graphview.GraphView-class.html#__init__,Method graeph.graphview.ViewMenu.__init__()=graeph.graphview.ViewMenu-class.html#__init__,Method graeph.gui.Algraeph.__init__()=graeph.gui.Algraeph-class.html#__init__,Method graeph.gui.AlgraephFrame.__init__()=graeph.gui.AlgraephFrame-class.html#__init__,Method graeph.gui.AlignPage.__init__()=graeph.gui.AlignPage-class.html#__init__,Method graeph.gui.BottomPanel.__init__()=graeph.gui.BottomPanel-class.html#__init__,Method graeph.gui.CommentPage.__init__()=graeph.gui.CommentPage-class.html#__init__,Method graeph.gui.GraphTokenPanel.__init__()=graeph.gui.GraphTokenPanel-class.html#__init__,Method graeph.gui.GraphViewPanel.__init__()=graeph.gui.GraphViewPanel-class.html#__init__,Method graeph.helpview.HelpViewFrame.__init__()=graeph.helpview.HelpViewFrame-class.html#__init__,Method graeph.relationview.RelationView.__init__()=graeph.relationview.RelationView-class.html#__init__,Method graeph.tokenview.TokenView.__init__()=graeph.tokenview.TokenView-class.html#__init__"><a title="graeph.aligner.Aligner.__init__
+graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__
+graeph.alpino.graphview.AlpinoGraphView.__init__
+graeph.commentview.CommentView.__init__
+graeph.dotgraph.BasicDotGraphPair.__init__
+graeph.dotgraph.DotGraph.__init__
+graeph.dotgraph.DotGraphPair.__init__
+graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__
+graeph.graphview.GraphView.__init__
+graeph.graphview.ViewMenu.__init__
+graeph.gui.Algraeph.__init__
+graeph.gui.AlgraephFrame.__init__
+graeph.gui.AlignPage.__init__
+graeph.gui.BottomPanel.__init__
+graeph.gui.CommentPage.__init__
+graeph.gui.GraphTokenPanel.__init__
+graeph.gui.GraphViewPanel.__init__
+graeph.helpview.HelpViewFrame.__init__
+graeph.relationview.RelationView.__init__
+graeph.tokenview.TokenView.__init__" class="py-name" href="#" onclick="return doclink('link-0', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-name">title</tt><tt class="py-op">=</tt><tt class="py-name">title</tt><tt class="py-op">,</tt> <tt class="py-name">size</tt><tt class="py-op">=</tt><tt class="py-op">(</tt><tt class="py-number">600</tt><tt class="py-op">,</tt><tt class="py-number">600</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">html</tt> <tt class="py-op">=</tt> <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">html</tt><tt class="py-op">.</tt><tt class="py-name">HtmlWindow</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">         </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">         </tt>
+<a name="HelpViewFrame.loadDoc"></a><div id="HelpViewFrame.loadDoc-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="HelpViewFrame.loadDoc-toggle" onclick="return toggle('HelpViewFrame.loadDoc');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.helpview.HelpViewFrame-class.html#loadDoc">loadDoc</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">appName</tt><tt class="py-op">,</tt> <tt class="py-param">appVersion</tt><tt class="py-op">,</tt> <tt class="py-param">docName</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HelpViewFrame.loadDoc-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="HelpViewFrame.loadDoc-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">         </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">,</tt> <tt class="py-name">failed_paths</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method graeph.helpview.HelpViewFrame.findDocs()=graeph.helpview.HelpViewFrame-class.html#findDocs"><a title="graeph.helpview.HelpViewFrame.findDocs" class="py-name" href="#" onclick="return doclink('link-1', 'findDocs', 'link-1');">findDocs</a></tt><tt class="py-op">(</tt><tt class="py-name">appName</tt><tt class="py-op">,</tt> <tt class="py-name">appVersion</tt><tt class="py-op">,</tt> <tt class="py-name">docName</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">         </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">path</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">html</tt><tt class="py-op">.</tt><tt class="py-name">LoadFile</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">            <tt class="py-name">msg</tt> <tt class="py-op">=</tt> <tt class="py-string">"&lt;b&gt;Error: cannot find documentation at any of the following locations&lt;/b&gt;&lt;br&gt;&lt;br&gt;"</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">            <tt class="py-name">msg</tt> <tt class="py-op">+=</tt> <tt class="py-string">"&lt;br&gt;"</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">failed_paths</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">html</tt><tt class="py-op">.</tt><tt class="py-name">SetPage</tt><tt class="py-op">(</tt><tt class="py-name">msg</tt><tt class="py-op">)</tt>  </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">         </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">Show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">         </tt>
+<a name="HelpViewFrame.findDocs"></a><div id="HelpViewFrame.findDocs-def"><a name="L57"></a><tt class="py-lineno">57</tt> <a class="py-toggle" href="#" id="HelpViewFrame.findDocs-toggle" onclick="return toggle('HelpViewFrame.findDocs');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.helpview.HelpViewFrame-class.html#findDocs">findDocs</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">appName</tt><tt class="py-op">,</tt> <tt class="py-param">appVersion</tt><tt class="py-op">,</tt> <tt class="py-param">docName</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-name">search_paths</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">         </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-comment"># are we in the DAESO dev tree?</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"DAESO_BASE"</tt><tt class="py-op">,</tt><tt class="py-string">""</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">            <tt class="py-name">unix_path</tt> <tt class="py-op">=</tt> <tt class="py-string">"trunk/software/intern/%s/doc"</tt> <tt class="py-op">%</tt> <tt class="py-name">appName</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">            <tt class="py-name">os_path</tt> <tt class="py-op">=</tt> <tt class="py-name">pathjoin</tt><tt class="py-op">(</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"DAESO_BASE"</tt><tt class="py-op">,</tt><tt class="py-string">""</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">normpath</tt><tt class="py-op">(</tt><tt class="py-name">unix_path</tt><tt class="py-op">)</tt><tt class="py-op">)</tt>  </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">            <tt class="py-name">search_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">             </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-comment"># are we in a standard bin dir with docs in ../doc ?</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-name">os_path</tt> <tt class="py-op">=</tt> <tt class="py-name">normpath</tt><tt class="py-op">(</tt><tt class="py-name">pathjoin</tt><tt class="py-op">(</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">"../doc"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">        <tt class="py-name">search_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">             </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">        <tt class="py-comment"># are we a source distribution? </tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-name">unix_path</tt> <tt class="py-op">=</tt> <tt class="py-string">"share/%s-%s/doc"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">appName</tt><tt class="py-op">,</tt> <tt class="py-name">appVersion</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">        <tt class="py-name">os_path</tt> <tt class="py-op">=</tt> <tt class="py-name">pathjoin</tt><tt class="py-op">(</tt><tt class="py-name">prefix</tt><tt class="py-op">,</tt> <tt class="py-name">normpath</tt><tt class="py-op">(</tt><tt class="py-name">unix_path</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">        <tt class="py-name">search_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">             </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-comment"># are we a Mac OS X application bundle?</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"RESOURCEPATH"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">            <tt class="py-name">search_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"RESOURCEPATH"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">             </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-comment"># are we a MS Win binary from iss installer?</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">        <tt class="py-name">os_path</tt> <tt class="py-op">=</tt> <tt class="py-name">pathjoin</tt><tt class="py-op">(</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">"doc"</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">        <tt class="py-name">search_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">         </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">        <tt class="py-name">failed_paths</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">         </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">path</tt> <tt class="py-keyword">in</tt> <tt class="py-name">search_paths</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">            <tt class="py-name">path</tt> <tt class="py-op">=</tt> <tt class="py-name">pathjoin</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">,</tt> <tt class="py-name">docName</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">            <tt class="py-name">failed_paths</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">failed_paths</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L92"></a><tt class="py-lineno">92</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:32 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parallel_graph_corpus>
+  <corpus_meta_data>
+    <version>$Id:$</version>
+  </corpus_meta_data>
+  <graphbanks>
+    <file format="graphml" id="1">simple-english-graphbank.xml</file>
+    <file format="graphml" id="2">simple-dutch-graphbank.xml</file>
+  </graphbanks>
+  <node_relations>
+    <relation>equals</relation>
+  </node_relations>
+  <aligned_graphs>
+    <graph_pair from_bank_id="1" from_graph_id="g0" n="1" to_bank_id="2" to_graph_id="g0">
+      <aligned_nodes>
+        <node_pair from_node_id="n0" relation="equals" to_node_id="n0"/>
+        <node_pair from_node_id="n4" relation="equals" to_node_id="n4"/>
+        <node_pair from_node_id="n5" relation="equals" to_node_id="n5"/>
+        <node_pair from_node_id="n6" relation="equals" to_node_id="n6"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>From the "Spam" sketch by Monty Python.</comment>
+      </graph_meta_data>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="g1" n="2" to_bank_id="2" to_graph_id="g1">
+      <aligned_nodes>
+        <node_pair from_node_id="n4" relation="equals" to_node_id="n4"/>
+        <node_pair from_node_id="n7" relation="equals" to_node_id="n7"/>
+        <node_pair from_node_id="n10" relation="equals" to_node_id="n10"/>
+        <node_pair from_node_id="n13" relation="equals" to_node_id="n13"/>
+        <node_pair from_node_id="n15" relation="equals" to_node_id="n15"/>
+        <node_pair from_node_id="n8" relation="equals" to_node_id="n8"/>
+        <node_pair from_node_id="n5" relation="equals" to_node_id="n5"/>
+        <node_pair from_node_id="n2" relation="equals" to_node_id="n2"/>
+        <node_pair from_node_id="n1" relation="equals" to_node_id="n1"/>
+      </aligned_nodes>
+      <graph_meta_data>
+        <comment>From "The Spanish Inquisition" sketch by Monty Python.</comment>
+      </graph_meta_data>
+    </graph_pair>
+  </aligned_graphs>
+</parallel_graph_corpus>

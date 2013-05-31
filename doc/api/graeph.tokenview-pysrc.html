@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.tokenview</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        Module&nbsp;tokenview
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.tokenview-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="graeph.tokenview-module.html">Module graeph.tokenview</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2007-2013 by </tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># Erwin Marsi and TST-Centrale</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"># This file is part of the Algraeph program.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is free software; you can redistribute it and/or modify</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># the Free Software Foundation; either version 3 of the License, or</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># (at your option) any later version.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment"># but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-comment"># GNU General Public License for more details.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-comment"># along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-docstring">"Erwin Marsi &lt;e.marsi@gmail.com&gt;"</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">wx</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package graeph=graeph-module.html"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-0', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module graeph.pubsub=graeph.pubsub-module.html"><a title="graeph.pubsub" class="py-name" href="#" onclick="return doclink('link-1', 'pubsub', 'link-1');">pubsub</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Method graeph.commentview.CommentView.subscribe()=graeph.commentview.CommentView-class.html#subscribe,Method graeph.graphview.GraphView.subscribe()=graeph.graphview.GraphView-class.html#subscribe,Method graeph.gui.AlgraephFrame.subscribe()=graeph.gui.AlgraephFrame-class.html#subscribe,Method graeph.gui.AlignPage.subscribe()=graeph.gui.AlignPage-class.html#subscribe,Method graeph.gui.BottomPanel.subscribe()=graeph.gui.BottomPanel-class.html#subscribe,Method graeph.gui.GraphViewPanel.subscribe()=graeph.gui.GraphViewPanel-class.html#subscribe,Function graeph.pubsub.subscribe()=graeph.pubsub-module.html#subscribe,Method graeph.relationview.RelationView.subscribe()=graeph.relationview.RelationView-class.html#subscribe,Method graeph.tokenview.FromNodeTokenView.subscribe()=graeph.tokenview.FromNodeTokenView-class.html#subscribe,Method graeph.tokenview.ToNodeTokenView.subscribe()=graeph.tokenview.ToNodeTokenView-class.html#subscribe,Method graeph.tokenview.TokenView.subscribe()=graeph.tokenview.TokenView-class.html#subscribe"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-2', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Function graeph.pubsub.receive()=graeph.pubsub-module.html#receive"><a title="graeph.pubsub.receive" class="py-name" href="#" onclick="return doclink('link-3', 'receive', 'link-3');">receive</a></tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">      </tt>
+<a name="TokenView"></a><div id="TokenView-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="TokenView-toggle" onclick="return toggle('TokenView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.tokenview.TokenView-class.html">TokenView</a><tt class="py-op">(</tt><tt class="py-base-class">wx</tt><tt class="py-op">.</tt><tt class="py-base-class">TextCtrl</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>         </tt>
+</div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="TokenView.__init__"></a><div id="TokenView.__init__-def"><a name="L34"></a><tt class="py-lineno">34</tt> <a class="py-toggle" href="#" id="TokenView.__init__-toggle" onclick="return toggle('TokenView.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.TokenView-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">aligner</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TokenView.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="TokenView.__init__-expanded"><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-comment"># wx.TE_RICH2 is required to get coloured text on MSW</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">TextCtrl</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method graeph.aligner.Aligner.__init__()=graeph.aligner.Aligner-class.html#__init__,Method graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__()=graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html#__init__,Method graeph.alpino.graphview.AlpinoGraphView.__init__()=graeph.alpino.graphview.AlpinoGraphView-class.html#__init__,Method graeph.commentview.CommentView.__init__()=graeph.commentview.CommentView-class.html#__init__,Method graeph.dotgraph.BasicDotGraphPair.__init__()=graeph.dotgraph.BasicDotGraphPair-class.html#__init__,Method graeph.dotgraph.DotGraph.__init__()=graeph.dotgraph.DotGraph-class.html#__init__,Method graeph.dotgraph.DotGraphPair.__init__()=graeph.dotgraph.DotGraphPair-class.html#__init__,Method graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__()=graeph.graphml.dotgraph.GraphmlDotGraphPair-class.html#__init__,Method graeph.graphview.GraphView.__init__()=graeph.graphview.GraphView-class.html#__init__,Method graeph.graphview.ViewMenu.__init__()=graeph.graphview.ViewMenu-class.html#__init__,Method graeph.gui.Algraeph.__init__()=graeph.gui.Algraeph-class.html#__init__,Method graeph.gui.AlgraephFrame.__init__()=graeph.gui.AlgraephFrame-class.html#__init__,Method graeph.gui.AlignPage.__init__()=graeph.gui.AlignPage-class.html#__init__,Method graeph.gui.BottomPanel.__init__()=graeph.gui.BottomPanel-class.html#__init__,Method graeph.gui.CommentPage.__init__()=graeph.gui.CommentPage-class.html#__init__,Method graeph.gui.GraphTokenPanel.__init__()=graeph.gui.GraphTokenPanel-class.html#__init__,Method graeph.gui.GraphViewPanel.__init__()=graeph.gui.GraphViewPanel-class.html#__init__,Method graeph.helpview.HelpViewFrame.__init__()=graeph.helpview.HelpViewFrame-class.html#__init__,Method graeph.relationview.RelationView.__init__()=graeph.relationview.RelationView-class.html#__init__,Method graeph.tokenview.TokenView.__init__()=graeph.tokenview.TokenView-class.html#__init__"><a title="graeph.aligner.Aligner.__init__
+graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__
+graeph.alpino.graphview.AlpinoGraphView.__init__
+graeph.commentview.CommentView.__init__
+graeph.dotgraph.BasicDotGraphPair.__init__
+graeph.dotgraph.DotGraph.__init__
+graeph.dotgraph.DotGraphPair.__init__
+graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__
+graeph.graphview.GraphView.__init__
+graeph.graphview.ViewMenu.__init__
+graeph.gui.Algraeph.__init__
+graeph.gui.AlgraephFrame.__init__
+graeph.gui.AlignPage.__init__
+graeph.gui.BottomPanel.__init__
+graeph.gui.CommentPage.__init__
+graeph.gui.GraphTokenPanel.__init__
+graeph.gui.GraphViewPanel.__init__
+graeph.helpview.HelpViewFrame.__init__
+graeph.relationview.RelationView.__init__
+graeph.tokenview.TokenView.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">size</tt><tt class="py-op">=</tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">50</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">                             <tt class="py-name">style</tt><tt class="py-op">=</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">TE_MULTILINE</tt><tt class="py-op">|</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">TE_READONLY</tt><tt class="py-op">|</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">TE_RICH2</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-comment"># Disable TokenView???</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-comment"># Pro:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-comment"># - draws focus, so scrolling the graph window with mouse wheel does not work</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">        <tt class="py-comment"># - prevents blinking cursor </tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-comment"># Contra:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-comment"># - disabling turns background grey on MSW</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-comment"># - prevents copy on OSX</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-comment">#self.Enable(False)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">SetForegroundColour</tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Module graeph.aligner=graeph.aligner-module.html"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-5', 'aligner', 'link-5');">aligner</a></tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-6', 'aligner', 'link-5');">aligner</a></tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-7', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">         </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">     </tt>
+<a name="TokenView.subscribe"></a><div id="TokenView.subscribe-def"><a name="L51"></a><tt class="py-lineno">51</tt> <a class="py-toggle" href="#" id="TokenView.subscribe-toggle" onclick="return toggle('TokenView.subscribe');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.TokenView-class.html#subscribe">subscribe</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TokenView.subscribe-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="TokenView.subscribe-expanded"><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt id="link-8" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-8', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method graeph.tokenview.TokenView.updateTokens()=graeph.tokenview.TokenView-class.html#updateTokens"><a title="graeph.tokenview.TokenView.updateTokens" class="py-name" href="#" onclick="return doclink('link-9', 'updateTokens', 'link-9');">updateTokens</a></tt><tt class="py-op">,</tt> <tt class="py-string">"newGraphPair.gui"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">         </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">         </tt>
+<a name="TokenView.updateTokens"></a><div id="TokenView.updateTokens-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="TokenView.updateTokens-toggle" onclick="return toggle('TokenView.updateTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.TokenView-class.html#updateTokens">updateTokens</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TokenView.updateTokens-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="TokenView.updateTokens-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt id="link-10" class="py-name"><a title="graeph.pubsub.receive" class="py-name" href="#" onclick="return doclink('link-10', 'receive', 'link-3');">receive</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="graeph.tokenview.TokenView.updateTokens" class="py-name" href="#" onclick="return doclink('link-11', 'updateTokens', 'link-9');">updateTokens</a></tt><tt class="py-op">,</tt> <tt class="py-name">msg</tt><tt class="py-op">)</tt>    </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">SetValue</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method graeph.tokenview.FromGraphTokenView.getTokens()=graeph.tokenview.FromGraphTokenView-class.html#getTokens,Method graeph.tokenview.FromNodeTokenView.getTokens()=graeph.tokenview.FromNodeTokenView-class.html#getTokens,Method graeph.tokenview.ToGraphTokenView.getTokens()=graeph.tokenview.ToGraphTokenView-class.html#getTokens,Method graeph.tokenview.ToNodeTokenView.getTokens()=graeph.tokenview.ToNodeTokenView-class.html#getTokens"><a title="graeph.tokenview.FromGraphTokenView.getTokens
+graeph.tokenview.FromNodeTokenView.getTokens
+graeph.tokenview.ToGraphTokenView.getTokens
+graeph.tokenview.ToNodeTokenView.getTokens" class="py-name" href="#" onclick="return doclink('link-12', 'getTokens', 'link-12');">getTokens</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">         </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">         </tt>
+<a name="FromGraphTokenView"></a><div id="FromGraphTokenView-def"><a name="L61"></a><tt class="py-lineno">61</tt> <a class="py-toggle" href="#" id="FromGraphTokenView-toggle" onclick="return toggle('FromGraphTokenView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.tokenview.FromGraphTokenView-class.html">FromGraphTokenView</a><tt class="py-op">(</tt><tt class="py-base-class">TokenView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FromGraphTokenView-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="FromGraphTokenView-expanded"><a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">     </tt>
+<a name="FromGraphTokenView.getTokens"></a><div id="FromGraphTokenView.getTokens-def"><a name="L63"></a><tt class="py-lineno">63</tt> <a class="py-toggle" href="#" id="FromGraphTokenView.getTokens-toggle" onclick="return toggle('FromGraphTokenView.getTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.FromGraphTokenView-class.html#getTokens">getTokens</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FromGraphTokenView.getTokens-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="FromGraphTokenView.getTokens-expanded"><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-13', 'aligner', 'link-5');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method graeph.aligner.Aligner.get_from_graph_tokens()=graeph.aligner.Aligner-class.html#get_from_graph_tokens"><a title="graeph.aligner.Aligner.get_from_graph_tokens" class="py-name" href="#" onclick="return doclink('link-14', 'get_from_graph_tokens', 'link-14');">get_from_graph_tokens</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">     </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">         </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">         </tt>
+<a name="ToGraphTokenView"></a><div id="ToGraphTokenView-def"><a name="L68"></a><tt class="py-lineno">68</tt> <a class="py-toggle" href="#" id="ToGraphTokenView-toggle" onclick="return toggle('ToGraphTokenView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.tokenview.ToGraphTokenView-class.html">ToGraphTokenView</a><tt class="py-op">(</tt><tt class="py-base-class">TokenView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToGraphTokenView-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ToGraphTokenView-expanded"><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">     </tt>
+<a name="ToGraphTokenView.getTokens"></a><div id="ToGraphTokenView.getTokens-def"><a name="L70"></a><tt class="py-lineno">70</tt> <a class="py-toggle" href="#" id="ToGraphTokenView.getTokens-toggle" onclick="return toggle('ToGraphTokenView.getTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.ToGraphTokenView-class.html#getTokens">getTokens</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToGraphTokenView.getTokens-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ToGraphTokenView.getTokens-expanded"><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-15', 'aligner', 'link-5');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method graeph.aligner.Aligner.get_to_graph_tokens()=graeph.aligner.Aligner-class.html#get_to_graph_tokens"><a title="graeph.aligner.Aligner.get_to_graph_tokens" class="py-name" href="#" onclick="return doclink('link-16', 'get_to_graph_tokens', 'link-16');">get_to_graph_tokens</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">     </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">     </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">     </tt>
+<a name="FromNodeTokenView"></a><div id="FromNodeTokenView-def"><a name="L75"></a><tt class="py-lineno">75</tt> <a class="py-toggle" href="#" id="FromNodeTokenView-toggle" onclick="return toggle('FromNodeTokenView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.tokenview.FromNodeTokenView-class.html">FromNodeTokenView</a><tt class="py-op">(</tt><tt class="py-base-class">TokenView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FromNodeTokenView-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="FromNodeTokenView-expanded"><a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">     </tt>
+<a name="FromNodeTokenView.subscribe"></a><div id="FromNodeTokenView.subscribe-def"><a name="L77"></a><tt class="py-lineno">77</tt> <a class="py-toggle" href="#" id="FromNodeTokenView.subscribe-toggle" onclick="return toggle('FromNodeTokenView.subscribe');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.FromNodeTokenView-class.html#subscribe">subscribe</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FromNodeTokenView.subscribe-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="FromNodeTokenView.subscribe-expanded"><a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt id="link-17" class="py-name" targets="Class graeph.tokenview.TokenView=graeph.tokenview.TokenView-class.html"><a title="graeph.tokenview.TokenView" class="py-name" href="#" onclick="return doclink('link-17', 'TokenView', 'link-17');">TokenView</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-18', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt id="link-19" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-19', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="graeph.tokenview.TokenView.updateTokens" class="py-name" href="#" onclick="return doclink('link-20', 'updateTokens', 'link-9');">updateTokens</a></tt><tt class="py-op">,</tt> <tt class="py-string">"newNodeSelect.gui"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">         </tt>
+<a name="FromNodeTokenView.getTokens"></a><div id="FromNodeTokenView.getTokens-def"><a name="L81"></a><tt class="py-lineno">81</tt> <a class="py-toggle" href="#" id="FromNodeTokenView.getTokens-toggle" onclick="return toggle('FromNodeTokenView.getTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.FromNodeTokenView-class.html#getTokens">getTokens</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FromNodeTokenView.getTokens-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="FromNodeTokenView.getTokens-expanded"><a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-21', 'aligner', 'link-5');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method graeph.aligner.Aligner.get_from_node_tokens()=graeph.aligner.Aligner-class.html#get_from_node_tokens"><a title="graeph.aligner.Aligner.get_from_node_tokens" class="py-name" href="#" onclick="return doclink('link-22', 'get_from_node_tokens', 'link-22');">get_from_node_tokens</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">     </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">         </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">         </tt>
+<a name="ToNodeTokenView"></a><div id="ToNodeTokenView-def"><a name="L86"></a><tt class="py-lineno">86</tt> <a class="py-toggle" href="#" id="ToNodeTokenView-toggle" onclick="return toggle('ToNodeTokenView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.tokenview.ToNodeTokenView-class.html">ToNodeTokenView</a><tt class="py-op">(</tt><tt class="py-base-class">TokenView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToNodeTokenView-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ToNodeTokenView-expanded"><a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">     </tt>
+<a name="ToNodeTokenView.subscribe"></a><div id="ToNodeTokenView.subscribe-def"><a name="L88"></a><tt class="py-lineno">88</tt> <a class="py-toggle" href="#" id="ToNodeTokenView.subscribe-toggle" onclick="return toggle('ToNodeTokenView.subscribe');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.ToNodeTokenView-class.html#subscribe">subscribe</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToNodeTokenView.subscribe-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ToNodeTokenView.subscribe-expanded"><a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">        <tt id="link-23" class="py-name"><a title="graeph.tokenview.TokenView" class="py-name" href="#" onclick="return doclink('link-23', 'TokenView', 'link-17');">TokenView</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-24', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">        <tt id="link-25" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-25', 'subscribe', 'link-2');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="graeph.tokenview.TokenView.updateTokens" class="py-name" href="#" onclick="return doclink('link-26', 'updateTokens', 'link-9');">updateTokens</a></tt><tt class="py-op">,</tt> <tt class="py-string">"newNodeSelect.gui"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line">     </tt>
+<a name="ToNodeTokenView.getTokens"></a><div id="ToNodeTokenView.getTokens-def"><a name="L92"></a><tt class="py-lineno">92</tt> <a class="py-toggle" href="#" id="ToNodeTokenView.getTokens-toggle" onclick="return toggle('ToNodeTokenView.getTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.tokenview.ToNodeTokenView-class.html#getTokens">getTokens</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToNodeTokenView.getTokens-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ToNodeTokenView.getTokens-expanded"><a name="L93"></a><tt class="py-lineno">93</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-27', 'aligner', 'link-5');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method graeph.aligner.Aligner.get_to_node_tokens()=graeph.aligner.Aligner-class.html#get_to_node_tokens"><a title="graeph.aligner.Aligner.get_to_node_tokens" class="py-name" href="#" onclick="return doclink('link-28', 'get_to_node_tokens', 'link-28');">get_to_node_tokens</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L94"></a><tt class="py-lineno">94</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:31 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

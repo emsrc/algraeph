@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns      http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="tokens" attr.name="tokens" attr.type="string"/>
+  <key id="root" for="graph" attr.name="root" attr.type="string"/>
+  <graph id="g0" edgedefault="directed">
+    <data key="tokens">smac en eieren</data>
+    <data key="root">n0</data>
+    <node id="n0">
+      <data key="label">NP</data>
+      <data key="tokens">smac en eieren</data>
+    </node>
+    <node id="n1">
+      <data key="label">N</data>
+      <data key="tokens">smac</data>
+    </node>
+    <node id="n2">
+      <data key="label">Conj</data>
+      <data key="tokens">en</data>
+    </node>
+    <node id="n3">
+      <data key="label">N</data>
+      <data key="tokens">eieren</data>
+    </node>
+    <node id="n4">
+      <data key="label">smac</data>
+      <data key="tokens">smac</data>
+    </node>
+    <node id="n5">
+      <data key="label">en</data>
+      <data key="tokens">en</data>
+    </node>
+    <node id="n6">
+      <data key="label">eieren</data>
+      <data key="tokens">eieren</data>
+    </node>
+    <edge source="n0" target="n1"/>
+    <edge source="n0" target="n2"/>
+    <edge source="n0" target="n3"/>
+    <edge source="n1" target="n4"/>
+    <edge source="n2" target="n5"/>
+    <edge source="n3" target="n6"/>
+  </graph>
+  <graph id="g1" edgedefault="directed">
+    <data key="tokens">Niemand verwacht de Spaanse Inquisitie!</data>
+    <data key="root">n1</data>
+    <node id="n1">
+      <data key="label">S</data>
+      <data key="tokens">Niemand verwacht de Spaanse Inquisitie</data>
+    </node>
+    <node id="n2">
+      <data key="label">NP</data>
+      <data key="tokens">Niemand</data>
+    </node>
+    <node id="n3">
+      <data key="label">N</data>
+      <data key="tokens">Noboby</data>
+    </node>
+    <node id="n4">
+      <data key="label">Niemand</data>
+      <data key="tokens">Noboby</data>
+    </node>
+    <node id="n5">
+      <data key="label">VP</data>
+      <data key="tokens">verwacht de Spaanse Inquisitie</data>
+    </node>
+    <node id="n6">
+      <data key="label">V</data>
+      <data key="tokens">verwacht</data>
+    </node>
+    <node id="n7">
+      <data key="label">verwacht</data>
+      <data key="tokens">verwacht</data>
+    </node>
+    <node id="n8">
+      <data key="label">NP</data>
+      <data key="tokens">de Spaanse Inquisitie</data>
+    </node>
+    <node id="n9">
+      <data key="label">DET</data>
+      <data key="tokens">de</data>
+    </node>
+    <node id="n10">
+      <data key="label">de</data>
+      <data key="tokens">de</data>
+    </node>
+    <node id="n11">
+      <data key="label">N</data>
+      <data key="tokens">Spaanse Inquisitie</data>
+    </node>
+    <node id="n12">
+      <data key="label">N</data>
+      <data key="tokens">Spaanse</data>
+    </node>
+    <node id="n13">
+      <data key="label">Spaanse</data>
+      <data key="tokens">Spaanse</data>
+    </node>
+    <node id="n14">
+      <data key="label">N</data>
+      <data key="tokens">Inquisitie</data>
+    </node>
+    <node id="n15">
+      <data key="label">Inquisitie</data>
+      <data key="tokens">Inquisitie</data>
+    </node>
+    <edge source="n1" target="n2"/>
+    <edge source="n1" target="n5"/>
+    <edge source="n2" target="n3"/>
+    <edge source="n3" target="n4"/>
+    <edge source="n5" target="n6"/>
+    <edge source="n5" target="n8"/>
+    <edge source="n6" target="n7"/>
+    <edge source="n8" target="n9"/>
+    <edge source="n8" target="n11"/>
+    <edge source="n9" target="n10"/>
+    <edge source="n11" target="n12"/>
+    <edge source="n11" target="n14"/>
+    <edge source="n12" target="n13"/>
+    <edge source="n14" target="n15"/>
+  </graph>
+</graphml>

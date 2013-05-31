@@ -1,0 +1,7 @@
+include COPYING CHANGES INSTALL 
+recursive-include doc *
+recursive-include data *
+
+global-exclude *~
+global-exclude *.pyc
+global-exclude .svn

@@ -1,0 +1,123 @@
+================================================================================
+Notes on Algraeph release process
+================================================================================
+
+
+--------------------------------------------------------------------------------
+Preliminaries
+--------------------------------------------------------------------------------
+
+* Be in trunk/software/intern/algraeph, 
+  with env according to etc/daeso.sh or etc/daeso.bat  
+
+* Check README if changes are required (version no etc.)
+
+* Check INSTALL if changes are required (version no etc.)
+
+* Update CHANGES (svn log -v algraeph)
+
+* Change version number in setup script
+
+* Change version numbers in all source fles
+
+* regenerate API with epydoc
+
+* commit and make sure the whole software tree is up to date
+
+
+--------------------------------------------------------------------------------
+Building source distribution
+--------------------------------------------------------------------------------
+
+Tarball
+-------
+
+Run:
+
+    rm -rf MANIFEST build
+    ./setup.py sdist
+
+
+To check the packages:
+
+- inspect MANIFEST
+- unpack package and try
+
+    ./setup.py install --prefix ~/tmp/algraeph
+
+
+Windows installer
+-----------------
+
+    python setup.py bdist_wininst
+
+
+- .svn files are not excluded, so the MANIFEST.in contains an explicit
+global-exclude *.svn*
+
+
+
+--------------------------------------------------------------------------------
+Building package distributions
+--------------------------------------------------------------------------------
+
+Run:
+    ./setup.py sdist
+
+Check with:
+
+    python setup.py install --prefix ~/tmp
+    
+    
+
+--------------------------------------------------------------------------------
+Building binary distributions
+--------------------------------------------------------------------------------
+
+Mac OS X
+--------
+
+Run:
+    ./make-mac-dist.py
+    
+To check, unzip and inspect
+
+
+MS Windows
+----------
+
+Run:
+    python make-win-dist.py
+
+- .svn files are not excluded, so the MANIFEST.in contains an explicit
+global-exclude *.svn*
+
+Open iss/algraeph.iss with Inno Setup.  
+Ckeck for version number and included files. 
+Run to compile a setup executable.
+
+
+--------------------------------------------------------------------------------
+Tag
+--------------------------------------------------------------------------------
+
+Once all packages have been build succesfully, create a svn tag tree which includes daesolib:
+
+svn copy svn+ssh://emarsi@daeso.uvt.nl/daeso/repository/Daeso/trunk/software/intern 
+         svn+ssh://emarsi@daeso.uvt.nl/daeso/repository/Daeso/tags/algraeph-x.x.x
+
+
+--------------------------------------------------------------------------------
+Publish
+--------------------------------------------------------------------------------
+
+Put packages in downloads section
+
+Update "downloads" page
+Update README, INSTALL, CHANGES
+Update User Manual to latest version
+Update "News" section on Algraeph home
+Update "News" section on main daeso page
+
+
+

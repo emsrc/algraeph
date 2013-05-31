@@ -1,0 +1,10 @@
+*~
+_*
+*.pyc
+dist*
+build
+iss/Output
+MANIFEST
+.DS_Store
+!__init__.py
+

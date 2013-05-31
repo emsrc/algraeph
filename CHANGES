@@ -1,0 +1,42 @@
+================================================================================
+
+	ALGRAEPH CHANGES
+
+================================================================================
+
+--------------------------------------------------------------------------------
+Version 1.1
+--------------------------------------------------------------------------------
+
+Bugs fixed:
+
+- Import error in pubsub.py in combination with wxPython 2.8.11.0
+- Drawing truncated at right side because margin was too small
+- Syntax error in Graphiz spec for marking focused nodes
+
+--------------------------------------------------------------------------------
+Version 1.0
+--------------------------------------------------------------------------------
+
+Bugs fixed:
+
+- Node labels containing double quotes crashed Graphviz
+- Empty corpus caused crash
+- Alpino format: an error message is raised when a graph in graphbank in empty
+
+New features:
+
+- New and faster implementation of reading/writing corpusfiles 
+- Support for new XML format for a corpus 
+- The default extension for a parallel graph corpus is now ".pgc"
+- Alpino format only: new option to automatically fold nodes aligned 
+  with relation "equals"
+- Alpino format only: shortcut keys for the standard Daeso relations
+
+
+
+--------------------------------------------------------------------------------
+Version 0.6.0
+--------------------------------------------------------------------------------
+
+- first public release of Algraeph

@@ -1,0 +1,159 @@
+--------------------------------------------------------------------------------
+Model-View-Controller Architecture
+--------------------------------------------------------------------------------
+
+The "Model" is the class ParallelGraphCorpus in the file corpus.py.
+
+The "Controller" is in the class 
+
+There is more than one "View" on the data in te model.
+
+
+
+
+ 
+
+
+
+
+Application Model:    method calls      Data Model:
+Aligner            ------------------>  AlgraephCorpus
+
+
+--------------------------------------------------------------------------------
+Class Hierarchy
+--------------------------------------------------------------------------------
+
+    object
+        Aligner
+
+    list
+        ParallelGraphCorpus
+            AlgraephCorpus
+    dict
+        GraphPair
+
+
+
+    object
+        GraphViz
+            DotGraphViz
+                DotGraphPairViz
+                    AlpinoPairViz
+                AlpinoViz
+
+    
+    wx.App
+        Algraeph
+
+    wx.Frame
+        AlgraephFrame
+
+    wx.Panel
+        AlignPage
+        BottomPanel
+        CommentPage
+        GraphTokenPanel
+        GraphViewPanel
+
+    wx.TextCtrl
+        TokenView
+            FromGraphTokenView
+            ToGraphTokenView
+            FromNodeTokenView
+            ToNodeTokenView
+        CommentView
+
+    wx.RadioBox
+        RelationView
+
+    wx.html.HtmlWindow
+        GraphView
+
+    wx.Menu
+        AlpinoViewMenu
+
+
+
+--------------------------------------------------------------------------------
+Runtime Object Hierarchy
+--------------------------------------------------------------------------------
+
+The runtime object hierarchy shows for each parent objects which cild objects
+it creates and owns during runtime. Objects can own other objects in two ways:
+
+    1. Explicitly Static
+    
+    The parent object has an attribute with the child object as its value.
+    For example:
+       
+        self.algraephFrame = AlgraephFrame()
+          
+    This explicit ownership is written as:
+        
+        .algraephFrame = AlgraephFrame
+       
+    2. Implicitly Static
+    
+    The parent is an argument when calling the child's __init__ method.
+    For example:
+    
+        splitter1 = wx.SplitterWindow(self)
+          
+    This implicit ownership is written as
+        
+        ---> wx.SplitterWindow
+           
+    3. Dynamically
+    
+    The parent owns multiple child objects in the form of a complex
+    data structure (list, dict, etc). This occurs AlgraephCorpus,
+    which maintains a list of GraphPair objects.  Alternatively, a wx
+    object may be dynamically added during runtime, as with the View
+    menu that is updated during runtime from within the Graphiew
+    object. Dynamic types of ownership are not expressed in the current
+    hierarchy.
+       
+
+The runtime object hierarchy for Algraeph is as follows:
+    
+    Algraeph
+        .algraephFrame = AlgraephFrame
+            .aligner = Aligner
+                ._corpus = AlgraephCorpus
+                    ._etree = ElementTree
+            ---> wx.SplitterWindow
+                ---> GraphTokenPanel
+                    ---> FromGraphTokenView
+                    ---> ToGraphTokenView
+                ---> wx.SplitterWindow
+                    ---> GraphViewPanel
+                        .graphView = %sGraphView, instance of a subclass of GraphView
+                            .dotGraphpair = %sDotGraphPair, instance of a subclass of DotgraphPair
+                            .viewMenu = %sViewMenu, instance of a subclass of ViewMenu
+                    ---> BottomPanel
+                        ---> wx.Notebook
+                            ---> AlignPage
+                                ---> FromNodeTokenView
+                                ---> RelationView
+                                ---> ToNodeTokenView
+                            ---> CommentPage
+                                ---> CommentView
+
+
+Remarks:
+- The Aligner object is created within AlgraephFrame and subsequently shared 
+  at by most children, hence it is not shown multiple times in the hierarchy.
+- Sizer object are omitted from the hierarchy.
+
+
+--------------------------------------------------------------------------------
+Publish-Subscribe System
+--------------------------------------------------------------------------------
+
+If something changes in the model, 
+
+
+
+
+

@@ -1,0 +1,178 @@
+================================================================================
+
+	ALGRAEPH README
+
+================================================================================
+
+Algraeph
+Version 1.0
+
+Copyright (C) 2007-2013 by Erwin Marsi and TST-Centrale
+
+http://daeso.uvt.nl/algraeph
+e.marsi@gmail.com
+
+
+--------------------------------------------------------------------------------
+	DESCRIPTION
+--------------------------------------------------------------------------------
+
+Algraeph is a tool for manual alignment of linguistic graphs, such as
+phrase structure trees or dependency structures, where each node
+corresponds to a subsequence of the analyzed input sentence. It allows
+you to express the similarity between two graphs by aligning their
+nodes and attaching relation labels to these aligments. 
+
+Graphs are read from one or more graphbanks (or treebanks). Algraeph
+currently supports graphs in the general GraphML format and in the
+Alpino format (for Dutch). Alignment relations are user-defined. The
+alignments are stored in a simple XML format, which can be used for
+further processing.  The result - a parallel graph corpus - is a
+useful data set for many tasks in computational linguistics and
+natural language processing such as automatic summarization, automatic
+translation, paraphrase extraction, recognizing textual entailment,
+etc.
+
+Algraeph is implemented in the Python programming language using the
+wxPython GUI toolkit. It has been tested on Mac OS X, GNU Linux and MS
+Windows, but should run on any platform which is supported by Python,
+wxPython and Graphviz.
+
+
+--------------------------------------------------------------------------------
+	LICENSE & USAGE
+--------------------------------------------------------------------------------
+
+Algraeph is licensed under the GNU Public License. For detailed
+license information see the file COPYING
+
+Algraeph is provided free of charge. In return I would like to ask the
+following. In technical or scientfic publications about research in
+which Algraeph was used, please refer to the most appropriate paper
+from the list below:
+
+    Erwin Marsi and Emiel Krahmer, "Annotating a parallel monolingual
+    treebank with semantic similarity relations". In: Proceeding of
+    the Sixth International Workshop on Treebanks and Linguistic
+    Theories, December 7-8, 2007, Bergen, Norway.
+
+    Erwin Marsi and Emiel Krahmer, "Explorations in Sentence Fusion". In:
+    Proceedings of the 10th European Workshop on Natural Language
+    Generation, Aberdeen, GB, 8-10 August 2005,  pages 109-117.
+
+    Erwin Marsi and Emiel Krahmer, "Classification of semantic
+    relations by humans and machines". In: Proceedings of the ACL 2005
+    workshop on Empirical Modeling of Semantic Equivalence and
+    Entailment, University of Michigan, Ann Arbor, USA, 2005, pages
+    1-6.
+
+In other cases of commercial or educational use, please link or refer
+to the Algraeph webpage http://daeso.uvt.nl/algraeph
+
+
+--------------------------------------------------------------------------------
+	INSTALLATION
+--------------------------------------------------------------------------------
+
+For installation instruction see the file INSTALL.
+
+
+--------------------------------------------------------------------------------
+	USAGE
+--------------------------------------------------------------------------------
+
+For documentation see the Algraeph User Manual located under the Help
+menu, or in the file doc/algraeph-user-manual.htm.
+
+
+--------------------------------------------------------------------------------
+	DATA
+--------------------------------------------------------------------------------
+
+The "data" directory contains a number of examples, where each subdirectory
+contains a parallel graph corpus with its graphbanks(s):
+	
+	data
+	|-- alpino
+	|   `-- saint
+	|       |-- algraeph-saint-1_15.xml
+	|       |-- saintaltena-syntax.xml
+	|       `-- sainthamel-syntax.xml
+	`-- graphml
+		|-- rte
+		|   |-- algraeph_RTE2_dev-dep-SUM.xml
+		|   `-- graphbank_RTE2_dev-dep-SUM.xml
+		`-- simple
+			|-- algraeph-simple-alignment.xml
+			|-- simple-dutch-graphbank.xml
+			`-- simple-english-graphbank.xml
+	
+The corpus algraeph-simple-alignment.xml is a minimal example, consisting of
+just 2 sentence pairs of English sentences and their Dutch translations, that
+illustrates how similar nodes can be aligned in phrase structure trees encoded
+in GraphML.
+
+The corpus algraeph-saint-1_15.xml is a small sample from the Daeso corpus,
+which is currently under developement. The text material consists of the first
+15 sentences from two alternative Dutch translations of the book "Le Petit
+Prince" by Antoine de Saint-Exupéry
+(http://en.wikipedia.org/wiki/Le_petit_prince). The parse trees were produced
+by the Alpino parser (http://www.let.rug.nl/vannoord/alp/Alpino/). Nodes were
+manually aligned and labeled using the set of five semantic relations
+described in [Marsi & Krahmer 2005].
+
+The corpus algraeph_RTE2_dev-dep-SUM.xml is derived from 200 text-hypothesis
+pairs from the second Pascal Challenge on Recognizing Textual Entailment
+(http://www.pascal-network.org/Challenges/RTE2/), in particular the
+"summarization" task from the developement set. Sentences were parsed with the
+Minipar parser (http://www.cs.ualberta.ca/~lindek/minipar.htm) and converted
+to GraphML format. The first 10 sentence pairs are alignned according to the
+same five relations mentioned earlier. The idea is that of "tree inclusion"
+(implicit in many approaches to RTE): the text (tree on the left) entails the
+hypothesis (tree on the right), if (nearly) all nodes in the hypothesis are
+aligned and labeled as "equals", "restates" or "specifies".
+
+
+--------------------------------------------------------------------------------
+	CONTACT
+--------------------------------------------------------------------------------
+
+For questions, bug reports or feature requests, please contact 
+Erwin Marsi at e.marsi@gmail.com.
+
+
+--------------------------------------------------------------------------------
+	ACKNOWLEDGEMENTS
+--------------------------------------------------------------------------------
+
+This software was developed within the DAESO research project
+(http://daeso.uvt.nl) funded by the Stevin programme
+(http://taalunieversum.org/taal/technologie/stevin/)
+
+Algraeph's existence would be much harder without:
+
+- the Python programming language (http://www.python.org/)
+- the wxPython GUI toolkit (http://www.wxpython.org/)
+- the Graphviz graph visualization software (http://www.graphviz.org/)
+- the NetworkX Python package for creating and manipulating graphs and networks 
+  (https://networkx.lanl.gov/)
+- the Wingware's Python IDE (http://www.wingware.com/)
+- the packaging programs 
+   py2app (http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html), 
+   py2exe (http://www.py2exe.org/), and 
+   Inno Setup (http://www.jrsoftware.org/isinfo.php)
+- the feedback from annotators Bas Bareman, Fleur van Dongen, Nienke Eckhardt, 
+  Koen van Lierop, Vera Nijveld, Hanneke Schoormans, 
+
+ 
+$Id: README 1314 2010-04-27 04:21:36Z emarsi $
+
+
+
+
+
+
+
+
+
+

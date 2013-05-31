@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.graphml.graphview</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        <a href="graeph.graphml-module.html">Package&nbsp;graphml</a> ::
+        Module&nbsp;graphview
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.graphml.graphview-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="graeph.graphml.graphview-module.html">Module graeph.graphml.graphview</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2007-2013 by </tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># Erwin Marsi and TST-Centrale</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"># This file is part of the Algraeph program.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is free software; you can redistribute it and/or modify</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># the Free Software Foundation; either version 3 of the License, or</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># (at your option) any later version.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment"># but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-comment"># GNU General Public License for more details.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-comment"># along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">subclasses of GraphView and ViewMenu specific to Graphml format</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">"Erwin Marsi &lt;e.marsi@gmail.com&gt;"</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">wx</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package graeph=graeph-module.html"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-0', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module graeph.alpino.graphview=graeph.alpino.graphview-module.html,Module graeph.graphml.graphview=graeph.graphml.graphview-module.html,Module graeph.graphview=graeph.graphview-module.html"><a title="graeph.alpino.graphview
+graeph.graphml.graphview
+graeph.graphview" class="py-name" href="#" onclick="return doclink('link-1', 'graphview', 'link-1');">graphview</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class graeph.graphview.BasicGraphView=graeph.graphview.BasicGraphView-class.html"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-2', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Class graeph.graphview.BasicViewMenu=graeph.graphview.BasicViewMenu-class.html"><a title="graeph.graphview.BasicViewMenu" class="py-name" href="#" onclick="return doclink('link-3', 'BasicViewMenu', 'link-3');">BasicViewMenu</a></tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-4', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Module graeph.pubsub=graeph.pubsub-module.html"><a title="graeph.pubsub" class="py-name" href="#" onclick="return doclink('link-5', 'pubsub', 'link-5');">pubsub</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Method graeph.commentview.CommentView.subscribe()=graeph.commentview.CommentView-class.html#subscribe,Method graeph.graphview.GraphView.subscribe()=graeph.graphview.GraphView-class.html#subscribe,Method graeph.gui.AlgraephFrame.subscribe()=graeph.gui.AlgraephFrame-class.html#subscribe,Method graeph.gui.AlignPage.subscribe()=graeph.gui.AlignPage-class.html#subscribe,Method graeph.gui.BottomPanel.subscribe()=graeph.gui.BottomPanel-class.html#subscribe,Method graeph.gui.GraphViewPanel.subscribe()=graeph.gui.GraphViewPanel-class.html#subscribe,Function graeph.pubsub.subscribe()=graeph.pubsub-module.html#subscribe,Method graeph.relationview.RelationView.subscribe()=graeph.relationview.RelationView-class.html#subscribe,Method graeph.tokenview.FromNodeTokenView.subscribe()=graeph.tokenview.FromNodeTokenView-class.html#subscribe,Method graeph.tokenview.ToNodeTokenView.subscribe()=graeph.tokenview.ToNodeTokenView-class.html#subscribe,Method graeph.tokenview.TokenView.subscribe()=graeph.tokenview.TokenView-class.html#subscribe"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-6', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.unsubscribe()=graeph.alpino.graphview.AlpinoGraphView-class.html#unsubscribe,Method graeph.graphview.BasicGraphView.unsubscribe()=graeph.graphview.BasicGraphView-class.html#unsubscribe,Method graeph.graphview.GraphView.unsubscribe()=graeph.graphview.GraphView-class.html#unsubscribe,Function graeph.pubsub.unsubscribe()=graeph.pubsub-module.html#unsubscribe"><a title="graeph.alpino.graphview.AlpinoGraphView.unsubscribe
+graeph.graphview.BasicGraphView.unsubscribe
+graeph.graphview.GraphView.unsubscribe
+graeph.pubsub.unsubscribe" class="py-name" href="#" onclick="return doclink('link-7', 'unsubscribe', 'link-7');">unsubscribe</a></tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name" targets="Function graeph.pubsub.send()=graeph.pubsub-module.html#send"><a title="graeph.pubsub.send" class="py-name" href="#" onclick="return doclink('link-8', 'send', 'link-8');">send</a></tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name" targets="Function graeph.pubsub.receive()=graeph.pubsub-module.html#receive"><a title="graeph.pubsub.receive" class="py-name" href="#" onclick="return doclink('link-9', 'receive', 'link-9');">receive</a></tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-10', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Package graeph.graphml=graeph.graphml-module.html"><a title="graeph.graphml" class="py-name" href="#" onclick="return doclink('link-11', 'graphml', 'link-11');">graphml</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Module graeph.alpino.dotgraph=graeph.alpino.dotgraph-module.html,Module graeph.dotgraph=graeph.dotgraph-module.html,Module graeph.graphml.dotgraph=graeph.graphml.dotgraph-module.html"><a title="graeph.alpino.dotgraph
+graeph.dotgraph
+graeph.graphml.dotgraph" class="py-name" href="#" onclick="return doclink('link-12', 'dotgraph', 'link-12');">dotgraph</a></tt> <tt class="py-keyword">import</tt> <tt id="link-13" class="py-name" targets="Class graeph.graphml.dotgraph.GraphmlDotGraphPair=graeph.graphml.dotgraph.GraphmlDotGraphPair-class.html"><a title="graeph.graphml.dotgraph.GraphmlDotGraphPair" class="py-name" href="#" onclick="return doclink('link-13', 'GraphmlDotGraphPair', 'link-13');">GraphmlDotGraphPair</a></tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"> </tt>
+<a name="GraphmlGraphView"></a><div id="GraphmlGraphView-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="GraphmlGraphView-toggle" onclick="return toggle('GraphmlGraphView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.graphml.graphview.GraphmlGraphView-class.html">GraphmlGraphView</a><tt class="py-op">(</tt><tt class="py-base-class">BasicGraphView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GraphmlGraphView-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="GraphmlGraphView-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"><tt class="py-docstring">    Graph viewer for graph pairs in Graphml format</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">      </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">     </tt>
+<a name="GraphmlGraphView.initDotGraphPair"></a><div id="GraphmlGraphView.initDotGraphPair-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="GraphmlGraphView.initDotGraphPair-toggle" onclick="return toggle('GraphmlGraphView.initDotGraphPair');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.graphml.graphview.GraphmlGraphView-class.html#initDotGraphPair">initDotGraphPair</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GraphmlGraphView.initDotGraphPair-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="GraphmlGraphView.initDotGraphPair-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">        Initialize the dot visualization for Graphml graphs</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="graeph.graphml.dotgraph.GraphmlDotGraphPair" class="py-name" href="#" onclick="return doclink('link-14', 'GraphmlDotGraphPair', 'link-13');">GraphmlDotGraphPair</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">         </tt>
+<a name="GraphmlGraphView.initViewMenu"></a><div id="GraphmlGraphView.initViewMenu-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="GraphmlGraphView.initViewMenu-toggle" onclick="return toggle('GraphmlGraphView.initViewMenu');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.graphml.graphview.GraphmlGraphView-class.html#initViewMenu">initViewMenu</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GraphmlGraphView.initViewMenu-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="GraphmlGraphView.initViewMenu-expanded"><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring">        Initialise the pop-up menu for Graphml graph viewing options</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">viewMenu</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name" targets="Class graeph.graphml.graphview.GraphmlViewMenu=graeph.graphml.graphview.GraphmlViewMenu-class.html"><a title="graeph.graphml.graphview.GraphmlViewMenu" class="py-name" href="#" onclick="return doclink('link-15', 'GraphmlViewMenu', 'link-15');">GraphmlViewMenu</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Module graeph.aligner=graeph.aligner-module.html"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-16', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">algraephFrame</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">         </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="GraphmlViewMenu"></a><div id="GraphmlViewMenu-def"><a name="L60"></a><tt class="py-lineno">60</tt> <a class="py-toggle" href="#" id="GraphmlViewMenu-toggle" onclick="return toggle('GraphmlViewMenu');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.graphml.graphview.GraphmlViewMenu-class.html">GraphmlViewMenu</a><tt class="py-op">(</tt><tt class="py-base-class">BasicViewMenu</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GraphmlViewMenu-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="GraphmlViewMenu-expanded"><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">    Pop-up menu with viewing options for Graphml graphs</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:32 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

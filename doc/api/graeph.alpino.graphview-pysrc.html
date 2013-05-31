@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.alpino.graphview</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        <a href="graeph.alpino-module.html">Package&nbsp;alpino</a> ::
+        Module&nbsp;graphview
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.alpino.graphview-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="graeph.alpino.graphview-module.html">Module graeph.alpino.graphview</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2007-2013 by </tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment"># Erwin Marsi and TST-Centrale</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># This file is part of the Algraeph program.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is free software; you can redistribute it and/or modify</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># it under the terms of the GNU General Public License as published by</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># the Free Software Foundation; either version 3 of the License, or</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># (at your option) any later version.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># The Algraeph program is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># GNU General Public License for more details.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">subclasses of GraphView and ViewMenu specific to Alpino format</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">"Erwin Marsi &lt;e.marsi@gmail.com&gt;"</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">wx</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package graeph=graeph-module.html"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-0', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module graeph.alpino.graphview=graeph.alpino.graphview-module.html,Module graeph.graphml.graphview=graeph.graphml.graphview-module.html,Module graeph.graphview=graeph.graphview-module.html"><a title="graeph.alpino.graphview
+graeph.graphml.graphview
+graeph.graphview" class="py-name" href="#" onclick="return doclink('link-1', 'graphview', 'link-1');">graphview</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class graeph.graphview.BasicGraphView=graeph.graphview.BasicGraphView-class.html"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-2', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Class graeph.graphview.BasicViewMenu=graeph.graphview.BasicViewMenu-class.html"><a title="graeph.graphview.BasicViewMenu" class="py-name" href="#" onclick="return doclink('link-3', 'BasicViewMenu', 'link-3');">BasicViewMenu</a></tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-4', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Module graeph.pubsub=graeph.pubsub-module.html"><a title="graeph.pubsub" class="py-name" href="#" onclick="return doclink('link-5', 'pubsub', 'link-5');">pubsub</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Method graeph.commentview.CommentView.subscribe()=graeph.commentview.CommentView-class.html#subscribe,Method graeph.graphview.GraphView.subscribe()=graeph.graphview.GraphView-class.html#subscribe,Method graeph.gui.AlgraephFrame.subscribe()=graeph.gui.AlgraephFrame-class.html#subscribe,Method graeph.gui.AlignPage.subscribe()=graeph.gui.AlignPage-class.html#subscribe,Method graeph.gui.BottomPanel.subscribe()=graeph.gui.BottomPanel-class.html#subscribe,Method graeph.gui.GraphViewPanel.subscribe()=graeph.gui.GraphViewPanel-class.html#subscribe,Function graeph.pubsub.subscribe()=graeph.pubsub-module.html#subscribe,Method graeph.relationview.RelationView.subscribe()=graeph.relationview.RelationView-class.html#subscribe,Method graeph.tokenview.FromNodeTokenView.subscribe()=graeph.tokenview.FromNodeTokenView-class.html#subscribe,Method graeph.tokenview.ToNodeTokenView.subscribe()=graeph.tokenview.ToNodeTokenView-class.html#subscribe,Method graeph.tokenview.TokenView.subscribe()=graeph.tokenview.TokenView-class.html#subscribe"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-6', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.unsubscribe()=graeph.alpino.graphview.AlpinoGraphView-class.html#unsubscribe,Method graeph.graphview.BasicGraphView.unsubscribe()=graeph.graphview.BasicGraphView-class.html#unsubscribe,Method graeph.graphview.GraphView.unsubscribe()=graeph.graphview.GraphView-class.html#unsubscribe,Function graeph.pubsub.unsubscribe()=graeph.pubsub-module.html#unsubscribe"><a title="graeph.alpino.graphview.AlpinoGraphView.unsubscribe
+graeph.graphview.BasicGraphView.unsubscribe
+graeph.graphview.GraphView.unsubscribe
+graeph.pubsub.unsubscribe" class="py-name" href="#" onclick="return doclink('link-7', 'unsubscribe', 'link-7');">unsubscribe</a></tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name" targets="Function graeph.pubsub.send()=graeph.pubsub-module.html#send"><a title="graeph.pubsub.send" class="py-name" href="#" onclick="return doclink('link-8', 'send', 'link-8');">send</a></tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name" targets="Function graeph.pubsub.receive()=graeph.pubsub-module.html#receive"><a title="graeph.pubsub.receive" class="py-name" href="#" onclick="return doclink('link-9', 'receive', 'link-9');">receive</a></tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name"><a title="graeph" class="py-name" href="#" onclick="return doclink('link-10', 'graeph', 'link-0');">graeph</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Package graeph.alpino=graeph.alpino-module.html"><a title="graeph.alpino" class="py-name" href="#" onclick="return doclink('link-11', 'alpino', 'link-11');">alpino</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Module graeph.alpino.dotgraph=graeph.alpino.dotgraph-module.html,Module graeph.dotgraph=graeph.dotgraph-module.html,Module graeph.graphml.dotgraph=graeph.graphml.dotgraph-module.html"><a title="graeph.alpino.dotgraph
+graeph.dotgraph
+graeph.graphml.dotgraph" class="py-name" href="#" onclick="return doclink('link-12', 'dotgraph', 'link-12');">dotgraph</a></tt> <tt class="py-keyword">import</tt> <tt id="link-13" class="py-name" targets="Class graeph.alpino.dotgraph.AlpinoDotGraphPair=graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html"><a title="graeph.alpino.dotgraph.AlpinoDotGraphPair" class="py-name" href="#" onclick="return doclink('link-13', 'AlpinoDotGraphPair', 'link-13');">AlpinoDotGraphPair</a></tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoGraphView"></a><div id="AlpinoGraphView-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="AlpinoGraphView-toggle" onclick="return toggle('AlpinoGraphView');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html">AlpinoGraphView</a><tt class="py-op">(</tt><tt class="py-base-class">BasicGraphView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AlpinoGraphView-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">    Graph viewer for graph pairs in Alpino format</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">     </tt>
+<a name="AlpinoGraphView.__init__"></a><div id="AlpinoGraphView.__init__-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.__init__-toggle" onclick="return toggle('AlpinoGraphView.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">aligner</tt><tt class="py-op">,</tt> <tt class="py-param">algraephFrame</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.__init__-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-14', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method graeph.aligner.Aligner.__init__()=graeph.aligner.Aligner-class.html#__init__,Method graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__()=graeph.alpino.dotgraph.AlpinoDotGraphPair-class.html#__init__,Method graeph.alpino.graphview.AlpinoGraphView.__init__()=graeph.alpino.graphview.AlpinoGraphView-class.html#__init__,Method graeph.commentview.CommentView.__init__()=graeph.commentview.CommentView-class.html#__init__,Method graeph.dotgraph.BasicDotGraphPair.__init__()=graeph.dotgraph.BasicDotGraphPair-class.html#__init__,Method graeph.dotgraph.DotGraph.__init__()=graeph.dotgraph.DotGraph-class.html#__init__,Method graeph.dotgraph.DotGraphPair.__init__()=graeph.dotgraph.DotGraphPair-class.html#__init__,Method graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__()=graeph.graphml.dotgraph.GraphmlDotGraphPair-class.html#__init__,Method graeph.graphview.GraphView.__init__()=graeph.graphview.GraphView-class.html#__init__,Method graeph.graphview.ViewMenu.__init__()=graeph.graphview.ViewMenu-class.html#__init__,Method graeph.gui.Algraeph.__init__()=graeph.gui.Algraeph-class.html#__init__,Method graeph.gui.AlgraephFrame.__init__()=graeph.gui.AlgraephFrame-class.html#__init__,Method graeph.gui.AlignPage.__init__()=graeph.gui.AlignPage-class.html#__init__,Method graeph.gui.BottomPanel.__init__()=graeph.gui.BottomPanel-class.html#__init__,Method graeph.gui.CommentPage.__init__()=graeph.gui.CommentPage-class.html#__init__,Method graeph.gui.GraphTokenPanel.__init__()=graeph.gui.GraphTokenPanel-class.html#__init__,Method graeph.gui.GraphViewPanel.__init__()=graeph.gui.GraphViewPanel-class.html#__init__,Method graeph.helpview.HelpViewFrame.__init__()=graeph.helpview.HelpViewFrame-class.html#__init__,Method graeph.relationview.RelationView.__init__()=graeph.relationview.RelationView-class.html#__init__,Method graeph.tokenview.TokenView.__init__()=graeph.tokenview.TokenView-class.html#__init__"><a title="graeph.aligner.Aligner.__init__
+graeph.alpino.dotgraph.AlpinoDotGraphPair.__init__
+graeph.alpino.graphview.AlpinoGraphView.__init__
+graeph.commentview.CommentView.__init__
+graeph.dotgraph.BasicDotGraphPair.__init__
+graeph.dotgraph.DotGraph.__init__
+graeph.dotgraph.DotGraphPair.__init__
+graeph.graphml.dotgraph.GraphmlDotGraphPair.__init__
+graeph.graphview.GraphView.__init__
+graeph.graphview.ViewMenu.__init__
+graeph.gui.Algraeph.__init__
+graeph.gui.AlgraephFrame.__init__
+graeph.gui.AlignPage.__init__
+graeph.gui.BottomPanel.__init__
+graeph.gui.CommentPage.__init__
+graeph.gui.GraphTokenPanel.__init__
+graeph.gui.GraphViewPanel.__init__
+graeph.helpview.HelpViewFrame.__init__
+graeph.relationview.RelationView.__init__
+graeph.tokenview.TokenView.__init__" class="py-name" href="#" onclick="return doclink('link-15', '__init__', 'link-15');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt id="link-16" class="py-name" targets="Module graeph.aligner=graeph.aligner-module.html"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-16', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">,</tt> <tt class="py-name">algraephFrame</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">Bind</tt><tt class="py-op">(</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">EVT_CHAR</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.onChar()=graeph.alpino.graphview.AlpinoGraphView-class.html#onChar"><a title="graeph.alpino.graphview.AlpinoGraphView.onChar" class="py-name" href="#" onclick="return doclink('link-17', 'onChar', 'link-17');">onChar</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">         </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.initDotGraphPair"></a><div id="AlpinoGraphView.initDotGraphPair-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.initDotGraphPair-toggle" onclick="return toggle('AlpinoGraphView.initDotGraphPair');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#initDotGraphPair">initDotGraphPair</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.initDotGraphPair-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.initDotGraphPair-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-docstring">        Initialize the dot visualization for Alpino graphs</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotGraphPair" class="py-name" href="#" onclick="return doclink('link-18', 'AlpinoDotGraphPair', 'link-13');">AlpinoDotGraphPair</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.initViewMenu"></a><div id="AlpinoGraphView.initViewMenu-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.initViewMenu-toggle" onclick="return toggle('AlpinoGraphView.initViewMenu');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#initViewMenu">initViewMenu</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.initViewMenu-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.initViewMenu-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">        Initialise the pop-up menu for Alpino graph viewing options</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">viewMenu</tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name" targets="Class graeph.alpino.graphview.AlpinoViewMenu=graeph.alpino.graphview.AlpinoViewMenu-class.html"><a title="graeph.alpino.graphview.AlpinoViewMenu" class="py-name" href="#" onclick="return doclink('link-19', 'AlpinoViewMenu', 'link-19');">AlpinoViewMenu</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-20', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">algraephFrame</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">         </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">     </tt>
+<a name="AlpinoGraphView.subscribe_stage_1"></a><div id="AlpinoGraphView.subscribe_stage_1-def"><a name="L62"></a><tt class="py-lineno"> 62</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.subscribe_stage_1-toggle" onclick="return toggle('AlpinoGraphView.subscribe_stage_1');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#subscribe_stage_1">subscribe_stage_1</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.subscribe_stage_1-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.subscribe_stage_1-expanded"><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt id="link-21" class="py-name"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-21', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.subscribe_stage_1()=graeph.alpino.graphview.AlpinoGraphView-class.html#subscribe_stage_1,Method graeph.graphview.BasicGraphView.subscribe_stage_1()=graeph.graphview.BasicGraphView-class.html#subscribe_stage_1,Method graeph.graphview.GraphView.subscribe_stage_1()=graeph.graphview.GraphView-class.html#subscribe_stage_1"><a title="graeph.alpino.graphview.AlpinoGraphView.subscribe_stage_1
+graeph.graphview.BasicGraphView.subscribe_stage_1
+graeph.graphview.GraphView.subscribe_stage_1" class="py-name" href="#" onclick="return doclink('link-22', 'subscribe_stage_1', 'link-22');">subscribe_stage_1</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt>  </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt id="link-23" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-23', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.updateAutoFolded()=graeph.alpino.graphview.AlpinoGraphView-class.html#updateAutoFolded"><a title="graeph.alpino.graphview.AlpinoGraphView.updateAutoFolded" class="py-name" href="#" onclick="return doclink('link-24', 'updateAutoFolded', 'link-24');">updateAutoFolded</a></tt><tt class="py-op">,</tt> <tt class="py-string">"newGraphPair.viz"</tt><tt class="py-op">)</tt>  </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt id="link-25" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-25', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method graeph.graphview.BasicGraphView.updateFolded()=graeph.graphview.BasicGraphView-class.html#updateFolded"><a title="graeph.graphview.BasicGraphView.updateFolded" class="py-name" href="#" onclick="return doclink('link-26', 'updateFolded', 'link-26');">updateFolded</a></tt><tt class="py-op">,</tt> <tt class="py-string">"newGraphPair.viz"</tt><tt class="py-op">)</tt>   </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt id="link-27" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-27', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.updateAutoFolded" class="py-name" href="#" onclick="return doclink('link-28', 'updateAutoFolded', 'link-24');">updateAutoFolded</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">         </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.subscribe_stage_3"></a><div id="AlpinoGraphView.subscribe_stage_3-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.subscribe_stage_3-toggle" onclick="return toggle('AlpinoGraphView.subscribe_stage_3');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#subscribe_stage_3">subscribe_stage_3</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.subscribe_stage_3-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.subscribe_stage_3-expanded"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-comment"># NB order of subscripton is relevant</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt id="link-29" class="py-name"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-29', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.subscribe_stage_3()=graeph.alpino.graphview.AlpinoGraphView-class.html#subscribe_stage_3,Method graeph.graphview.BasicGraphView.subscribe_stage_3()=graeph.graphview.BasicGraphView-class.html#subscribe_stage_3,Method graeph.graphview.GraphView.subscribe_stage_3()=graeph.graphview.GraphView-class.html#subscribe_stage_3"><a title="graeph.alpino.graphview.AlpinoGraphView.subscribe_stage_3
+graeph.graphview.BasicGraphView.subscribe_stage_3
+graeph.graphview.GraphView.subscribe_stage_3" class="py-name" href="#" onclick="return doclink('link-30', 'subscribe_stage_3', 'link-30');">subscribe_stage_3</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">         </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-comment"># orderNodesChanged</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt id="link-31" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-31', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method graeph.graphview.GraphView.updateFromGraph()=graeph.graphview.GraphView-class.html#updateFromGraph"><a title="graeph.graphview.GraphView.updateFromGraph" class="py-name" href="#" onclick="return doclink('link-32', 'updateFromGraph', 'link-32');">updateFromGraph</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt id="link-33" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-33', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method graeph.graphview.GraphView.updateToGraph()=graeph.graphview.GraphView-class.html#updateToGraph"><a title="graeph.graphview.GraphView.updateToGraph" class="py-name" href="#" onclick="return doclink('link-34', 'updateToGraph', 'link-34');">updateToGraph</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt id="link-35" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-35', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Method graeph.graphview.GraphView.updateImageFile()=graeph.graphview.GraphView-class.html#updateImageFile"><a title="graeph.graphview.GraphView.updateImageFile" class="py-name" href="#" onclick="return doclink('link-36', 'updateImageFile', 'link-36');">updateImageFile</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt id="link-37" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-37', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method graeph.graphview.GraphView.updateImageMap()=graeph.graphview.GraphView-class.html#updateImageMap"><a title="graeph.graphview.GraphView.updateImageMap" class="py-name" href="#" onclick="return doclink('link-38', 'updateImageMap', 'link-38');">updateImageMap</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt id="link-39" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-39', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Method graeph.graphview.GraphView.updateHtmlPage()=graeph.graphview.GraphView-class.html#updateHtmlPage"><a title="graeph.graphview.GraphView.updateHtmlPage" class="py-name" href="#" onclick="return doclink('link-40', 'updateHtmlPage', 'link-40');">updateHtmlPage</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">         </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-comment"># autoFoldEqualsChanged</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt id="link-41" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-41', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="graeph.graphview.GraphView.updateFromGraph" class="py-name" href="#" onclick="return doclink('link-42', 'updateFromGraph', 'link-32');">updateFromGraph</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt id="link-43" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-43', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="graeph.graphview.GraphView.updateToGraph" class="py-name" href="#" onclick="return doclink('link-44', 'updateToGraph', 'link-34');">updateToGraph</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt id="link-45" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-45', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name" targets="Method graeph.graphview.GraphView.updateAlignment()=graeph.graphview.GraphView-class.html#updateAlignment"><a title="graeph.graphview.GraphView.updateAlignment" class="py-name" href="#" onclick="return doclink('link-46', 'updateAlignment', 'link-46');">updateAlignment</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt id="link-47" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-47', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="graeph.graphview.BasicGraphView.updateFolded" class="py-name" href="#" onclick="return doclink('link-48', 'updateFolded', 'link-26');">updateFolded</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt id="link-49" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-49', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="graeph.graphview.GraphView.updateImageFile" class="py-name" href="#" onclick="return doclink('link-50', 'updateImageFile', 'link-36');">updateImageFile</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt id="link-51" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-51', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="graeph.graphview.GraphView.updateImageMap" class="py-name" href="#" onclick="return doclink('link-52', 'updateImageMap', 'link-38');">updateImageMap</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt id="link-53" class="py-name"><a title="graeph.commentview.CommentView.subscribe
+graeph.graphview.GraphView.subscribe
+graeph.gui.AlgraephFrame.subscribe
+graeph.gui.AlignPage.subscribe
+graeph.gui.BottomPanel.subscribe
+graeph.gui.GraphViewPanel.subscribe
+graeph.pubsub.subscribe
+graeph.relationview.RelationView.subscribe
+graeph.tokenview.FromNodeTokenView.subscribe
+graeph.tokenview.ToNodeTokenView.subscribe
+graeph.tokenview.TokenView.subscribe" class="py-name" href="#" onclick="return doclink('link-53', 'subscribe', 'link-6');">subscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="graeph.graphview.GraphView.updateHtmlPage" class="py-name" href="#" onclick="return doclink('link-54', 'updateHtmlPage', 'link-40');">updateHtmlPage</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">         </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.unsubscribe"></a><div id="AlpinoGraphView.unsubscribe-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.unsubscribe-toggle" onclick="return toggle('AlpinoGraphView.unsubscribe');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#unsubscribe">unsubscribe</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.unsubscribe-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.unsubscribe-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt id="link-55" class="py-name"><a title="graeph.graphview.BasicGraphView" class="py-name" href="#" onclick="return doclink('link-55', 'BasicGraphView', 'link-2');">BasicGraphView</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.unsubscribe
+graeph.graphview.BasicGraphView.unsubscribe
+graeph.graphview.GraphView.unsubscribe
+graeph.pubsub.unsubscribe" class="py-name" href="#" onclick="return doclink('link-56', 'unsubscribe', 'link-7');">unsubscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt id="link-57" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.unsubscribe
+graeph.graphview.BasicGraphView.unsubscribe
+graeph.graphview.GraphView.unsubscribe
+graeph.pubsub.unsubscribe" class="py-name" href="#" onclick="return doclink('link-57', 'unsubscribe', 'link-7');">unsubscribe</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.updateAutoFolded" class="py-name" href="#" onclick="return doclink('link-58', 'updateAutoFolded', 'link-24');">updateAutoFolded</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">         </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------    </tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-comment"># Event handlers</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------ </tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.onOrderNodes"></a><div id="AlpinoGraphView.onOrderNodes-def"><a name="L99"></a><tt class="py-lineno"> 99</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.onOrderNodes-toggle" onclick="return toggle('AlpinoGraphView.onOrderNodes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#onOrderNodes">onOrderNodes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">evt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.onOrderNodes-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.onOrderNodes-expanded"><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">        handler for the 'Order Nodes' option in AlpinoViewMenu </tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">from_subgraph</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Method graeph.alpino.dotgraph.AlpinoDotSubGraph.order_nodes_option()=graeph.alpino.dotgraph.AlpinoDotSubGraph-class.html#order_nodes_option"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph.order_nodes_option" class="py-name" href="#" onclick="return doclink('link-59', 'order_nodes_option', 'link-59');">order_nodes_option</a></tt><tt class="py-op">(</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt class="py-name">Checked</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">to_subgraph</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="graeph.alpino.dotgraph.AlpinoDotSubGraph.order_nodes_option" class="py-name" href="#" onclick="return doclink('link-60', 'order_nodes_option', 'link-59');">order_nodes_option</a></tt><tt class="py-op">(</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt class="py-name">Checked</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt id="link-61" class="py-name"><a title="graeph.pubsub.send" class="py-name" href="#" onclick="return doclink('link-61', 'send', 'link-8');">send</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.onOrderNodes()=graeph.alpino.graphview.AlpinoGraphView-class.html#onOrderNodes"><a title="graeph.alpino.graphview.AlpinoGraphView.onOrderNodes" class="py-name" href="#" onclick="return doclink('link-62', 'onOrderNodes', 'link-62');">onOrderNodes</a></tt><tt class="py-op">,</tt> <tt class="py-string">"orderNodesChanged"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">         </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.onAutoFoldEquals"></a><div id="AlpinoGraphView.onAutoFoldEquals-def"><a name="L108"></a><tt class="py-lineno">108</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.onAutoFoldEquals-toggle" onclick="return toggle('AlpinoGraphView.onAutoFoldEquals');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#onAutoFoldEquals">onAutoFoldEquals</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">evt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.onAutoFoldEquals-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.onAutoFoldEquals-expanded"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">        handler for the 'Auto Fold Equals' option in AlpinoViewMenu </tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt id="link-63" class="py-name"><a title="graeph.pubsub.send" class="py-name" href="#" onclick="return doclink('link-63', 'send', 'link-8');">send</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-64" class="py-name" targets="Method graeph.alpino.graphview.AlpinoGraphView.onAutoFoldEquals()=graeph.alpino.graphview.AlpinoGraphView-class.html#onAutoFoldEquals"><a title="graeph.alpino.graphview.AlpinoGraphView.onAutoFoldEquals" class="py-name" href="#" onclick="return doclink('link-64', 'onAutoFoldEquals', 'link-64');">onAutoFoldEquals</a></tt><tt class="py-op">,</tt> <tt class="py-string">"autoFoldEqualsChanged"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">         </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoGraphView.onChar"></a><div id="AlpinoGraphView.onChar-def"><a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.onChar-toggle" onclick="return toggle('AlpinoGraphView.onChar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#onChar">onChar</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">evt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.onChar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.onChar-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-comment"># TODO: this is an hack that relies on the Daeso relation set </tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-comment"># - should be solved in a better way </tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-name">keycode</tt> <tt class="py-op">=</tt> <tt class="py-name">evt</tt><tt class="py-op">.</tt><tt class="py-name">GetKeyCode</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">         </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">keycode</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">256</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">char</tt> <tt class="py-op">=</tt> <tt class="py-name">chr</tt><tt class="py-op">(</tt><tt class="py-name">keycode</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-name">char</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">         </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"n"</tt><tt class="py-op">:</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-65', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-66" class="py-name" targets="Method graeph.aligner.Aligner.set_node_pair_relation()=graeph.aligner.Aligner-class.html#set_node_pair_relation"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-66', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"none"</tt><tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">                <tt class="py-comment"># nodes were not aligned</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-keyword">pass</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"e"</tt><tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-67" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-67', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-68', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"equals"</tt><tt class="py-op">)</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"r"</tt><tt class="py-op">:</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-69" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-69', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-70" class="py-name"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-70', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"restates"</tt><tt class="py-op">)</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"g"</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-71', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-72', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"generalizes"</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"s"</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-73" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-73', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-74" class="py-name"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-74', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"specifies"</tt><tt class="py-op">)</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-string">"i"</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-75" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-75', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-76" class="py-name"><a title="graeph.aligner.Aligner.set_node_pair_relation" class="py-name" href="#" onclick="return doclink('link-76', 'set_node_pair_relation', 'link-66');">set_node_pair_relation</a></tt><tt class="py-op">(</tt><tt class="py-string">"intersects"</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">            <tt class="py-name">evt</tt><tt class="py-op">.</tt><tt class="py-name">Skip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">     </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------    </tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-comment"># Dotgraph updates</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">    <tt class="py-comment"># ------------------------------------------------------------------------------    </tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">     </tt>
+<a name="AlpinoGraphView.updateAutoFolded"></a><div id="AlpinoGraphView.updateAutoFolded-def"><a name="L148"></a><tt class="py-lineno">148</tt> <a class="py-toggle" href="#" id="AlpinoGraphView.updateAutoFolded-toggle" onclick="return toggle('AlpinoGraphView.updateAutoFolded');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoGraphView-class.html#updateAutoFolded">updateAutoFolded</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoGraphView.updateAutoFolded-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoGraphView.updateAutoFolded-expanded"><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt id="link-77" class="py-name"><a title="graeph.pubsub.receive" class="py-name" href="#" onclick="return doclink('link-77', 'receive', 'link-9');">receive</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-78" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.updateAutoFolded" class="py-name" href="#" onclick="return doclink('link-78', 'updateAutoFolded', 'link-24');">updateAutoFolded</a></tt><tt class="py-op">,</tt> <tt class="py-name">msg</tt><tt class="py-op">)</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">viewMenu</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Method graeph.graphview.ViewMenu.isChecked()=graeph.graphview.ViewMenu-class.html#isChecked"><a title="graeph.graphview.ViewMenu.isChecked" class="py-name" href="#" onclick="return doclink('link-79', 'isChecked', 'link-79');">isChecked</a></tt><tt class="py-op">(</tt><tt class="py-string">"Auto Fold Equals"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>   </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">            <tt class="py-name">from_graph</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-80" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-80', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-81" class="py-name" targets="Method graeph.aligner.Aligner.get_from_graph()=graeph.aligner.Aligner-class.html#get_from_graph"><a title="graeph.aligner.Aligner.get_from_graph" class="py-name" href="#" onclick="return doclink('link-81', 'get_from_graph', 'link-81');">get_from_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">            <tt class="py-name">to_graph</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-82', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-83" class="py-name" targets="Method graeph.aligner.Aligner.get_to_graph()=graeph.aligner.Aligner-class.html#get_to_graph"><a title="graeph.aligner.Aligner.get_to_graph" class="py-name" href="#" onclick="return doclink('link-83', 'get_to_graph', 'link-83');">get_to_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">            <tt class="py-name">from_equal_nodes</tt><tt class="py-op">,</tt> <tt class="py-name">to_equal_nodes</tt> <tt class="py-op">=</tt> \ </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-84" class="py-name"><a title="graeph.aligner" class="py-name" href="#" onclick="return doclink('link-84', 'aligner', 'link-16');">aligner</a></tt><tt class="py-op">.</tt><tt id="link-85" class="py-name" targets="Method graeph.aligner.Aligner.get_auto_fold_equal_nodes()=graeph.aligner.Aligner-class.html#get_auto_fold_equal_nodes"><a title="graeph.aligner.Aligner.get_auto_fold_equal_nodes" class="py-name" href="#" onclick="return doclink('link-85', 'get_auto_fold_equal_nodes', 'link-85');">get_auto_fold_equal_nodes</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">         </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">from_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">from_equal_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">from_subgraph</tt><tt class="py-op">.</tt><tt id="link-86" class="py-name" targets="Method graeph.dotgraph.BasicDotSubGraph._fold_node()=graeph.dotgraph.BasicDotSubGraph-class.html#_fold_node"><a title="graeph.dotgraph.BasicDotSubGraph._fold_node" class="py-name" href="#" onclick="return doclink('link-86', '_fold_node', 'link-86');">_fold_node</a></tt><tt class="py-op">(</tt><tt class="py-name">from_graph</tt><tt class="py-op">,</tt> <tt class="py-name">from_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                 </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">to_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">to_equal_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">to_subgraph</tt><tt class="py-op">.</tt><tt id="link-87" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph._fold_node" class="py-name" href="#" onclick="return doclink('link-87', '_fold_node', 'link-86');">_fold_node</a></tt><tt class="py-op">(</tt><tt class="py-name">to_graph</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">            <tt class="py-comment"># Unfolding only the auto-folded nodes is difficult, because one</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">            <tt class="py-comment"># or more predecessors of an auto-folded nody may have been be</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">            <tt class="py-comment"># manually folded. We obviously cannot unfold a subtree without</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">            <tt class="py-comment"># unfolding the folded predecesors as well. Keeping track of these</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">            <tt class="py-comment"># relations would require a lot of administration. Instead we just</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">            <tt class="py-comment"># unfold all nodes.</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">from_subgraph</tt><tt class="py-op">.</tt><tt id="link-88" class="py-name" targets="Method graeph.dotgraph.BasicDotSubGraph.unfold_all()=graeph.dotgraph.BasicDotSubGraph-class.html#unfold_all"><a title="graeph.dotgraph.BasicDotSubGraph.unfold_all" class="py-name" href="#" onclick="return doclink('link-88', 'unfold_all', 'link-88');">unfold_all</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dotGraphPair</tt><tt class="py-op">.</tt><tt class="py-name">to_subgraph</tt><tt class="py-op">.</tt><tt id="link-89" class="py-name"><a title="graeph.dotgraph.BasicDotSubGraph.unfold_all" class="py-name" href="#" onclick="return doclink('link-89', 'unfold_all', 'link-88');">unfold_all</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">             </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">             </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">             </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"> </tt>
+<a name="AlpinoViewMenu"></a><div id="AlpinoViewMenu-def"><a name="L177"></a><tt class="py-lineno">177</tt> <a class="py-toggle" href="#" id="AlpinoViewMenu-toggle" onclick="return toggle('AlpinoViewMenu');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoViewMenu-class.html">AlpinoViewMenu</a><tt class="py-op">(</tt><tt class="py-base-class">BasicViewMenu</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoViewMenu-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AlpinoViewMenu-expanded"><a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-docstring">    Pop-up menu with viewing options for Alpino graphs</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-docstring">    Adds node ordering option to the standard menu </tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">         </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">     </tt>
+<a name="AlpinoViewMenu.appendFoldOptions"></a><div id="AlpinoViewMenu.appendFoldOptions-def"><a name="L185"></a><tt class="py-lineno">185</tt> <a class="py-toggle" href="#" id="AlpinoViewMenu.appendFoldOptions-toggle" onclick="return toggle('AlpinoViewMenu.appendFoldOptions');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoViewMenu-class.html#appendFoldOptions">appendFoldOptions</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoViewMenu.appendFoldOptions-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoViewMenu.appendFoldOptions-expanded"><a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt id="link-90" class="py-name"><a title="graeph.graphview.BasicViewMenu" class="py-name" href="#" onclick="return doclink('link-90', 'BasicViewMenu', 'link-3');">BasicViewMenu</a></tt><tt class="py-op">.</tt><tt id="link-91" class="py-name" targets="Method graeph.alpino.graphview.AlpinoViewMenu.appendFoldOptions()=graeph.alpino.graphview.AlpinoViewMenu-class.html#appendFoldOptions,Method graeph.graphview.BasicViewMenu.appendFoldOptions()=graeph.graphview.BasicViewMenu-class.html#appendFoldOptions"><a title="graeph.alpino.graphview.AlpinoViewMenu.appendFoldOptions
+graeph.graphview.BasicViewMenu.appendFoldOptions" class="py-name" href="#" onclick="return doclink('link-91', 'appendFoldOptions', 'link-91');">appendFoldOptions</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">         </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">        <tt class="py-name">item</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">Append</tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt>  </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">                           <tt class="py-string">"Auto Fold Equals"</tt><tt class="py-op">,</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">                           <tt class="py-string">"Automatically fold all nodes that are aligned with "</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">                           <tt class="py-string">"with an equals relation"</tt><tt class="py-op">,</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">                           <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">ITEM_CHECK</tt><tt class="py-op">)</tt>         </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">algraephFrame</tt><tt class="py-op">.</tt><tt class="py-name">Bind</tt><tt class="py-op">(</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">EVT_MENU</tt><tt class="py-op">,</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">graphView</tt><tt class="py-op">.</tt><tt id="link-92" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.onAutoFoldEquals" class="py-name" href="#" onclick="return doclink('link-92', 'onAutoFoldEquals', 'link-64');">onAutoFoldEquals</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">                                <tt class="py-name">item</tt><tt class="py-op">)</tt>     </tt>
+</div><a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">         </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-comment">#self.auto_fold_equals_item_id = item.GetId()</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">         </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">         </tt>
+<a name="AlpinoViewMenu.appendNodeViewOptions"></a><div id="AlpinoViewMenu.appendNodeViewOptions-def"><a name="L200"></a><tt class="py-lineno">200</tt> <a class="py-toggle" href="#" id="AlpinoViewMenu.appendNodeViewOptions-toggle" onclick="return toggle('AlpinoViewMenu.appendNodeViewOptions');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="graeph.alpino.graphview.AlpinoViewMenu-class.html#appendNodeViewOptions">appendNodeViewOptions</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlpinoViewMenu.appendNodeViewOptions-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AlpinoViewMenu.appendNodeViewOptions-expanded"><a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt id="link-93" class="py-name"><a title="graeph.graphview.BasicViewMenu" class="py-name" href="#" onclick="return doclink('link-93', 'BasicViewMenu', 'link-3');">BasicViewMenu</a></tt><tt class="py-op">.</tt><tt id="link-94" class="py-name" targets="Method graeph.alpino.graphview.AlpinoViewMenu.appendNodeViewOptions()=graeph.alpino.graphview.AlpinoViewMenu-class.html#appendNodeViewOptions,Method graeph.graphview.BasicViewMenu.appendNodeViewOptions()=graeph.graphview.BasicViewMenu-class.html#appendNodeViewOptions"><a title="graeph.alpino.graphview.AlpinoViewMenu.appendNodeViewOptions
+graeph.graphview.BasicViewMenu.appendNodeViewOptions" class="py-name" href="#" onclick="return doclink('link-94', 'appendNodeViewOptions', 'link-94');">appendNodeViewOptions</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">         </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-name">item</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">Append</tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt>  </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">                           <tt class="py-string">"&amp;Order Nodes"</tt><tt class="py-op">,</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">                           <tt class="py-string">"Force the nodes to appear in strict order"</tt><tt class="py-op">,</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">                           <tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">ITEM_CHECK</tt><tt class="py-op">)</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">algraephFrame</tt><tt class="py-op">.</tt><tt class="py-name">Bind</tt><tt class="py-op">(</tt><tt class="py-name">wx</tt><tt class="py-op">.</tt><tt class="py-name">EVT_MENU</tt><tt class="py-op">,</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">graphView</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="graeph.alpino.graphview.AlpinoGraphView.onOrderNodes" class="py-name" href="#" onclick="return doclink('link-95', 'onOrderNodes', 'link-62');">onOrderNodes</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">                                <tt class="py-name">item</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:32 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

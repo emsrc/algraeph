@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>graeph.dotgraph.DotGraphPair</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="graeph-module.html">Package&nbsp;graeph</a> ::
+        <a href="graeph.dotgraph-module.html">Module&nbsp;dotgraph</a> ::
+        Class&nbsp;DotGraphPair
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="graeph.dotgraph.DotGraphPair-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class DotGraphPair</h1><p class="nomargin-top"><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+    
+         |    
+  <a href="graeph.dotgraph.DotGraph-class.html">DotGraph</a> --+
+             |
+            <strong class="uidshort">DotGraphPair</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="graeph.dotgraph.BasicDotGraphPair-class.html">BasicDotGraphPair</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>Abstract base class for converting a GraphPair instance (a matching of
+  source and target nodes) to a Graphviz dot graph.</p>
+  <p>Adds support for marking the selected alignment and for marking 
+  aligned nodes.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">node_prefix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">graph_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">node_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">edge_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">from_graph_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">from_node_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">from_edge_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">to_graph_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">to_node_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">to_edge_attr</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">subgraph_class</span>=<span class="summary-sig-default">&lt;class 'graeph.dotgraph.DotSubGraph'&gt;</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="mark_selected_alignments_option"></a><span class="summary-sig-name">mark_selected_alignments_option</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>=<span class="summary-sig-default">False</span>)</span><br />
+      set the mark selected alignments option, which determines whether of 
+      not the alignment between the currently selected nodes is highlighted</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.mark_selected_alignments_option">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="mark_aligned_nodes_option"></a><span class="summary-sig-name">mark_aligned_nodes_option</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>=<span class="summary-sig-default">False</span>)</span><br />
+      set the mark aligned nodes option, which determines whether of not 
+      aligned nodes are marked (greyed)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.mark_aligned_nodes_option">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#update_structure" class="summary-sig-name">update_structure</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">agraph</span>,
+        <span class="summary-sig-arg">from_graph</span>,
+        <span class="summary-sig-arg">to_graph</span>)</span><br />
+      update the whole dot graph</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_structure">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#update_nodes" class="summary-sig-name">update_nodes</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">agraph</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_nodes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#update_edges" class="summary-sig-name">update_edges</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">agraph</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_edges">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear_edge_focus"></a><span class="summary-sig-name">clear_edge_focus</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.clear_edge_focus">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#_init_view_options" class="summary-sig-name" onclick="show_private();">_init_view_options</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      reset all viewing options to their default value</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._init_view_options">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#_init_structure" class="summary-sig-name" onclick="show_private();">_init_structure</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._init_structure">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_update_tweak"></a><span class="summary-sig-name">_update_tweak</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">agraph</span>,
+        <span class="summary-sig-arg">from_graph</span>,
+        <span class="summary-sig-arg">to_graph</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._update_tweak">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#_labeled_edge_statement" class="summary-sig-name" onclick="show_private();">_labeled_edge_statement</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">snode</span>,
+        <span class="summary-sig-arg">tnode</span>,
+        <span class="summary-sig-arg">aedge</span>)</span><br />
+      get the statement for a labeled dot edge corresponding to an edge 
+      (from a DaesoGraph or GrapPair instance)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._labeled_edge_statement">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#_unlabeled_edge_statement" class="summary-sig-name" onclick="show_private();">_unlabeled_edge_statement</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">snode</span>,
+        <span class="summary-sig-arg">tnode</span>,
+        <span class="summary-sig-arg">aedge</span>=<span class="summary-sig-default">None</span>)</span><br />
+      get the statement for a unlabeled dot edge corresponding to an edge 
+      (from a DaesoGraph or GrapPair instance)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._unlabeled_edge_statement">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="graeph.dotgraph.DotGraphPair-class.html#_parts" class="summary-sig-name" onclick="show_private();">_parts</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._parts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_update_edge_focus"></a><span class="summary-sig-name">_update_edge_focus</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">snode</span>,
+        <span class="summary-sig-arg">tnode</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._update_edge_focus">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="graeph.dotgraph.DotGraph-class.html">DotGraph</a></code></b>:
+      <code><a href="graeph.dotgraph.DotGraph-class.html#label_edges_option">label_edges_option</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#to_string">to_string</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#update_attribs">update_attribs</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="graeph.dotgraph.DotGraph-class.html">DotGraph</a></code></b> (private):
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_attribs_str" onclick="show_private();">_attribs_str</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_dot_node" onclick="show_private();">_dot_node</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_finish_graph" onclick="show_private();">_finish_graph</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_is_visible" onclick="show_private();">_is_visible</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_node_label" onclick="show_private();">_node_label</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_node_statement" onclick="show_private();">_node_statement</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_set_attribs" onclick="show_private();">_set_attribs</a></code>,
+      <code><a href="graeph.dotgraph.DotGraph-class.html#_start_graph" onclick="show_private();">_start_graph</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">node_prefix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">graph_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">node_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">edge_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">from_graph_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">from_node_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">from_edge_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">to_graph_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">to_node_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">to_edge_attr</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">subgraph_class</span>=<span class="sig-default">&lt;class 'graeph.dotgraph.DotSubGraph'&gt;</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> - name of the dot graph</li>
+        <li><strong class="pname"><code>node_prefix</code></strong> - a prefix string attached to a node to form the label of a dot 
+          node</li>
+        <li><strong class="pname"><code>dgraph_attr</code></strong> - dict of default dot graph attributes</li>
+        <li><strong class="pname"><code>node_attr</code></strong> - dict of default dot node attributes</li>
+        <li><strong class="pname"><code>edge_attr</code></strong> - dict of default dot edge attributes
+          <p>See http://www.graphviz.org/doc/info/attrs.html</p></li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_structure"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_structure</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">agraph</span>,
+        <span class="sig-arg">from_graph</span>,
+        <span class="sig-arg">to_graph</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_structure">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>update the whole dot graph</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#update_structure">DotGraph.update_structure</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_nodes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_nodes</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">agraph</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_nodes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#update_nodes">DotGraph.update_nodes</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_edges"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_edges</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">agraph</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair.update_edges">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#update_edges">DotGraph.update_edges</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_init_view_options"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_init_view_options</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._init_view_options">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>reset all viewing options to their default value</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#_init_view_options" onclick="show_private();">DotGraph._init_view_options</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_init_structure"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_init_structure</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._init_structure">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#_init_structure" onclick="show_private();">DotGraph._init_structure</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_labeled_edge_statement"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_labeled_edge_statement</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">snode</span>,
+        <span class="sig-arg">tnode</span>,
+        <span class="sig-arg">aedge</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._labeled_edge_statement">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get the statement for a labeled dot edge corresponding to an edge 
+  (from a DaesoGraph or GrapPair instance)</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#_labeled_edge_statement" onclick="show_private();">DotGraph._labeled_edge_statement</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_unlabeled_edge_statement"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_unlabeled_edge_statement</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">snode</span>,
+        <span class="sig-arg">tnode</span>,
+        <span class="sig-arg">aedge</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._unlabeled_edge_statement">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get the statement for a unlabeled dot edge corresponding to an edge 
+  (from a DaesoGraph or GrapPair instance)</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#_unlabeled_edge_statement" onclick="show_private();">DotGraph._unlabeled_edge_statement</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_parts"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_parts</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="graeph.dotgraph-pysrc.html#DotGraphPair._parts">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="graeph.dotgraph.DotGraph-class.html#_parts" onclick="show_private();">DotGraph._parts</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="graeph-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri May 31 09:24:31 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

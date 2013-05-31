@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy, see www.w3.org">
+        <meta http-equiv="content-type" content=
+        "text/html; charset=UTF-8">
+        <link rel="stylesheet" href="daeso.css" type="text/css">
+
+        <title>Algraeph User Manual</title>
+    </head>
+
+    <body style="margin:32px">
+        <h1>Algraeph User Manual</h1>
+        <b>Erwin Marsi</b> <br>
+         Tilburg centre for Cognition and Communication<br>
+         Tilburg University<br>
+         The Netherlands <br>
+         <a href="mailto:e.marsi@gmail.com">e.marsi@gmail.com</a>
+        <br>
+         <br>
+         (Version $Id: algraeph-user-manual.htm 409 2008-02-28
+        08:39:35Z emarsi $) <br>
+		<div style="color:red">Even though this text is work in progress,
+		  it contains all essential information to work with Algraeph.</div>
+         
+
+        <h2><a name="contents">Contents</a></h2>
+        <!-- ================================ -->
+
+        <ol>
+            <li><a href="#contents">Contents</a></li>
+
+            <li><a href="#sum">Summary</a></li>
+
+            <li><a href="#quick">Quick start</a></li>
+
+            <li><a href="#intro">Introduction</a></li>
+
+            <li><a href="#use">Using Algraeph</a></li>
+
+            <li><a href="#use">Creating your own graphbanks and
+            parallel graph corpora</a></li>
+
+            <li><a href="#ref">Reference</a></li>
+        </ol>
+
+        <h2><a name="sum">Summary</a></h2>
+        <!-- ================================ -->
+
+        <p>Algraeph is a tool to manually align linguistic graphs,
+        such as phrase structure trees or dependency graphs, where
+        each node corresponds to a subsequence of the analyzed input
+        sentence. It allows you to express the similarity between two
+        graphs by aligning their nodes and attaching relation labels
+        to these aligments.</p>
+
+        <p>Graphs are read from one or more graphbanks (or
+        treebanks). Algraeph currently supports graphs in the general
+        GraphML format and in the Alpino format (for Dutch). Alignment
+        relations are user-defined. The alignments are stored in a
+        simple XML format, which can be used for further
+        processing. The result - a parallel graph corpus - is a useful
+        data set for many tasks in computational linguistics and
+        natural language processing such as automatic summarization,
+        automatic translation, paraphrase extraction, recognizing
+        textual entailment, etc.  The DAESO library provides support
+        for creating, processing and exploiting such aligned parallel
+        corpora.</p>
+
+        <p>Algraeph is implemented in the Python programming
+        language using the wxPython GUI toolkit. It has been tested
+        on Mac OS X, GNU Linux and MS Windows, but should run on
+        any platform which is supported by Python, wxPython and
+        Graphviz.</p>
+
+        <h2><a name="quick">Quick start</a></h2>
+        <!-- ================================ -->
+
+        <p>So you managed to install Algraeph and now you are in
+        hurry to see if this is of any use to you? Sounds familiar
+        :-) Try this:</p>
+
+        <ul>
+            <li>Start Algraeph by double clicking the program icon
+            or typing "algraeph.py" at the command line.</li>
+
+            <li>From the "File" menu, choose "Open", go to the
+            "data/graphml/simple" directory included in the
+            Algraeph distribution, and open the file
+            "algraeph-simple-alignment.xml". After loading, the
+            middle of the Algraeph window contains two simple
+            phrase structure trees. The tree on the left is for the
+            English phrase "spam and eggs"; the tree on the right
+            is for the Dutch translation "smac en eieren". These
+            full phrases are shown in the text boxes at the top.
+            Aligned nodes, as indicate by green lines, are
+            translations of each other.</li>
+
+            <li>From the "View" menu, choose "Mark Selected
+            Nodes".</li>
+
+            <li>Again from the "View" menu, choose "Mark Selected
+            Alignment."</li>
+
+            <li>Click on the node labeled "spam" in the left tree.
+            The selected node and its alignment are shown in
+            yellow. The token sequence corresponding to the
+            selected node ("spam") is shown in the text box in the
+            left bottom. The alignment relation, which is simply
+            "equals" here, is shown in between.</li>
+
+            <li>Now click on the corresponding node "smac" in the
+            right tree. Observe that the token sequence
+            corresponding to this node ("spam") is shown in the
+            text box in the right bottom, and that the relation has
+            changed from "none" to "equals".</li>
+
+            <li>Click on the radio button "none" to remove the
+            alignment, and on "equals" to reestablish it.</li>
+
+            <li>Now align the nodes "spam" and "eieren". As you can
+            see, any existing alignments of the nodes involved are
+            automatically removed, because by default only
+            one-to-one alignment are allowed.</li>
+
+            <li>
+                So far, so good. Suggested continuations are: 
+
+                <ul style="padding-top:12px">
+                    <li>Explore the other options (e.g. "Fold
+                    Node") in the View menu, which are also
+                    accessible from a popup menu by right clicking
+                    on a node.</li>
+
+                    <li>Look at the next graph by choosing "Next"
+                    from the "Go" menu (or using the keyb board
+                    shortcut), and load any of the other examples
+                    in de "data" directory.</li>
+
+                    <li>Open the file
+                    "simple-english-graphbank.xml" in a text editor
+                    and have a look at a graphbank in GraphML
+                    format.</li>
+
+                    <li>Open the file
+                    "algraeph-simple-alignment.xml" in a text
+                    editor to see how the alignments are stored in
+                    a straight-forward XML format.</li>
+
+                    <li>Read the rest of the manual (when it is
+                    finished ;-).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2><a name="intro">Introduction</a></h2>
+        <!-- ================================ -->
+
+        <p>...</p>
+
+        <h2><a name="use">Using Algraeph</a></h2>
+        <!-- ================================ -->
+
+        <p>This section explains how to use Algraeph for manually aligning graphs.</p>
+        
+		<p>...</p>
+
+        <p>Folding: When folding a node, all successors nodes are
+        hidden, the folded node is marked by a black rectangle and
+        the menu item becomes checked. When unfolding a node, all
+        successors nodes are revealed, the black rectangle mark is
+        removed, and the menu item becomes unchecked.</p>
+
+        <h2><a name="create">Creating your own graphbanks and
+        parallel graph corpora</a></h2>
+        <!-- ================================ -->
+		
+        <p>This section explains how to create your own input for
+	Algraeph in the form of graphbanks and a parallel graph
+	corpus. You can create your own XML files, but we recommend
+	using the <i>Daeso Framework</i> Python library, which
+	provides a convenient API for creating, reading, manipulating
+	and writing parallel graph corpora.</p>
+
+	</p>
+
+        <h3>Your own graphbanks</h3>
+
+        <p>Algraeph supports the general <a href=
+        "http://graphml.graphdrawing.org/">GraphML</a> format. I
+        suggest to have a look at the <a href=
+        "http://graphml.graphdrawing.org/primer/graphml-primer.html">
+        GraphML Primer</a>, and at examples in the included
+        "data/graphml" directory.</p>
+
+        <p>Notice however that there are a few additional
+        requirements on top of those defined by the GraphML
+        Schema/DTD:</p>
+
+        <ol>
+            <li>Every node must have a "tokens" attribute which
+            defines the token subsequences displayed in the text
+            boxes at the bottom when a node is selected. In GraphML
+            format, "tokens" is not a direct XML attribute of the
+            "node" element, but character data contained in an
+            embedded "data" element.</li>
+
+            <li>Similarly, every graph must have a "tokens"
+            attribute which defines the tokens displayed in the
+            text boxes at the top of the window.</li>
+
+            <li>Every graph must have a "root" attribute which
+            defines a unique root node.</li>
+
+            <li>Every node must have a "label" attribute.</li>
+
+            <li>Edges may have a "label" attribute.</li>
+
+            <li>These GraphML attributes must be appropriately
+            defined by means of a "key" element.</li>
+        </ol>
+
+        <p>A minimal example is presented below:</p>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;graphml xmlns="http://graphml.graphdrawing.org/xmlns" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"&gt;
+
+  &lt;key id="label" for="node" attr.name="label" attr.type="string"/&gt;
+  &lt;key id="tokens" attr.name="tokens" attr.type="string"/&gt;
+  &lt;key id="root" for="graph" attr.name="root" attr.type="string"/&gt;
+  
+  &lt;graph id="g0" edgedefault="directed"&gt;  
+    &lt;data key="tokens"&gt;spam and eggs&lt;/data&gt;
+    &lt;data key="root"&gt;n0&lt;/data&gt;
+    
+    &lt;node id="n0"&gt;
+      &lt;data key="label"&gt;and&lt;/data&gt;
+      &lt;data key="tokens"&gt;spam and eggs&lt;/data&gt;
+    &lt;/node&gt;
+    &lt;node id="n1"&gt;
+      &lt;data key="label"&gt;spam&lt;/data&gt;
+      &lt;data key="tokens"&gt;spam&lt;/data&gt;
+    &lt;/node&gt;
+    &lt;node id="n2"&gt;
+      &lt;data key="label"&gt;eggs&lt;/data&gt;
+      &lt;data key="tokens"&gt;eggs&lt;/data&gt;
+    &lt;/node&gt;
+    
+    &lt;edge source="n0" target="n1"/&gt;
+    &lt;edge source="n0" target="n2"/&gt;
+    
+  &lt;/graph&gt;
+&lt;/graphml&gt;
+</pre>
+
+        <h3>Your own parallel graph corpora</h3>
+
+        <p>Algraeph represents a parallel graph corpus in a
+        straight-forward XML format. If you want to use Algraeoh to
+        annotate your own data, you will have to create your own
+        parallel graph corpus in this format, either by hand or by
+        program. The following is a minimal example of a parallel
+        graph corpus:</p>
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;parallel_graph_corpus&gt;
+  &lt;corpus_meta_data&gt;
+    &lt;comment&gt;simple alignment example&lt;/comment&gt;
+  &lt;/corpus_meta_data&gt;
+  &lt;graphbanks&gt;
+    &lt;file id="1" format="graphml"&gt;simple-english-graphbank.xml&lt;/file&gt;
+    &lt;file id="2" format="graphml"&gt;simple-dutch-graphbank.xml&lt;/file&gt;
+  &lt;/graphbanks&gt;
+  &lt;node_relations&gt;
+    &lt;relation&gt;equals&lt;/relation&gt;
+  &lt;/node_relations&gt;
+  &lt;aligned_graphs&gt;
+    &lt;graph_pair from_bank_id="1" from_graph_id="g0" to_bank_id="2" to_graph_id="g0"&gt;
+      &lt;aligned_nodes&gt;
+        &lt;node_pair from_node_id="n0" relation="equals" to_node_id="n0"/&gt;
+        &lt;node_pair from_node_id="n1" relation="equals" to_node_id="n1"/&gt;
+        &lt;node_pair from_node_id="n2" relation="equals" to_node_id="n2"/&gt;
+      &lt;/aligned_nodes&gt;
+      &lt;graph_meta_data&gt;
+        &lt;comment&gt;From the "Spam" sketch by Monty Python.&lt;/comment&gt;
+      &lt;/graph_meta_data&gt;
+    &lt;/graph_pair&gt;
+  &lt;/aligned_graphs&gt;
+&lt;/parallel_graph_corpus&gt;
+</pre>
+
+<p>The XML elements are explained in the following table:</p>
+
+        <table>
+            <tr>
+                <td class="head">Element:</td>
+
+                <td class="head">Function:</td>
+            </tr>
+
+            <tr>
+                <td>parallel_graph_corpus</td>
+
+                <td>The root container for a parallel graph
+                corpus.</td>
+            </tr>
+
+            <tr>
+                <td>corpus_meta_data</td>
+
+                <td>Optional element for specifying arbitary corpus meta data.
+		Algraeph will not change its content.</td>
+            </tr>
+
+            <tr>
+                <td>graphbanks</td>
+
+                <td>Defines the graphbanks as a one or more "file"
+                elements.</td>
+            </tr>
+
+            <tr>
+                <td>file</td>
+
+                <td>Specifies the filename for loading a graphbank,
+                which may be a base name, a path relative to the
+                location of the corpus file, or an absolute path (all
+                in unix format with forward slashes).  The manditory
+                "id" attribute assign a unique id to every graph bank.
+                The manditory "format" attribute specifies the format
+                of the graphbanks, which can currently be either
+                "graphml" or "alpino". </td> </tr>
+
+            <tr>
+                <td>node_relations</td>
+
+                <td>Defines the labels that can be assigned to node
+                relations as one or more "relation" elements.</td>
+            </tr>
+
+            <tr>
+                <td>relation</td>
+
+                <td>Defines a single node relation.</td>
+            </tr>
+
+            <tr>
+                <td>aligned_graphs</td>
+
+                <td>Defines the aligned pairs of graphs as a list
+                of zero or more "graph_pair" elements.</td>
+            </tr>
+
+            <tr>
+                <td>graph_pair</td>
+
+                <td>Defines a pair of alligned graphs in terms of
+                four manditory attributes. The "from_graphbank_id"
+                is the id of the graphbank (cf. "file" element)
+                which contains the source graph. The
+                "from_graph_id" is the id of a graph within this
+                graphbank. Similary, "to_graphbank_id" and
+                "to_graph_id" identify a unique target graph.</td>
+            </tr>
+
+            <tr>
+                <td>aligned_nodes</td>
+
+                <td>Defines the aligned nodes as a list of zero or
+                nore "node_pair" elements.</td>
+            </tr>
+
+            <tr>
+                <td>node_pair</td>
+
+                <td>Defines a pair of aligned nodes in terms of
+                three manditory attributes. The "from_node_id" is
+                the id of a node in the source graph. The
+                "to_node_id" is the id of a node in the target
+                graph. The "relation" is the relation that holds
+                between these nodes (cd. the "node_relations"
+                element)</td>
+            </tr>
+	    
+            <tr>
+                <td>graph_meta_data</td>
+
+                <td>Optional element for specifying arbitrary graph meta data.
+		    Except for the "comment" element, Algraeph will not change its contents.</td>
+            </tr>
+
+            <tr>
+                <td>comment</td>
+
+                <td>An optional element for free-form comments
+                regarding the graph alignment. Content corresponds to the Comments text box in Algraeph.</td>
+            </tr>
+        </table>
+	
+        <h2><a name="ref">Reference</a></h2>
+        <!-- ================================ -->
+		
+		<p>This section contains reference information an all available menus and key board shortcuts.</p> 
+
+        <h3>View Menu</h3>
+
+        <table summary="view menu reference info">
+            <tr>
+                <td class="head">Item:</td>
+
+                <td class="head">Shortcut:</td>
+
+                <td class="head">Function:</td>
+            </tr>
+
+            <tr>
+                <td>Fold Node</td>
+
+                <td>Shift + Left Mouse Button</td>
+
+                <td>Hides or reveals successors nodes. This
+                function is enabled in the pop-up menu when
+                right-clicking on a node.</td>
+            </tr>
+
+            <tr>
+                <td>Unfold All Node</td>
+
+                <td>Ctrl + U</td>
+
+                <td>All folded nodes become unfolded</td>
+            </tr>
+
+            <tr>
+                <td>Auto Fold Equals</td>
+
+                <td>
+				</td>
+
+                <td>Automatically fold all nodes that are 
+				aligned with with an "equals" relation</td>
+            </tr>
+
+            <tr>
+                <td>Mark Aligned Nodes</td>
+
+                <td>
+                </td>
+
+                <td>Already aligned nodes are marked by rendering
+                them in gray color, leaving unaligned nodes
+                rendered in blue, red or black.</td>
+            </tr>
+
+            <tr>
+                <td>Mark Selected Nodes</td>
+
+                <td>Ctrl + M</td>
+
+                <td>Selected nodes are marked by a yellow
+                background.</td>
+            </tr>
+
+            <tr>
+                <td>Co-select Aligned Node</td>
+
+                <td>Ctrl + K</td>
+
+                <td>When selecting a node in the left graph, the
+                aligned node in the right graph (if any) is
+                automatically selected as well.</td>
+            </tr>
+
+            <tr>
+                <td>Order Nodes</td>
+
+                <td>
+                </td>
+
+                <td>Enforce strict ordering of nodes (alpino format only)</td>
+            </tr>
+
+            <tr>
+                <td>Label Edges</td>
+
+                <td>
+                </td>
+
+                <td>Show edge labels</td>
+            </tr>
+
+            <tr>
+                <td>Mark Selected Alignments</td>
+
+                <td>Ctrl + A</td>
+
+                <td>The alignments of the currently selected nodes
+                (if any) are rendered in yellow.</td>
+            </tr>
+
+            <tr>
+                <td>Hide Alignments</td>
+
+                <td>Ctrl + H</td>
+
+                <td>Hide all alignments, except those resulting
+                from the Mark Selected Alignments option.</td>
+            </tr>
+
+            <tr>
+                <td>Save image</td>
+
+                <td>
+                </td>
+
+                <td>Save the current view to a file (default image
+                format is png).</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
