@@ -1,6 +1,6 @@
 ================================================================================
 
-	ALGRAEPH INSTALL
+   ALGRAEPH INSTALL
 
 ================================================================================
 
@@ -9,7 +9,7 @@ Version 1.0
 
 Copyright (C) 2007-2013 by Erwin Marsi and TST-Central
 
-http://daeso.uvt.nl/algraeph
+https://github.com/emsrc/algraeph
 e.marsi@gmail.com
 
 
@@ -33,38 +33,38 @@ visualization software (http://www.graphviz.org/). You have two options:
 
 Option 1 (recommended): Install a Graphviz binary package 
 
-  Download and install the current stable release of Graphviz for Mac OS X 
-  from http://www.graphviz.org/Download_macos.php
-  
+   Download and install the current stable release of Graphviz for Mac OS X 
+   from http://www.graphviz.org/Download_macos.php
+
 Option 2: Install Graphviz from source
 
-  Install Graphviz from a package management system such as MacPorts or Fink,
-  or build directly from source.
-  
-  For example, if you have MacPorts (http://www.macports.org/), you can
-  install graphviz with the command:
+   Install Graphviz from a package management system such as MacPorts or Fink,
+   or build directly from source.
 
-    sudo port install graphviz +no_x11
-		
-  IMPORTANT: Make sure that the "dot" executable is in your /usr/bin
-  directory. Either create a symbolic link or copy it to /usr/bin/dot.
-  (Algraeph.app runs in a system-wide environment without reading your
-  .profile or .bashrc, so adding to PATH does not help).
-	
-  For example, if you installed with MacPorts, create a symbolic link (
-  /usr/bin/dot) to the real dot program (/opt/local/bin/dot) by opening a
-  terminal window and typing:
-  
-    sudo ln -s /opt/local/bin/dot /usr/bin/dot
-	
-  (you must supply your superuser password for this)
-  
+   For example, if you have MacPorts (http://www.macports.org/), you can
+   install graphviz with the command:
+
+   sudo port install graphviz +no_x11
+
+   IMPORTANT: Make sure that the "dot" executable is in your /usr/bin
+   directory. Either create a symbolic link or copy it to /usr/bin/dot.
+   (Algraeph.app runs in a system-wide environment without reading your
+   .profile or .bashrc, so adding to PATH does not help).
+
+   For example, if you installed with MacPorts, create a symbolic link (
+   /usr/bin/dot) to the real dot program (/opt/local/bin/dot) by opening a
+   terminal window and typing:
+
+   sudo ln -s /opt/local/bin/dot /usr/bin/dot
+
+   (you must supply your superuser password for this)
+
 
 
 Install Algraeph
 ----------------
 
-1. Download the file algraeph_1.0_mac-os-x.zip from http://daeso.uvt.nl/algraeph.
+1. Download the file algraeph_1.0_mac-os-x.zip from https://github.com/emsrc/algraeph.
 
 2. Double click on the file algraeph_1.0_mac-os-x.zip to unzip the archive. 
 
@@ -87,7 +87,7 @@ Testing Algraeph
    you should see two aligned trees for the sentences "spam and eggs" and 
    "smac en eieren".
 
-   
+
 Uninstall Algraeph
 ------------------ 
 
@@ -138,9 +138,9 @@ Uninstall Algraeph
 ------------------
 
 1. Open the "Control Panel" from the "Start" menu
-   
+
 2. Double click "Add or Remove Software"
-   
+
 3. Select Algraeph-1.0 and click the button "Remove"
 
 
@@ -163,13 +163,16 @@ Algraeph has the following dependencies:
    available from http://www.wxpython.org/
 
 4. "dot" command line program from Graphviz (tested with version 2.26)
-    available from http://www.graphviz.org/
+   available from http://www.graphviz.org/
 
 5. NetworkX (tested with version 1.0)
    available from https://networkx.lanl.gov/
-   
-6. The DAESO Framework and DAESO Dutch Python libraries
-   available from http://daeso.uvt.nl/daeso-framework
+
+6. The DAESO Python Framework availabe from
+   https://github.com/emsrc/daeso-framework
+
+7. The DAESO Dutch Python libraries available from 
+   https://github.com/emsrc/daeso-dutch
 
 Notice that the first five of these may already be present on your system, or
 may be easily installed through a package manager. Although untested, Algraeph
@@ -180,30 +183,30 @@ and Graphviz (NetworkX must be 1.0 or higher though).
 Install Algraeph
 ----------------
 
-1. Download the source archive in your preferred format
-   (e.g. algraeph-1.0.tar.gz) from http://daeso.uvt.nl/algraeph
+1. Download the source archive in your preferred format (e.g. algraeph-1.0.tar.gz) 
+   from https://github.com/emsrc/algraeph/wiki/Python-Packages
 
 2. Unpack (e.g. tar xvzf algraeph-1.0.tar.gz) in a suitable location
    (e.g. /usr/local/src)
-   
+
 3. Change directory to the root of the unpacked archive 
    (e.g. cd algraeph-1.0)
-   
+
 4. Install using the command
 
-      python setup.py -v install
-      
+   python setup.py -v install
+
    You probably need to be root or administrator to be allowed to do a
    system-wide install. For more information (alternative install locations,
    trouble shooting, etc) see "Installing Pyton Modules" at
    http://docs.python.org/inst/inst.html
-   
+
    You can check the ouput of the preceding setup.py command to see to
    which directory the main script algraeph.py was copied. Normally,
    this will be a directory like /usr/bin, which is already in your
    search path. If not, make sure you add this directory to your search
    path or to copy algraeph.py to another directory in your search path.
-	
+
    The documentation (in directory "doc") goes to a directory
    sys.prefix/share/algraeph-1.0/doc and the examples (in directory
    "data") to sys.prefix/share/algraeph-0-.6.x/doc, where the value of
@@ -211,8 +214,8 @@ Install Algraeph
    often be /usr/share, but it may be different on your platform. To
    find out, type the following at the shell command line:
 
-      python -c "import sys; print sys.prefix"
-   
+   python -c "import sys; print sys.prefix"
+
 5. Optional: remove the unpacked archive
 
 
@@ -225,7 +228,7 @@ Testing Algraeph
    sys.prefix/share/algraeph-1.0/data/graphml/simple/ After loading
    is finished, you should see two aligned trees for the sentences
    "spam and eggs" and "smac en eieren".
-   
+
 
 Uninstall Algraeph
 ------------------
@@ -240,7 +243,6 @@ Uninstall Algraeph
    see step 4 of the installation.
 
 
-$Id: INSTALL 1314 2010-04-27 04:21:36Z emarsi $
 
 
-   
+

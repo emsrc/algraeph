@@ -9,7 +9,7 @@ Version 1.0
 
 Copyright (C) 2007-2013 by Erwin Marsi and TST-Centrale
 
-http://daeso.uvt.nl/algraeph
+https://github.com/emsrc/algraeph
 e.marsi@gmail.com
 
 
@@ -67,7 +67,7 @@ from the list below:
     1-6.
 
 In other cases of commercial or educational use, please link or refer
-to the Algraeph webpage http://daeso.uvt.nl/algraeph
+to the Algraeph webpage https://github.com/emsrc/algraeph
 
 
 --------------------------------------------------------------------------------
@@ -165,7 +165,6 @@ Algraeph's existence would be much harder without:
   Koen van Lierop, Vera Nijveld, Hanneke Schoormans, 
 
  
-$Id: README 1314 2010-04-27 04:21:36Z emarsi $
 
 
 

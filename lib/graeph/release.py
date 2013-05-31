@@ -44,13 +44,13 @@ author = "Erwin Marsi"
 
 author_email = "e.marsi@gmail.com"
 
-url = "http://daeso.uvt.nl/algraeph"
+url = "https://github.com/emsrc/algraeph"
 
 copyright = " TST-Centrale and Erwin Marsi"
 
 license = "GNU Public License"
 
-download_url = "http://daeso.uvt.nl/algraeph"
+download_url = "https://github.com/emsrc/algraeph"
 
 platforms = ["Linux", "Mac OSX", "Windows XP/2000/NT"]
 

@@ -245,7 +245,7 @@ class AlgraephFrame(wx.Frame):
         info.SetVersion(release.version)
         info.SetCopyright("Copyright %s\nReleased under %s" % 
                           (release.copyright, release.license))
-        #info.SetWebSite("http://daeso.uvt.nl/algraeph")
+        #info.SetWebSite("https://github.com/emsrc/algraeph")
         wx.AboutBox(info)
 
         
