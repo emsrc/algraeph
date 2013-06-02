@@ -53,5 +53,5 @@ graphviz_logger = logging.getLogger("algraeph.graphviz")
 
 # set log level here:
 
-pubsub_logger.setLevel(logging.ERROR)
+pubsub_logger.setLevel(logging.DEBUG)
 graphviz_logger.setLevel(logging.DEBUG)
